@@ -1,113 +1,328 @@
+
 import Image from 'next/image'
+import charlesLogo from '/public/assets/logo.png';
+import avatar from '/public/assets/avatar.png';
+
+import htmlTec from '/public/assets/technologies/html.svg';
+import cssTec from '/public/assets/technologies/css.svg';
+import tailwindTec from '/public/assets/technologies/tailwind.svg';
+import styledComponentTec from '/public/assets/technologies/stylecomponent.svg';
+import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
+import sassTec from '/public/assets/technologies/sass.svg';
+
+import javascriptTec from '/public/assets/technologies/javascript.svg';
+import reactJsTec from '/public/assets/technologies/reactjs.svg';
+import reactNativeTec from '/public/assets/technologies/reactnative.svg';
+import nextJsTec from '/public/assets/technologies/nextjs.svg';
+import typescriptTec from '/public/assets/technologies/typescript.svg';
+import nodeJsTec from '/public/assets/technologies/nodejs.svg';
+import phpTec from '/public/assets/technologies/php.svg';
+import wordpressTec from '/public/assets/technologies/wordpress.svg';
+import figmaTec from '/public/assets/technologies/figma.svg';
+
+
+import barLevel_5 from '/public/assets/technologies/proficiency-bars/bar-level-5.svg';
+import barLevel_6 from '/public/assets/technologies/proficiency-bars/bar-level-6.svg';
+import barLevel_7 from '/public/assets/technologies/proficiency-bars/bar-level-7.svg';
+import barLevel_8 from '/public/assets/technologies/proficiency-bars/bar-level-8.svg';
+import barLevel_9 from '/public/assets/technologies/proficiency-bars/bar-level-9.svg';
+
+import {
+  Menu,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Github,
+  Mouse,
+  Triangle,
+  Circle,
+  Hexagon,
+  FileCode2
+} from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+
+    <main className="">
+
+      {/* MENU */}
+      <header className="h-10 w-screen p-2 flex justify-between items-center bg-transparent fixed z-50">
+
+        <div className="w-[33%]">
+          <Image src={charlesLogo} alt="charles portofio logo" />
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <nav className="text-zinc-50 text-base font-medium uppercase flex justify-center gap-5 w-[33%]">
+          <a href="about-m2" className="">sobre-mim</a>
+          <a href="project" className="">projeto</a>
+          <a href="contact" className="">contato</a>
+        </nav>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* <Menu className="text-zinc-50" /> */}
+        <div className="w-[33%] flex justify-end gap-5 text-zinc-900 ">
+          <a href="" title="instagram Charles"><Instagram /></a>
+          <a href="" title="facebook Charles"><Facebook /></a>
+          <a href="" title="linkedin Charles"><Linkedin /></a>
+          <a href="" title="github Charles"><Github /></a>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      </header>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+      {/* SECTION 1 */}
+      <section
+        className="bg-cover bg-center h-screen max-h-[1080px] flex flex-end justify-center"
+        style={{ backgroundImage: "url('/assets/bg-section-1R.jpg')" }}
+      >
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* wrapper 2 */}
+        <div className="h-full w-full max-w-7xl  grid grid-cols-2 items-center justify-items-center relative overflow-hidden">
+
+          {/* left */}
+          <div className="flex flex-col gap-2 items-center">
+
+            <div className="text-zinc-50 flex flex-col gap-2 items-center">
+
+              <h1 className="font-semibold uppercase text-base">
+                <span className="text-xl">olá</span>,
+                seja bem vindo ao meu portfólio
+              </h1>
+
+              <p className="text-xl font-semibold">
+                Me chamo
+                <strong className="capitalize"> charles martins </strong>
+                sou,
+              </p>
+
+              <p className="text-5xl font-medium capitalize">
+                front end,
+                <strong className="text-green-400 underline ml-3">developer</strong>
+              </p>
+
+              <div className="text-green-400 mt-2 items-center flex flex-col ">
+                <Mouse size={31} />
+                <Triangle size={28} className="transform rotate-180 mt-2 opacity-60" />
+                <Triangle size={26} className="transform rotate-180 -mt-3.5 opacity-60" />
+                <Triangle size={24} className="transform rotate-180 -mt-3 opacity-60" />
+              </div>
+            </div>
+          </div>
+
+
+          {/* right */}
+          <div className="max-w-md h-full flex items-end">
+            <Image
+              id="teste"
+              src={avatar}
+              alt="imagem do Charles"
+            />
+          </div>
+
+
+        </div>{/* end wrapper 1 */}
+
+        {/*divider */}
+        <div className="absolute z-40 bottom-0 w-full">
+          <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path className="shape-fill fill-current text-zinc-800" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+          </svg>
+        </div>
+
+      </section>
+
+
+
+
+      {/* SECTION 2 */}
+
+      <section
+        className="bg-cover bg-center h-screen max-h-[1080px] flex flex-end justify-center"
+        style={{ backgroundImage: "url('/assets/bg-section-2.jpg')" }}
+      >
+        {/* wrapper 2 */}
+        <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start justify-items-center">
+
+
+          {/* left */}
+          <div className="w-[29rem] text-zinc-50 flex flex-col gap-11">
+
+            <h2 className="text-5xl font-medium capitalize">
+              sobre
+              <strong className="text-green-400 underline ml-3 normal-case">mim.</strong>
+            </h2>
+
+            <p className="font-normal text-base tracking-[1px]">
+              Sempre tive uma paixão pela criação e inovação, buscando soluções para desafios e necessidades. Essa habilidade me proporcionou uma mentalidade empreendedora e focada em soluções.Atualmente, estou direcionando meus estudos em tecnologias front-end, como JS, ReactJS e TypeScript. Além disso, sou criador do Espaço Conecta, uma plataforma focada na divulgação de cursos e ferramentas para aprimoramento profissional e pessoal. Sou responsável pelo desenvolvimento, manutenção e direcionamento tecnológico da plataforma, bem como pela criação de determinados conteúdos.Meu desejo de ensinar o que aprendi sempre foi uma constante em minha vida e, em breve, pretendo criar vídeo aulas focadas em desenvolvimento web e disponibilizá-las no Youtube para contribuir com a comunidade. Combinando minha paixão por soluções inovadoras e aperfeiçoamento profissional, estou animado para continuar crescendo como profissional e contribuir para o avanço da comunidade tecnológica.
+            </p>
+
+            <div className="flex gap-6  text-base font-semibold uppercase tracking-[1px]">
+              <a href="" title="contato" className="w-52 h-16 bg-green-400 border-2 border-green-400 rounded-[5px] flex items-center justify-center">contato</a>
+              <a href="" title="projetos" className="w-52 h-16 bg-zinc-700 border-2 border-zinc-700 rounded-[5px] flex items-center justify-center gap-5"><FileCode2 /> projetos</a>
+            </div>
+          </div>
+
+
+
+
+          {/* right */}
+          <div className="w-full text-zinc-50 flex flex-col gap-11 ">
+
+
+            <h2 className="text-5xl font-medium ">
+              <span className="capitalize">tecnologias</span> que
+              <strong className="text-green-400 underline ml-3 normal-case">utilizo.</strong>
+            </h2>
+
+            {/* cards */}
+            <div className="grid grid-cols-3 gap-3">
+
+
+              {/* card 1 */}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>html</strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={htmlTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_9} alt="barra de nível" />
+                </footer>
+              </div>
+
+
+              {/* card 2*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>css</strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={cssTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_9} alt="barra de nível" />
+                </footer>
+              </div>
+
+              {/* card 3*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>tailwind</strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={tailwindTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_5} alt="barra de nível" />
+                </footer>
+              </div>
+
+              {/* card 4*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>java<span className="text-zinc-50">script</span></strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={javascriptTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_8} alt="barra de nível" />
+                </footer>
+              </div>
+
+              {/* card 5*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                <strong>react<span className="text-zinc-50 text-xl">.js</span></strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={reactJsTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_5} alt="barra de nível" />
+                </footer>
+              </div>
+
+              {/* card 6*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                <strong>next<span className="text-zinc-50 text-xl">.js</span></strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={nextJsTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_5} alt="barra de nível" />
+                </footer>
+              </div>
+
+               {/* card 7*/}
+               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                <strong>type<span className="text-zinc-50">script</span></strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={typescriptTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_5} alt="barra de nível" />
+                </footer>
+              </div>
+
+               {/* card 8*/}
+               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>word<span className="text-zinc-50">press</span></strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={wordpressTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_8} alt="barra de nível" />
+                </footer>
+              </div>
+
+               {/* card 9*/}
+               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+                <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
+                  <strong>figma</strong>
+                </header>
+                <div className="border-4 border-zinc-700 rounded-md p-4">
+                  <Image src={figmaTec} alt="logo html" className="w-12 h-12"/>
+                </div>
+
+                <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+                  proficiência
+                  <Image src={barLevel_7} alt="barra de nível" />
+                </footer>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>  {/* end wrapper 2 */}
+
+
+      </section>
+
+
+    </main >
   )
 }
