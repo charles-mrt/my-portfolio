@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: 'var(--font-nunito)',
       },
+      boxShadow: {
+        'custom': '0px 0px 20px 1px #2AD883',
+      },
 
       colors: {
         green: {
