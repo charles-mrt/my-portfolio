@@ -27,6 +27,9 @@ import barLevel_7 from '/public/assets/technologies/proficiency-bars/bar-level-7
 import barLevel_8 from '/public/assets/technologies/proficiency-bars/bar-level-8.svg';
 import barLevel_9 from '/public/assets/technologies/proficiency-bars/bar-level-9.svg';
 
+
+import walkProject from '/public/assets/projects/walk.jpg';
+
 import {
   Menu,
   Instagram,
@@ -37,7 +40,8 @@ import {
   Triangle,
   Circle,
   Hexagon,
-  FileCode2
+  FileCode2,
+  MonitorSmartphone
 } from 'lucide-react';
 
 export default function Home() {
@@ -72,7 +76,7 @@ export default function Home() {
       {/* SECTION 1 */}
       <section
         className="bg-cover bg-center h-screen max-h-[1080px] flex flex-end justify-center"
-        style={{ backgroundImage: "url('/assets/bg-section-1R.jpg')" }}
+        style={{ backgroundImage: "url('/assets/bg-section-1.jpg')" }}
       >
 
         {/* wrapper 2 */}
@@ -99,7 +103,9 @@ export default function Home() {
                 <strong className="text-green-400 underline ml-3">developer</strong>
               </p>
 
-              <div className="text-green-400 mt-2 items-center flex flex-col ">
+
+              {/*scroll down indicator */}
+              <div className="text-green-400 mt-8 items-center flex flex-col ">
                 <Mouse size={31} />
                 <Triangle size={28} className="transform rotate-180 mt-2 opacity-60" />
                 <Triangle size={26} className="transform rotate-180 -mt-3.5 opacity-60" />
@@ -136,11 +142,11 @@ export default function Home() {
       {/* SECTION 2 */}
 
       <section
-        className="bg-cover bg-center h-screen max-h-[1080px] flex flex-end justify-center"
+        className="bg-cover bg-center h-full max-h-[1080px] w-full flex justify-center"
         style={{ backgroundImage: "url('/assets/bg-section-2.jpg')" }}
       >
         {/* wrapper 2 */}
-        <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start justify-items-center">
+        <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start">
 
 
           {/* left */}
@@ -158,6 +164,14 @@ export default function Home() {
             <div className="flex gap-6  text-base font-semibold uppercase tracking-[1px]">
               <a href="" title="contato" className="w-52 h-16 bg-green-400 border-2 border-green-400 rounded-[5px] flex items-center justify-center">contato</a>
               <a href="" title="projetos" className="w-52 h-16 bg-zinc-700 border-2 border-zinc-700 rounded-[5px] flex items-center justify-center gap-5"><FileCode2 /> projetos</a>
+            </div>
+
+            {/*scroll down indicator */}
+            <div className="text-green-400 mt-2 items-center flex flex-col ">
+              <Mouse size={31} />
+              <Triangle size={28} className="transform rotate-180 mt-2 opacity-60" />
+              <Triangle size={26} className="transform rotate-180 -mt-3.5 opacity-60" />
+              <Triangle size={24} className="transform rotate-180 -mt-3 opacity-60" />
             </div>
           </div>
 
@@ -183,7 +197,7 @@ export default function Home() {
                   <strong>html</strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={htmlTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={htmlTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -199,7 +213,7 @@ export default function Home() {
                   <strong>css</strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={cssTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={cssTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -214,7 +228,7 @@ export default function Home() {
                   <strong>tailwind</strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={tailwindTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={tailwindTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -229,7 +243,7 @@ export default function Home() {
                   <strong>java<span className="text-zinc-50">script</span></strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={javascriptTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={javascriptTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -241,10 +255,10 @@ export default function Home() {
               {/* card 5*/}
               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
                 <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
-                <strong>react<span className="text-zinc-50 text-xl">.js</span></strong>
+                  <strong>react<span className="text-zinc-50 text-xl">.js</span></strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={reactJsTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={reactJsTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -256,10 +270,10 @@ export default function Home() {
               {/* card 6*/}
               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
                 <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
-                <strong>next<span className="text-zinc-50 text-xl">.js</span></strong>
+                  <strong>next<span className="text-zinc-50 text-xl">.js</span></strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={nextJsTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={nextJsTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -268,13 +282,13 @@ export default function Home() {
                 </footer>
               </div>
 
-               {/* card 7*/}
-               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+              {/* card 7*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
                 <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
-                <strong>type<span className="text-zinc-50">script</span></strong>
+                  <strong>type<span className="text-zinc-50">script</span></strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={typescriptTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={typescriptTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -283,13 +297,13 @@ export default function Home() {
                 </footer>
               </div>
 
-               {/* card 8*/}
-               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+              {/* card 8*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
                 <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
                   <strong>word<span className="text-zinc-50">press</span></strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={wordpressTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={wordpressTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -298,13 +312,13 @@ export default function Home() {
                 </footer>
               </div>
 
-               {/* card 9*/}
-               <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
+              {/* card 9*/}
+              <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
                 <header className="text-green-400 text-3xl leading-none uppercase tracking-[1px]">
                   <strong>figma</strong>
                 </header>
                 <div className="border-4 border-zinc-700 rounded-md p-4">
-                  <Image src={figmaTec} alt="logo html" className="w-12 h-12"/>
+                  <Image src={figmaTec} alt="logo html" className="w-12 h-12" />
                 </div>
 
                 <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
@@ -322,6 +336,241 @@ export default function Home() {
 
       </section>
 
+      {/* SECTION 3 */}
+      <section className="bg-cover bg-center h-screen max-h-[1080px]"
+        style={{ backgroundImage: "url('/assets/bg-section-3.jpg')" }}>
+
+        {/*wrapper 3*/}
+        <div className=" h-full w-full max-w-7xl m-auto">
+
+          <h2 className="text-5xl text-center font-medium capitalize text-zinc-50 my-10">
+            projetos
+            <strong className="text-green-400 underline ml-3 normal-case">
+              realizados.
+            </strong>
+          </h2>
+
+          {/*cards */}
+          <div className="w-full grid grid-cols-[repeat(2,550px)] justify-center gap-4 ">
+
+            {/*card 1*/}
+            <div className="w-[550px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]">
+
+              <header
+                className="w-full h-96 overflow-hidden "
+                style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
+              >
+                {/* <Image src={walkProject} alt="walk landing page" className="w-full" style={{ objectFit:'cover'}} /> */}
+                <Image src={walkProject} alt="walk landing page" className="w-full" />
+              </header>
+
+              <div className="w-full px-5 flex flex-col gap-3">
+
+                <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
+
+                <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
+                  WALK é um projeto de landing page para venda de tênis.
+                  O foco da página é direcionar o usuário a aquisição do produto,
+                  através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                  Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
+                </p>
+
+                <div className="flex gap-2">
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                </div>
+                <span className="text-zinc-200">tecnologias utilizadas</span>
+
+
+
+                <footer className="flex gap-6  text-base font-semibold uppercase tracking-[1px] text-zinc-100">
+                  <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <MonitorSmartphone />
+                    acessar app
+                  </a>
+                  <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <FileCode2 />
+                    acessar código
+                  </a>
+                </footer>
+
+              </div>
+
+
+            </div>{/*card 1*/}
+
+            {/*card 2*/}
+            <div className="w-[550px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]">
+
+              <header
+                className="w-full h-96 overflow-hidden "
+                style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
+              >
+                {/* <Image src={walkProject} alt="walk landing page" className="w-full" style={{ objectFit:'cover'}} /> */}
+                <Image src={walkProject} alt="walk landing page" className="w-full" />
+              </header>
+
+              <div className="w-full px-5 flex flex-col gap-3">
+
+                <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
+
+                <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
+                  WALK é um projeto de landing page para venda de tênis.
+                  O foco da página é direcionar o usuário a aquisição do produto,
+                  através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                  Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
+                </p>
+
+                <div className="flex gap-2">
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                </div>
+                <span className="text-zinc-200">tecnologias utilizadas</span>
+
+
+
+                <footer className="flex gap-6  text-base font-semibold uppercase tracking-[1px] text-zinc-100">
+                  <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <MonitorSmartphone />
+                    acessar app
+                  </a>
+                  <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <FileCode2 />
+                    acessar código
+                  </a>
+                </footer>
+
+              </div>
+
+
+            </div>{/*card 2*/}
+
+
+            {/*card 3*/}
+            <div className="w-[550px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]">
+
+              <header
+                className="w-full h-96 overflow-hidden "
+                style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
+              >
+                {/* <Image src={walkProject} alt="walk landing page" className="w-full" style={{ objectFit:'cover'}} /> */}
+                <Image src={walkProject} alt="walk landing page" className="w-full" />
+              </header>
+
+              <div className="w-full px-5 flex flex-col gap-3">
+
+                <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
+
+                <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
+                  WALK é um projeto de landing page para venda de tênis.
+                  O foco da página é direcionar o usuário a aquisição do produto,
+                  através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                  Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
+                </p>
+
+                <div className="flex gap-2">
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                </div>
+                <span className="text-zinc-200">tecnologias utilizadas</span>
+
+
+
+                <footer className="flex gap-6  text-base font-semibold uppercase tracking-[1px] text-zinc-100">
+                  <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <MonitorSmartphone />
+                    acessar app
+                  </a>
+                  <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <FileCode2 />
+                    acessar código
+                  </a>
+                </footer>
+
+              </div>
+
+
+            </div>{/*card 3*/}
+
+            {/*card 4*/}
+            <div className="w-[550px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]">
+
+              <header
+                className="w-full h-96 overflow-hidden "
+                style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
+              >
+                {/* <Image src={walkProject} alt="walk landing page" className="w-full" style={{ objectFit:'cover'}} /> */}
+                <Image src={walkProject} alt="walk landing page" className="w-full" />
+              </header>
+
+              <div className="w-full px-5 flex flex-col gap-3">
+
+                <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
+
+                <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
+                  WALK é um projeto de landing page para venda de tênis.
+                  O foco da página é direcionar o usuário a aquisição do produto,
+                  através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                  Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
+                </p>
+
+                <div className="flex gap-2">
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                  <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
+                    <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
+                  </div>
+                </div>
+                <span className="text-zinc-200">tecnologias utilizadas</span>
+
+
+
+                <footer className="flex gap-6  text-base font-semibold uppercase tracking-[1px] text-zinc-100">
+                  <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <MonitorSmartphone />
+                    acessar app
+                  </a>
+                  <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-3">
+                    <FileCode2 />
+                    acessar código
+                  </a>
+                </footer>
+
+              </div>
+
+
+            </div>{/*card 4*/}
+
+          </div>{/* end cards*/}
+        </div>
+
+        {/*end wrapper 3*/}
+      </section>
 
     </main >
   )
