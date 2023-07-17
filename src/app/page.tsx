@@ -23,12 +23,7 @@ import wordpressTec from '/public/assets/technologies/wordpress.svg';
 import figmaTec from '/public/assets/technologies/figma.svg';
 
 
-import barLevel_5 from '/public/assets/technologies/proficiency-bars/bar-level-5.svg';
-import barLevel_6 from '/public/assets/technologies/proficiency-bars/bar-level-6.svg';
-import barLevel_7 from '/public/assets/technologies/proficiency-bars/bar-level-7.svg';
-import barLevel_8 from '/public/assets/technologies/proficiency-bars/bar-level-8.svg';
-import barLevel_9 from '/public/assets/technologies/proficiency-bars/bar-level-9.svg';
-
+import {BarLevel} from './components/TechnologiesSkills/BarLevel';
 
 import walkProject from '/public/assets/projects/walk.jpg';
 
@@ -207,7 +202,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_9} alt="barra de nível" />
+                    <BarLevel level={9} />                   
                   </footer>
                 </div>
 
@@ -223,7 +218,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_9} alt="barra de nível" />
+                    <BarLevel level={9} />
                   </footer>
                 </div>
 
@@ -238,7 +233,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_5} alt="barra de nível" />
+                    <BarLevel level={5} />
                   </footer>
                 </div>
 
@@ -253,7 +248,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_8} alt="barra de nível" />
+                    <BarLevel level={8} />
                   </footer>
                 </div>
 
@@ -268,7 +263,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_5} alt="barra de nível" />
+                    <BarLevel level={5} />
                   </footer>
                 </div>
 
@@ -283,7 +278,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_5} alt="barra de nível" />
+                    <BarLevel level={5} />
                   </footer>
                 </div>
 
@@ -298,7 +293,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_5} alt="barra de nível" />
+                    <BarLevel level={5} />
                   </footer>
                 </div>
 
@@ -313,7 +308,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_8} alt="barra de nível" />
+                    <BarLevel level={8} />
                   </footer>
                 </div>
 
@@ -328,7 +323,7 @@ export default function Home() {
 
                   <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
                     proficiência
-                    <Image src={barLevel_7} alt="barra de nível" />
+                    <BarLevel level={7} />
                   </footer>
                 </div>
 
