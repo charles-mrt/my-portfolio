@@ -23,7 +23,8 @@ import wordpressTec from '/public/assets/technologies/wordpress.svg';
 import figmaTec from '/public/assets/technologies/figma.svg';
 
 
-import {BarLevel} from './components/TechnologiesSkills/BarLevel';
+import { BarLevel } from './components/TechnologiesSkills/BarLevel';
+import { TechCard } from './components/TechnologiesSkills/TechCard';
 
 import walkProject from '/public/assets/projects/walk.jpg';
 
@@ -192,140 +193,15 @@ export default function Home() {
 
 
                 {/* card 1 */}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>html</strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={htmlTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={9} />                   
-                  </footer>
-                </div>
-
-
-                {/* card 2*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>css</strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={cssTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={9} />
-                  </footer>
-                </div>
-
-                {/* card 3*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>tailwind</strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={tailwindTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={5} />
-                  </footer>
-                </div>
-
-                {/* card 4*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>java<span className="text-zinc-50">script</span></strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={javascriptTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={8} />
-                  </footer>
-                </div>
-
-                {/* card 5*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-custom  shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>react<span className="text-zinc-50 text-xl">.js</span></strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={reactJsTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={5} />
-                  </footer>
-                </div>
-
-                {/* card 6*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>next<span className="text-zinc-50 text-xl">.js</span></strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={nextJsTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={5} />
-                  </footer>
-                </div>
-
-                {/* card 7*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>type<span className="text-zinc-50">script</span></strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={typescriptTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={5} />
-                  </footer>
-                </div>
-
-                {/* card 8*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>word<span className="text-zinc-50">press</span></strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={wordpressTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={8} />
-                  </footer>
-                </div>
-
-                {/* card 9*/}
-                <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
-                  <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
-                    <strong>figma</strong>
-                  </header>
-                  <div className="border-4 border-zinc-700 rounded-md p-4">
-                    <Image src={figmaTec} alt="logo html" className="w-12 h-12" />
-                  </div>
-
-                  <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-                    proficiência
-                    <BarLevel level={7} />
-                  </footer>
-                </div>
+                <TechCard title="html" imageUrl={htmlTec} barLevel={9} />
+                <TechCard title="css" imageUrl={cssTec} barLevel={9} />
+                <TechCard title="tailwind" imageUrl={tailwindTec} barLevel={5} />
+                <TechCard title="javascript" imageUrl={javascriptTec} barLevel={8} />
+                <TechCard title="react" subTitle=".js" imageUrl={reactJsTec} barLevel={5} />
+                <TechCard title="netx" subTitle=".js" imageUrl={nextJsTec} barLevel={5} />
+                <TechCard title="typescript" imageUrl={typescriptTec} barLevel={5} />
+                <TechCard title="wordpress" imageUrl={wordpressTec} barLevel={8} />
+                <TechCard title="figma" imageUrl={figmaTec} barLevel={7} />
 
               </div>
 
