@@ -5,12 +5,18 @@ interface BarLevel {
 
 export function BarLevel({ level }: BarLevel) {
 
+  const maxLevel = 10;
+
+  if (level < 0 || level > maxLevel) {
+    throw new Error(`"The value of 'level' (${level}) is outside the allowed range. Please set a value for the 'level' prop between 0 and 10."`);
+  }
+
   return (
     <div className="flex gap-1.5">
-      {Array.from({ length: 10 }, (_, index) => (
+      {Array.from({ length: maxLevel }, (_, index) => (
         <div
           key={index}
-          className={`w-[11px] h-[3px] ${index < level ? 'bg-green-400' : 'bg-zinc-500'}`}
+          className={`w-[11px] h-[3px] ${index < Math.min(level, 10) ? 'bg-green-400' : 'bg-zinc-500'}`}
         >
         </div>
       ))}
