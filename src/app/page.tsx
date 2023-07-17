@@ -15,8 +15,10 @@ import reactJsTec from '/public/assets/technologies/reactjs.svg';
 import reactNativeTec from '/public/assets/technologies/reactnative.svg';
 import nextJsTec from '/public/assets/technologies/nextjs.svg';
 import typescriptTec from '/public/assets/technologies/typescript.svg';
+
 import nodeJsTec from '/public/assets/technologies/nodejs.svg';
 import phpTec from '/public/assets/technologies/php.svg';
+
 import wordpressTec from '/public/assets/technologies/wordpress.svg';
 import figmaTec from '/public/assets/technologies/figma.svg';
 
@@ -44,6 +46,8 @@ import {
   MonitorSmartphone,
   ArrowBigUpDash
 } from 'lucide-react';
+
+import { ProjectCards } from './components/Projects/ProjectCards'
 
 export default function Home() {
   return (
@@ -352,265 +356,19 @@ export default function Home() {
             </h2>
 
             {/*cards */}
-            <div className="w-full grid grid-cols-[repeat(3,400px)] justify-center gap-4">
-
-              {/*card 1*/}
-              <div className="
-             w-[400px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
-             position:block
-             z-0
-             hover:z-10
-             hover:border-green-400 
-             hover:scale-105 
-             hover:shadow-custom 
-             hover:shadow-green-400 
-             transition-transform duration-200 ease-in-out 
-             transform-gpu will-change-transform 
-             will-change-box-shadow"
-              >
-
-                <header
-                  className="w-full h-96 overflow-hidden "
-                  style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
-                >
-                  {/* <Image src={walkProject} alt="walk landing page" className="w-full" style={{ objectFit:'cover'}} /> */}
-                  <Image src={walkProject} alt="walk landing page" className="w-full" />
-                </header>
-
-                <div className="w-full px-3 flex flex-col gap-3">
-
-                  <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
-
-                  <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
-                    WALK é um projeto de landing page para venda de tênis.
-                    O foco da página é direcionar o usuário a aquisição do produto,
-                    através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-                    Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
-                  </p>
-
-                  <div className="flex gap-2">
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                  </div>
-                  <span className="text-zinc-200">tecnologias utilizadas</span>
-
-
-
-                  <footer className="flex gap-2  text-sm font-semibold uppercase tracking-[1px] text-zinc-100">
-                    <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <MonitorSmartphone />
-                      acessar app
-                    </a>
-                    <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <FileCode2 />
-                      acessar código
-                    </a>
-                  </footer>
-
-                </div>
-
-
-              </div>{/*card 1*/}
-
-              {/*card 2*/}
-              <div className="
-             w-[400px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
-             position:block
-             z-0
-             hover:z-10
-             hover:border-green-400 
-             hover:scale-105 
-             hover:shadow-custom 
-             hover:shadow-green-400 
-             transition-transform duration-200 ease-in-out 
-             transform-gpu will-change-transform 
-             will-change-box-shadow"
-              >
-
-                <header
-                  className="w-full h-96 overflow-hidden "
-                  style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
-                >
-                  <Image src={walkProject} alt="walk landing page" className="w-full" />
-                </header>
-
-                <div className="w-full px-3 flex flex-col gap-3">
-
-                  <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
-
-                  <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
-                    WALK é um projeto de landing page para venda de tênis.
-                    O foco da página é direcionar o usuário a aquisição do produto,
-                    através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-                    Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
-                  </p>
-
-                  <div className="flex gap-2">
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                  </div>
-                  <span className="text-zinc-200">tecnologias utilizadas</span>
-
-
-
-                  <footer className="flex gap-2  text-sm font-semibold uppercase tracking-[1px] text-zinc-100">
-                    <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <MonitorSmartphone />
-                      acessar app
-                    </a>
-                    <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <FileCode2 />
-                      acessar código
-                    </a>
-                  </footer>
-
-                </div>
-
-
-              </div>{/*card 2*/}
-
-
-              {/*card 3*/}
-              <div className="
-              w-[400px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
-              position:block
-             z-0
-             hover:z-10
-             hover:border-green-400 
-             hover:scale-105 
-             hover:shadow-custom 
-             hover:shadow-green-400 
-             transition-transform duration-200 ease-in-out 
-             transform-gpu will-change-transform 
-             will-change-box-shadow"
-              >
-
-                <header
-                  className="w-full h-96 overflow-hidden "
-                  style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
-                >
-                  <Image src={walkProject} alt="walk landing page" className="w-full" />
-                </header>
-
-                <div className="w-full px-3 flex flex-col gap-3">
-
-                  <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
-
-                  <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
-                    WALK é um projeto de landing page para venda de tênis.
-                    O foco da página é direcionar o usuário a aquisição do produto,
-                    através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-                    Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
-                  </p>
-
-                  <div className="flex gap-2">
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                  </div>
-                  <span className="text-zinc-200">tecnologias utilizadas</span>
-
-
-
-                  <footer className="flex gap-2  text-sm font-semibold uppercase tracking-[1px] text-zinc-100">
-                    <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <MonitorSmartphone />
-                      acessar app
-                    </a>
-                    <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <FileCode2 />
-                      acessar código
-                    </a>
-                  </footer>
-
-                </div>
-
-
-              </div>
-              {/*card 3*/}
-
-              {/*card 4*/}
-              {/* <div className="
-             w-[550px] h-[650px] bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
-             hover:border-green-400 
-             hover:scale-105 
-             hover:shadow-custom 
-             hover:shadow-green-400 
-             transition-transform duration-200 ease-in-out 
-             transform-gpu will-change-transform 
-             will-change-box-shadow"
-              >
-
-                <header
-                  className="w-full h-96 overflow-hidden "
-                  style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
-                >
-                  <Image src={walkProject} alt="walk landing page" className="w-full" />
-                </header>
-
-                <div className="w-full px-3 flex flex-col gap-3">
-
-                  <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">walk</h3>
-
-                  <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center text-ellipsis overflow-hidden line-clamp-3">
-                    WALK é um projeto de landing page para venda de tênis.
-                    O foco da página é direcionar o usuário a aquisição do produto,
-                    através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-                    Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis.
-                  </p>
-
-                  <div className="flex gap-2">
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={reactJsTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={cssModuleTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                    <div className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                      <Image src={typescriptTec} alt="logo react" className="w-7 h-7" />
-                    </div>
-                  </div>
-                  <span className="text-zinc-200">tecnologias utilizadas</span>
-
-
-
-                  <footer className="flex gap-2  text-sm font-semibold uppercase tracking-[1px] text-zinc-100">
-                    <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <MonitorSmartphone />
-                      acessar app
-                    </a>
-                    <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-                      <FileCode2 />
-                      acessar código
-                    </a>
-                  </footer>
-
-                </div>
-
-
-              </div> */}
-              {/*card 4*/}
-
+            <div className="
+              w-full 
+              grid 
+              lg:grid-cols-[repeat(2,400px)] 
+              xl:grid-cols-[repeat(3,400px)]               
+              justify-center gap-4"
+            >
+              <ProjectCards />
+              <ProjectCards />
+              <ProjectCards />
+              <ProjectCards />
+              <ProjectCards />
+              <ProjectCards />
             </div>{/* end cards*/}
           </div>
 
@@ -620,14 +378,14 @@ export default function Home() {
 
       </main>
 
-        {/*divider */}
-        <div className="w-full">
-          <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path className="shape-fill fill-current text-zinc-700" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
-          </svg>
-        </div>
+      {/*divider */}
+      <div className="w-full">
+        <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path className="shape-fill fill-current text-zinc-700" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+        </svg>
+      </div>
       <footer className="h-10 w-full p-2 bg-zinc-700 relative  flex items-center justify-between">
-            
+
         <div className="w-[33%]">
           <Image src={charlesLogo} alt="charles portofio logo" />
         </div>
@@ -642,9 +400,9 @@ export default function Home() {
           <a href="" title="facebook Charles"><Facebook /></a>
           <a href="" title="linkedin Charles"><Linkedin /></a>
           <a href="" title="github Charles"><Github /></a>
-          
+
           <div className="border-[1px] border-green-400 rounded-[5px] w-10 h-10 flex items-center justify-center text-green-400 ">
-          <a href=""><ArrowBigUpDash/></a>
+            <a href=""><ArrowBigUpDash /></a>
           </div>
         </div>
       </footer>
