@@ -1,9 +1,9 @@
 
-interface BarLevel {
+interface BarLevelProps {
   level: number
 }
 
-export function BarLevel({ level }: BarLevel) {
+export function BarLevel({ level }: BarLevelProps) {
 
   const maxLevel = 10;
 

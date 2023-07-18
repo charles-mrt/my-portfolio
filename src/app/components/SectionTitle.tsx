@@ -1,9 +1,9 @@
-interface Title {
+interface TitleProps {
   titleName1: string;
   titleName2: string;
 }
 
-export const SectionTitle = ({ titleName1, titleName2 }: Title) => {
+export const SectionTitle = ({ titleName1, titleName2 }: TitleProps) => {
   return (
     <h2 className="text-5xl font-medium first-letter:capitalize text-zinc-50">
       {titleName1}

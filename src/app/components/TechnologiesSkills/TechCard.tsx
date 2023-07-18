@@ -2,16 +2,15 @@ import { BarLevel } from "./BarLevel"
 
 import Image from 'next/image'
 
-interface Card {
+interface CardProps {
   title: string,
   subTitle?: string,
-
   imageUrl: string,
   barLevel : number
 }
 
 
-export const TechCard = ({ title, subTitle, imageUrl, barLevel}: Card) => {
+export const TechCard = ({ title, subTitle, imageUrl, barLevel}: CardProps) => {
 
   return (
     <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3">
