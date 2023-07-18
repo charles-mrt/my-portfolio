@@ -1,18 +1,15 @@
 
 import Image from 'next/image'
 
-
-
 import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
 
 import reactJsTec from '/public/assets/technologies/reactjs.svg';
 
 import typescriptTec from '/public/assets/technologies/typescript.svg';
 
-
-
-
 import walkProject from '/public/assets/projects/walk.jpg';
+
+import { Button } from '../Button';
 
 import {
   FileCode2,
@@ -82,15 +79,26 @@ export function ProjectCards() {
         </div>
 
 
-        <footer className="flex gap-2  text-sm font-semibold uppercase tracking-[1px] text-zinc-100">
-          <a href="" title="contato" className="w-60 h-14  border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-            <MonitorSmartphone />
-            acessar app
-          </a>
-          <a href="" title="contato" className="w-60 h-14 border-2 border-green-400 rounded-[5px] flex items-center justify-center gap-2">
-            <FileCode2 />
-            acessar código
-          </a>
+        <footer className="flex gap-2 ">
+          <Button
+            link={""}
+            title={"acessar app"}
+            fontSize={"text-xs"}
+            size={"w-60 h-14"}
+            bgColor={"bg-transparent"}
+            borderColor={"border-green-400 "}
+            icon={<MonitorSmartphone />}
+          />
+
+          <Button
+            link={""}
+            title={" acessar código"}
+            fontSize={"text-xs"}
+            size={"w-60 h-14"}
+            bgColor={"bg-transparent"}
+            borderColor={"border-green-400 "}
+            icon={<FileCode2 />}
+          />
         </footer>
 
       </div>

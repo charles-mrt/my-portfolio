@@ -44,8 +44,12 @@ import {
 } from 'lucide-react';
 
 import { ProjectCards } from './components/Projects/ProjectCards'
+import { SectionTitle } from './components/SectionTitle';
+
+import { Button } from './components/Button';
 
 export default function Home() {
+
   return (
 
 
@@ -151,20 +155,35 @@ export default function Home() {
 
 
             {/* left */}
-            <div className="w-[29rem] text-zinc-50 flex flex-col gap-11">
+            <div className="w-[29rem]  flex flex-col gap-11">
+              <header>
+                <SectionTitle titleName1="sobre" titleName2="mim." />
+              </header>
 
-              <h2 className="text-5xl font-medium capitalize">
-                sobre
-                <strong className="text-green-400 underline ml-3 normal-case">mim.</strong>
-              </h2>
 
-              <p className="font-normal text-base tracking-[1px]">
+              <p className="font-normal text-base tracking-[1px] text-zinc-50">
                 Sempre tive uma paixão pela criação e inovação, buscando soluções para desafios e necessidades. Essa habilidade me proporcionou uma mentalidade empreendedora e focada em soluções.Atualmente, estou direcionando meus estudos em tecnologias front-end, como JS, ReactJS e TypeScript. Além disso, sou criador do Espaço Conecta, uma plataforma focada na divulgação de cursos e ferramentas para aprimoramento profissional e pessoal. Sou responsável pelo desenvolvimento, manutenção e direcionamento tecnológico da plataforma, bem como pela criação de determinados conteúdos.Meu desejo de ensinar o que aprendi sempre foi uma constante em minha vida e, em breve, pretendo criar vídeo aulas focadas em desenvolvimento web e disponibilizá-las no Youtube para contribuir com a comunidade. Combinando minha paixão por soluções inovadoras e aperfeiçoamento profissional, estou animado para continuar crescendo como profissional e contribuir para o avanço da comunidade tecnológica.
               </p>
 
-              <div className="flex gap-6  text-base font-semibold uppercase tracking-[1px]">
-                <a href="" title="contato" className="w-52 h-16 bg-green-400 border-2 border-green-400 rounded-[5px] flex items-center justify-center">contato</a>
-                <a href="" title="projetos" className="w-52 h-16 bg-zinc-700 border-2 border-zinc-700 rounded-[5px] flex items-center justify-center gap-5"><FileCode2 /> projetos</a>
+
+              <div className="flex gap-6 ">
+                <Button
+                  link={""}
+                  title={"contato"}
+                  fontSize={"text-base"}
+                  size={"w-52 h-16"}
+                  bgColor={"bg-green-400"}
+                  borderColor={"border-green-400"}
+                />
+                <Button
+                  link={""}
+                  title={"projetos"}
+                  fontSize={"text-base"}
+                  size={"w-52 h-16"}
+                  bgColor={"bg-zinc-700"}
+                  borderColor={"border-zinc-700"}
+                  icon={<FileCode2 />}
+                />
               </div>
 
               {/*scroll down indicator */}
@@ -180,18 +199,15 @@ export default function Home() {
 
 
             {/* right */}
-            <div className="w-full text-zinc-50 flex flex-col gap-11 ">
+            <div className="w-full flex flex-col gap-11 ">
 
+              <header>
+                <SectionTitle titleName1="tecnologias que" titleName2="utilizo." />
+              </header>
 
-              <h2 className="text-5xl font-medium ">
-                <span className="capitalize">tecnologias</span> que
-                <strong className="text-green-400 underline ml-3 normal-case">utilizo.</strong>
-              </h2>
 
               {/* cards */}
               <div className="grid grid-cols-3 gap-3">
-
-
                 {/* card 1 */}
                 <TechCard title="html" imageUrl={htmlTec} barLevel={9} />
                 <TechCard title="css" imageUrl={cssTec} barLevel={9} />
@@ -202,7 +218,6 @@ export default function Home() {
                 <TechCard title="typescript" imageUrl={typescriptTec} barLevel={5} />
                 <TechCard title="wordpress" imageUrl={wordpressTec} barLevel={8} />
                 <TechCard title="figma" imageUrl={figmaTec} barLevel={7} />
-
               </div>
 
             </div>
@@ -219,12 +234,10 @@ export default function Home() {
           {/*wrapper 3*/}
           <div className=" h-full w-full max-w-7xl m-auto">
 
-            <h2 className="text-5xl text-center font-medium capitalize text-zinc-50 my-10">
-              projetos
-              <strong className="text-green-400 underline ml-3 normal-case">
-                realizados.
-              </strong>
-            </h2>
+
+            <header className="text-center my-6">
+              <SectionTitle titleName1="projetos" titleName2="realizados." />
+            </header>
 
             {/*cards */}
             <div className="
