@@ -30,7 +30,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel}: Card) => {
       </div>
 
       <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
-        proficiência
+        skill
         <BarLevel level={barLevel} />
       </footer>
     </div>
