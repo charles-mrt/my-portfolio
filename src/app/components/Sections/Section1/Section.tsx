@@ -2,12 +2,8 @@
 import Image from 'next/image'
 import avatar from '/public/assets/avatar.png';
 
-import {
-  Mouse,
-  Triangle,
-} from 'lucide-react';
-
 import { SectionTitle } from '../../SectionTitle';
+import { ScrollDownIndicator } from '../../ScrollDownIndicator';
 
 
 export const Section = () => {
@@ -38,13 +34,7 @@ export const Section = () => {
                           
           <SectionTitle titleName1="front End," titleName2="Developer" />
 
-          {/*scroll down indicator */}
-          <div className="text-green-400 mt-8 items-center flex flex-col ">
-            <Mouse size={31} />
-            <Triangle size={28} className="transform rotate-180 mt-2 opacity-60" />
-            <Triangle size={26} className="transform rotate-180 -mt-3.5 opacity-60" />
-            <Triangle size={24} className="transform rotate-180 -mt-3 opacity-60" />
-          </div>
+          <ScrollDownIndicator />
         </div>
       </div>
 
