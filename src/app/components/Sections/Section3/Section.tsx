@@ -8,14 +8,15 @@ import { ProjectCards } from '../../Projects/ProjectCards'
 import { SectionTitle } from '../../SectionTitle';
 
 export const Section = () => {
+
   return (
-    < section className="bg-cover bg-center h-screen max-h-[1080px]"
-      style={{ backgroundImage: "url('/assets/bg-section-3.jpg')" }
-      }>
 
-      {/*wrapper 3*/}
+    < section 
+      className="bg-cover bg-center h-screen max-h-[1080px]"
+      style={{ backgroundImage: "url('/assets/bg-section-3.jpg')" }}
+    >
+
       < div className=" h-full w-full max-w-7xl m-auto" >
-
 
         <header className="text-center my-10">
           <SectionTitle titleName1="projetos" titleName2="realizados." />
@@ -61,9 +62,9 @@ export const Section = () => {
           />
 
         </div>{/* end cards*/}
+        
       </div >
 
-      {/*end wrapper 3*/}
     </section >
   )
 }
