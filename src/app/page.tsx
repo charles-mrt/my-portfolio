@@ -6,27 +6,21 @@ import avatar from '/public/assets/avatar.png';
 import htmlTec from '/public/assets/technologies/html.svg';
 import cssTec from '/public/assets/technologies/css.svg';
 import tailwindTec from '/public/assets/technologies/tailwind.svg';
-import styledComponentTec from '/public/assets/technologies/stylecomponent.svg';
-import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
+import styledComponentTec from '/public/assets/technologies/styledcomponent.svg';
 import sassTec from '/public/assets/technologies/sass.svg';
-
-import javascriptTec from '/public/assets/technologies/javascript.svg';
-import reactJsTec from '/public/assets/technologies/reactjs.svg';
 import reactNativeTec from '/public/assets/technologies/reactnative.svg';
 import nextJsTec from '/public/assets/technologies/nextjs.svg';
-import typescriptTec from '/public/assets/technologies/typescript.svg';
-
 import nodeJsTec from '/public/assets/technologies/nodejs.svg';
 import phpTec from '/public/assets/technologies/php.svg';
-
 import wordpressTec from '/public/assets/technologies/wordpress.svg';
 import figmaTec from '/public/assets/technologies/figma.svg';
-
-
-import { BarLevel } from './components/TechnologiesSkills/BarLevel';
-import { TechCard } from './components/TechnologiesSkills/TechCard';
+import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
+import reactJsTec from '/public/assets/technologies/reactjs.svg';
+import typescriptTec from '/public/assets/technologies/typescript.svg';
+import javascriptTec from '/public/assets/technologies/javascript.svg';
 
 import walkProject from '/public/assets/projects/walk.jpg';
+
 
 import {
   Menu,
@@ -43,9 +37,10 @@ import {
   ArrowBigUpDash
 } from 'lucide-react';
 
+
+import { TechCard } from './components/TechnologiesSkills/TechCard';
 import { ProjectCards } from './components/Projects/ProjectCards'
 import { SectionTitle } from './components/SectionTitle';
-
 import { Button } from './components/Button';
 
 export default function Home() {
@@ -168,20 +163,20 @@ export default function Home() {
 
               <div className="flex gap-6 ">
                 <Button
-                  link={""}
-                  title={"contato"}
-                  fontSize={"text-base"}
-                  size={"w-52 h-16"}
-                  bgColor={"bg-green-400"}
-                  borderColor={"border-green-400"}
+                  link=""
+                  title="contato"
+                  fontSize="text-base"
+                  size="w-52 h-16"
+                  bgColor="bg-green-400"
+                  borderColor="border-green-400"
                 />
                 <Button
-                  link={""}
-                  title={"projetos"}
-                  fontSize={"text-base"}
-                  size={"w-52 h-16"}
-                  bgColor={"bg-zinc-700"}
-                  borderColor={"border-zinc-700"}
+                  link=""
+                  title="projetos"
+                  fontSize="text-base"
+                  size="w-52 h-16"
+                  bgColor="bg-zinc-700"
+                  borderColor="border-zinc-700"
                   icon={<FileCode2 />}
                 />
               </div>
@@ -235,7 +230,7 @@ export default function Home() {
           <div className=" h-full w-full max-w-7xl m-auto">
 
 
-            <header className="text-center my-6">
+            <header className="text-center my-10">
               <SectionTitle titleName1="projetos" titleName2="realizados." />
             </header>
 
@@ -247,12 +242,37 @@ export default function Home() {
               xl:grid-cols-[repeat(3,400px)]               
               justify-center gap-4"
             >
-              <ProjectCards />
-              <ProjectCards />
-              <ProjectCards />
-              <ProjectCards />
-              <ProjectCards />
-              <ProjectCards />
+              <ProjectCards
+                imageUrl={walkProject.src}
+                alt="walk landing page"
+                title="walk"
+                technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}                
+                description="WALK é um projeto de landing page para venda de tênis.
+                O foco da página é direcionar o usuário a aquisição do produto,
+                através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
+              />
+              <ProjectCards
+                imageUrl={walkProject.src}
+                alt="walk landing page"
+                title="walk"
+                technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}                
+                description="WALK é um projeto de landing page para venda de tênis.
+                O foco da página é direcionar o usuário a aquisição do produto,
+                através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
+              />
+              <ProjectCards
+                imageUrl={walkProject.src}
+                alt="walk landing page"
+                title="walk"
+                technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}                
+                description="WALK é um projeto de landing page para venda de tênis.
+                O foco da página é direcionar o usuário a aquisição do produto,
+                através de uma página atraente, onde os modelos de tênis são exibidos em slide.
+                Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
+              />
+
             </div>{/* end cards*/}
           </div>
 
@@ -291,6 +311,6 @@ export default function Home() {
         </div>
       </footer>
 
-    </div >
+    </div>
   )
 }
