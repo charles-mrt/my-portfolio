@@ -1,6 +1,6 @@
 interface Title {
-  titleName1: string,
-  titleName2: string,
+  titleName1: string;
+  titleName2: string;
 }
 
 export const SectionTitle = ({ titleName1, titleName2 }: Title) => {

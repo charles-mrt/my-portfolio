@@ -2,14 +2,13 @@
 import { ReactElement } from 'react';
 
 interface ButtonProps {
-  link: string,
-  title: string,
-  fontSize:string,
-  icon?: ReactElement,
-  size?: string,
+  link: string;
+  title: string;
+  fontSize:string;
+  icon?: ReactElement;
+  size?: string;
   bgColor: string;
   borderColor: string;
-
 }
 
 export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor }: ButtonProps) => {
