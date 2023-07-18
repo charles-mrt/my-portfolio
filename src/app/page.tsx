@@ -92,17 +92,13 @@ export default function Home() {
                   seja bem vindo ao meu portfólio
                 </h1>
 
-                <p className="text-xl font-semibold">
+                <p className="text-xl font-semibold tracking-[1px]">
                   Me chamo
                   <strong className="capitalize"> charles martins </strong>
                   sou,
                 </p>
-
-                <p className="text-5xl font-medium capitalize">
-                  front end,
-                  <strong className="text-green-400 underline ml-3">developer</strong>
-                </p>
-
+                                
+                <SectionTitle titleName1="front End," titleName2="Developer" />
 
                 {/*scroll down indicator */}
                 <div className="text-green-400 mt-8 items-center flex flex-col ">
