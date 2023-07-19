@@ -25,11 +25,9 @@ import { Button } from '../../Button';
 
 export const Section = () => {
   return (
-    <section
-      className="bg-cover bg-center h-full max-h-[1080px] w-full flex justify-center"
-      style={{ backgroundImage: "url('/assets/bg-section-2.jpg')" }}
+    <section 
+      className="w-full h-full max-h-[1080px] flex justify-center"      
     >
-      
       <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start">
 
         {/* left */}

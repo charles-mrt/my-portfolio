@@ -12,11 +12,9 @@ export const Section = () => {
   return (
 
     < section 
-      className="bg-cover bg-center h-screen max-h-[1080px]"
-      style={{ backgroundImage: "url('/assets/bg-section-3.jpg')" }}
+      className="w-full h-auto bg-zinc-900 bg-opacity-90 py-10"
     >
-
-      < div className=" h-full w-full max-w-7xl m-auto" >
+      <div className="w-full max-w-7xl m-auto">
 
         <header className="text-center my-10">
           <SectionTitle titleName1="projetos" titleName2="realizados." />
@@ -60,6 +58,7 @@ export const Section = () => {
           através de uma página atraente, onde os modelos de tênis são exibidos em slide.
           Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
           />
+         
 
         </div>{/* end cards*/}
         
