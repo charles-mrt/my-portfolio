@@ -22,7 +22,7 @@ export default function RootLayout({
         className={
          `${nunito.variable} font-sans bg-transparent bg-no-repeat bg-cover bg-center bg-fixed w-full h-screen`
         }
-        style={{ backgroundImage: "url('/assets/bg-section-2.jpg')" }}
+        style={{ backgroundImage: "url('/assets/background.jpg')" }}
       >
           {children}
       </body>
