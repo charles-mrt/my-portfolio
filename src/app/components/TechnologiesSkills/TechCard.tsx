@@ -3,10 +3,10 @@ import { BarLevel } from "./BarLevel"
 import Image from 'next/image'
 
 interface CardProps {
-  title: string,
-  subTitle?: string,
-  imageUrl: string,
-  barLevel : number
+  title: string;
+  subTitle?: string;
+  imageUrl: string;
+  barLevel : number;
 }
 
 
