@@ -10,11 +10,15 @@ import {
 } from 'lucide-react';
 
 
-export const FooterInfo = () => {
+interface FooterInfoProps {
+  imageUrl: string,
+}
+
+export const FooterInfo = ({imageUrl}:FooterInfoProps) => {
   return (
     <>
       <div className="w-[33%]">
-        <Image src={charlesLogo} alt="charles portofio logo" />
+        <Image src={imageUrl} alt="charles portfolio logo" />
       </div>
 
       <p className="text-xs text-zinc-400 uppercase font-medium">
