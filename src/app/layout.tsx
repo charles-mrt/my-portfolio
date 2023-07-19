@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body 
         className={
-         `${nunito.variable} font-sans bg-zinc-900`
+         `${nunito.variable} font-sans bg-transparent bg-no-repeat bg-cover bg-center bg-fixed w-full h-screen`
         }
+       
+         style={{ backgroundImage: "url('/assets/bg-section-2.jpg')" }}
       >
           {children}
       </body>
