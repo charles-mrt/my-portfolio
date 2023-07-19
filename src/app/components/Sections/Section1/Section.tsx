@@ -44,14 +44,12 @@ export const Section = () => {
             alt="imagem do Charles"
           />
         </div>
-
       </div>
 
       <div className="absolute z-40 bottom-0 w-full">      
         <WaveDivider bgTextColor="text-zinc-800" />
       </div>
-      
-
+    
     </section>
   )
 }

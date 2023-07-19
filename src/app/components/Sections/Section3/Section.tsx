@@ -12,6 +12,7 @@ export const Section = () => {
   return (
 
     < section 
+      id="project"
       className="w-full h-auto bg-zinc-900 bg-opacity-90 py-10"
     >
       <div className="w-full max-w-7xl m-auto">

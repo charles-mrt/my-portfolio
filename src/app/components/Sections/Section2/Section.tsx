@@ -22,12 +22,13 @@ import { TechCard } from '../../TechnologiesSkills/TechCard';
 import { SectionTitle } from '../../SectionTitle';
 import { Button } from '../../Button';
 
-
 export const Section = () => {
   return (
     <section 
-      className="w-full h-full max-h-[1080px] flex justify-center"      
-    >
+      id="about-me"
+      className="w-full h-full max-h-[1080px] flex justify-center py-10"      
+    >    
+
       <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start">
 
         {/* left */}
