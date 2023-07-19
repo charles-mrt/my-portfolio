@@ -10,27 +10,28 @@ import { Section as Section3 } from './components/Sections/Section3/Section';
 
 
 export default function Home() {
-
   return (
-
     <div className="min-h-screen flex flex-col">
 
       <header className="h-10 w-screen p-2 flex justify-between items-center bg-transparent fixed z-50">
         <Menu />
       </header>
 
-      <main className="flex-grow h-full mb-60">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-      </main>
+      <div className="flex flex-col flex-grow">
+        <main className="flex-grow">
+          <Section1 />
+          <Section2 />
+          <Section3 />
+        </main>
 
-      < WaveDivider />
-
-      <footer className="h-10 w-full p-2 bg-zinc-700 relative  flex items-center justify-between">
-        <FooterInfo />
-      </footer>
+        <div className="w-full bg-zinc-900 bg-opacity-90">
+          <WaveDivider bgTextColor="text-zinc-700" />
+          <footer className="h-10 w-full p-2 bg-zinc-700 relative flex items-center justify-between">
+            <FooterInfo />
+          </footer>
+        </div>
+      </div>
 
     </div>
-  )
+  );
 }
