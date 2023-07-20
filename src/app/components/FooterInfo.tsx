@@ -14,7 +14,7 @@ interface FooterInfoProps {
   imageUrl: string,
 }
 
-export const FooterInfo = ({imageUrl}:FooterInfoProps) => {
+export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
   return (
     <>
       <div className="w-[33%]">
@@ -26,10 +26,13 @@ export const FooterInfo = ({imageUrl}:FooterInfoProps) => {
       </p>
 
       <div className="w-[33%] flex items-end justify-end gap-5 text-zinc-100 mb-5">
-        <SocialMediaIcons />
-        <div className="border-[1px] border-green-400 rounded-[5px] w-10 h-10 flex items-center justify-center text-green-400 ">
-          <a href="#anchor-top"><ArrowBigUpDash /></a>
-        </div>
+        <SocialMediaIcons />    
+          <a
+            href="#anchor-top"
+            className="w-10 h-10 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center"
+          >
+            <ArrowBigUpDash />
+          </a>       
       </div>
     </>
   )
