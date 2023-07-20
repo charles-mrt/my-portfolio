@@ -60,7 +60,7 @@ export const Section = () => {
               icon={<FileCode2 />}
             />
           </div>
-          < ScrollDownIndicator />
+          < ScrollDownIndicator idName="project"/>
         </div>
 
         {/* right */}

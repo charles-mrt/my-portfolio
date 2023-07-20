@@ -32,7 +32,7 @@ export const Section = () => {
             </p>
 
             <SectionTitle titleName1="front End," titleName2="Developer" />
-            <ScrollDownIndicator />
+            <ScrollDownIndicator idName="about-me"/>
           </div>
         </div>
 
