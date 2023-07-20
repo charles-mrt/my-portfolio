@@ -29,7 +29,7 @@ export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
         <SocialMediaIcons />    
           <a
             href="#anchor-top"
-            className="w-10 h-10 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center"
+            className="w-10 h-10 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"
           >
             <ArrowBigUpDash />
           </a>       
