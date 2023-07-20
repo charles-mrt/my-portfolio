@@ -15,6 +15,7 @@ import javascriptTec from '/public/assets/technologies/javascript.svg';
 import { ScrollDownIndicator } from '../../ScrollDownIndicator';
 
 import {
+  MessagesSquare,
   FileCode2,
 } from 'lucide-react';
 
@@ -49,6 +50,7 @@ export const Section = () => {
               size="w-52 h-16"
               bgColor="bg-green-400"
               borderColor="border-green-400"
+              icon={<MessagesSquare />}
             />
             <Button
               link=""

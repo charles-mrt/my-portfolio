@@ -1,7 +1,14 @@
 
 import Image from 'next/image'
-import { MenuLink } from './MenuNav';
+import { MenuNav } from './MenuNav';
 import { SocialMediaIcons } from '../SocialMediaIcons';
+
+
+import {
+  MessagesSquare,
+  User2,
+  FileCode2
+} from 'lucide-react';
 
 interface MenuProps {
   imageUrl: string;
@@ -16,9 +23,9 @@ export const Menu = ({ imageUrl, color}: MenuProps) => {
       </div>
 
       <nav className=" flex justify-center w-auto gap-6">
-        < MenuLink linkText="sobre mim" textAnchor="about-me" />
-        < MenuLink linkText="projetos" textAnchor="project" />
-        < MenuLink linkText="contato" textAnchor="contact" />
+        < MenuNav icon={<User2  size={20} strokeWidth={2}/>} linkText="sobre mim" textAnchor="about-me" />
+        < MenuNav icon={<FileCode2  size={20} strokeWidth={2}/>} linkText="projetos" textAnchor="project" />
+        < MenuNav icon={<MessagesSquare size={20} strokeWidth={2}/>} linkText="contato" textAnchor="contact" />
       </nav>
 
       <div className={`w-[33%] flex justify-end gap-5 ${color}`}>
