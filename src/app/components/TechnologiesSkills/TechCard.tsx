@@ -20,7 +20,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
       hover:scale-105 
       hover:shadow-custom 
       hover:shadow-green-400 
-      transition-transform duration-400 ease-in-out 
+      transition-transform duration-200 ease-linear
       transform-gpu will-change-transform 
       will-change-box-shadow"
     >

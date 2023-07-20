@@ -38,7 +38,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
     hover:scale-105 
     hover:shadow-custom 
     hover:shadow-green-400 
-    transition-transform duration-200 ease-in-out 
+    transition-transform duration-200 ease-linear
     transform-gpu will-change-transform 
     will-change-box-shadow"
     >
