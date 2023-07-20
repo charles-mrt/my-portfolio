@@ -28,7 +28,7 @@ export const FooterInfo = ({imageUrl}:FooterInfoProps) => {
       <div className="w-[33%] flex items-end justify-end gap-5 text-zinc-100 mb-5">
         <SocialMediaIcons />
         <div className="border-[1px] border-green-400 rounded-[5px] w-10 h-10 flex items-center justify-center text-green-400 ">
-          <a href=""><ArrowBigUpDash /></a>
+          <a href="#anchor-top"><ArrowBigUpDash /></a>
         </div>
       </div>
     </>

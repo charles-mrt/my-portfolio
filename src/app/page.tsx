@@ -13,7 +13,9 @@ import { Section as Section3 } from './components/Sections/Section3/Section';
 export default function Home() {
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div
+      id="anchor-top"
+      className="min-h-screen flex flex-col">
       <Header />
 
       <div className="flex flex-col flex-grow">
