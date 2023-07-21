@@ -22,6 +22,7 @@ import {
 import { TechCard } from '../../TechnologiesSkills/TechCard';
 import { SectionTitle } from '../../SectionTitle';
 import { Button } from '../../Button';
+import { Modal } from '../../Modal';
 
 export const Section = () => {
   return (
@@ -62,6 +63,7 @@ export const Section = () => {
               icon={<FileCode2 />}
             />
           </div>
+          <Modal />
           < ScrollDownIndicator idName="project"/>
         </div>
 
