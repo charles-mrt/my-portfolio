@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { SocialMediaIcons } from '../components/SocialIcons/ListSocialMediaIcon';
+import { ListSocialMediaIcon } from '../components/SocialIcons/ListSocialMediaIcon';
 
 import {
   ArrowBigUpDash
@@ -25,7 +25,7 @@ export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
       </p>
 
       <div className="w-[33%] flex items-end justify-end gap-5 text-zinc-100 mb-5">
-        <SocialMediaIcons />    
+        <ListSocialMediaIcon />    
           <a
             href="#anchor-top"
             className="w-10 h-10 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"

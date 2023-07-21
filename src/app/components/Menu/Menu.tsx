@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import { MenuNav } from './MenuNav';
-import { SocialMediaIcons } from '../SocialIcons/ListSocialMediaIcon';
+import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon';
 
 
 import {
@@ -29,7 +29,7 @@ export const Menu = ({ imageUrl, color}: MenuProps) => {
       </nav>
 
       <div className={`w-[33%] flex justify-end gap-5 ${color}`}>
-        <SocialMediaIcons />
+        <ListSocialMediaIcon />
       </div>
     </>
   )

@@ -15,7 +15,7 @@ const socialLinks = {
 }
 
 
-export const SocialMediaIcons = () => {
+export const ListSocialMediaIcon = () => {
   return (
     <>
       <SocialMediaIcon url={socialLinks.isntagram} title="instagram charles" icon={Instagram} />
