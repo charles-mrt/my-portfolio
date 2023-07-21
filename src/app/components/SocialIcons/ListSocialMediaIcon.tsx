@@ -14,14 +14,18 @@ const socialLinks = {
   github: "https://github.com/charles-mrt",
 }
 
+interface ListSocialMediaIconProps {
+  selector?: string;
+  iconSize?: number;
+}
 
-export const ListSocialMediaIcon = () => {
+export const ListSocialMediaIcon = ({ selector, iconSize }: ListSocialMediaIconProps) => {
   return (
     <>
-      <SocialMediaIcon url={socialLinks.isntagram} title="instagram charles" icon={Instagram} />
-      <SocialMediaIcon url={socialLinks.facebook} title="facebook charles" icon={Facebook} />
-      <SocialMediaIcon url={socialLinks.linkedin} title="linkedin charles" icon={Linkedin} />
-      <SocialMediaIcon url={socialLinks.github} title="github charles" icon={Github} />
+      <SocialMediaIcon url={socialLinks.isntagram} title="instagram charles" icon={Instagram} extraSelectors={selector} size={iconSize}/>
+      <SocialMediaIcon url={socialLinks.facebook} title="facebook charles" icon={Facebook} extraSelectors={selector} size={iconSize}/>
+      <SocialMediaIcon url={socialLinks.linkedin} title="linkedin charles" icon={Linkedin} extraSelectors={selector} size={iconSize}/>
+      <SocialMediaIcon url={socialLinks.github} title="github charles" icon={Github} extraSelectors={selector} size={iconSize}/>
     </>
   )
 }
