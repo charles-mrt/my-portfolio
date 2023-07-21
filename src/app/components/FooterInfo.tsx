@@ -1,9 +1,8 @@
 
 
 import Image from 'next/image'
-import charlesLogo from '/public/assets/logo.png';
 
-import { SocialMediaIcons } from './ListSocialMediaIcon';
+import { SocialMediaIcons } from '../components/SocialIcons/ListSocialMediaIcon';
 
 import {
   ArrowBigUpDash

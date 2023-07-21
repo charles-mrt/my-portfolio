@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import { MenuNav } from './MenuNav';
-import { SocialMediaIcons } from '../ListSocialMediaIcon';
+import { SocialMediaIcons } from '../SocialIcons/ListSocialMediaIcon';
 
 
 import {

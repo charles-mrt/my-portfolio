@@ -1,4 +1,4 @@
-import { SocialMediaIcon } from './SocialMedia';
+import { SocialMediaIcon } from './SocialMediaIcon';
 
 import {
   Instagram,
