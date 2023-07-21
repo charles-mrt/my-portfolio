@@ -1,6 +1,4 @@
-import { link } from 'fs';
 import { SocialMediaIcon } from './SocialMedia';
-
 
 import {
   Instagram,
@@ -15,7 +13,6 @@ const socialLinks = {
   linkedin: "https://www.linkedin.com/in/charles-martins-tecnologia-da-informacao/",
   github: "https://github.com/charles-mrt",
 }
-
 
 
 export const SocialMediaIcons = () => {
