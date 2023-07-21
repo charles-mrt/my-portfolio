@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import charlesLogo from '/public/assets/logo.png';
 
-import { SocialMediaIcons } from './SocialMediaIcons';
+import { SocialMediaIcons } from './ListSocialMediaIcon';
 
 import {
   ArrowBigUpDash
