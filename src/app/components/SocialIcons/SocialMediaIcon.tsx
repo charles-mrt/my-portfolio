@@ -4,9 +4,11 @@ interface SocialMediaIconProps {
   url: string;
   title: string;
   icon: Icon;
+  size?: number;
+  extraSelectors?: string;
 }
 
-export const SocialMediaIcon = ({ url, title, icon: Icon }: SocialMediaIconProps) => {
+export const SocialMediaIcon = ({ url, title, icon: Icon, size, extraSelectors}: SocialMediaIconProps) => {
 
   return (
 
@@ -15,9 +17,9 @@ export const SocialMediaIcon = ({ url, title, icon: Icon }: SocialMediaIconProps
       title={title} 
       target="_blank " 
       rel="noreferrer noopener"
-      className="ease-linear duration-200 hover:scale-125"
+      className={`ease-linear duration-200 hover:scale-125 ${extraSelectors}`}
     >
-      <Icon />
+      <Icon size={size} />
     </a>
 
   )
