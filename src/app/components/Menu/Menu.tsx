@@ -9,6 +9,8 @@ import {
   User2,
   FileCode2
 } from 'lucide-react';
+import { useState } from 'react';
+import { Modal } from '../Modal';
 
 interface MenuProps {
   imageUrl: string;
@@ -16,6 +18,15 @@ interface MenuProps {
 }
 export const Menu = ({ imageUrl, color}: MenuProps) => {
 
+  const [showModal, setShowModal] = useState(false);
+
+  const openModalHandle = () => {
+    setShowModal(true);
+  };
+
+  const closeModalHandle = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <div className="w-[33%]">
@@ -25,12 +36,14 @@ export const Menu = ({ imageUrl, color}: MenuProps) => {
       <nav className=" flex justify-center w-auto gap-6">
         < MenuNav icon={<User2  size={20} strokeWidth={2}/>} linkText="sobre mim" textAnchor="about-me" />
         < MenuNav icon={<FileCode2  size={20} strokeWidth={2}/>} linkText="projetos" textAnchor="project" />
-        < MenuNav icon={<MessagesSquare size={20} strokeWidth={2}/>} linkText="contato" textAnchor="contact" />
+        < MenuNav icon={<MessagesSquare size={20} strokeWidth={2}/>} linkText="contato" textAnchor="contato" onClickHandle={openModalHandle} />
       </nav>
 
       <div className={`w-[33%] flex justify-end gap-5 ${color}`}>
         <ListSocialMediaIcon />
       </div>
+
+      {showModal && <Modal display="fixed" onClose={closeModalHandle} />}
     </>
   )
 }
