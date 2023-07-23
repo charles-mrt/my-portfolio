@@ -9,10 +9,11 @@ interface ButtonProps {
   size?: string;
   bgColor: string;
   borderColor: string;
+  onClickHandle?: () => void;
 }
 
-export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor }: ButtonProps) => {
-
+export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor, onClickHandle }: ButtonProps) => {
+ 
   return (
     <a
       href={link}
@@ -32,6 +33,7 @@ export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor
         duration-300
       hover:bg-zinc-700
        hover:border-green-400`}
+      onClick={onClickHandle}
     >
       {icon}
       {title}
