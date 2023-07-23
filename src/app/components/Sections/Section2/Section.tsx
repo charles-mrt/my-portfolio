@@ -1,6 +1,11 @@
 
 "use client"
 
+import {
+  MessagesSquare,
+  FileCode2,
+} from 'lucide-react';
+
 import htmlTec from '/public/assets/technologies/html.svg';
 import cssTec from '/public/assets/technologies/css.svg';
 import tailwindTec from '/public/assets/technologies/tailwind.svg';
@@ -15,29 +20,17 @@ import javascriptTec from '/public/assets/technologies/javascript.svg';
 
 import { ScrollDownIndicator } from '../../ScrollDownIndicator';
 
-import {
-  MessagesSquare,
-  FileCode2,
-} from 'lucide-react';
-
 import { TechCard } from '../../TechnologiesSkills/TechCard';
 import { SectionTitle } from '../../SectionTitle';
 import { Button } from '../../Button';
-import { Modal } from '../../Modal';
 
-import { useState } from 'react';
+import { Modal } from '../../Modal';
+import {useModal} from '../../../hooks/useModal';
+
 
 export const Section = () => {
 
-  const [showModal, setShowModal] = useState(false);
-
-  const openModalHandle = () => {
-    setShowModal(true);
-  };
-
-  const closeModalHandle = () => {
-    setShowModal(false);
-  };
+  const { showModal, openModal, closeModal } = useModal();
 
   return (
     <section 
@@ -66,7 +59,7 @@ export const Section = () => {
               bgColor="bg-green-400"
               borderColor="border-green-400"
               icon={<MessagesSquare />}
-              onClickHandle={openModalHandle}
+              onClickHandle={openModal}
             />
             <Button
               link=""
@@ -78,7 +71,7 @@ export const Section = () => {
               icon={<FileCode2 />}
             />
           </div>
-          {showModal && <Modal display="fixed" onClose={closeModalHandle} />}
+          {showModal && <Modal display="fixed" onClose={closeModal} />}
 
           < ScrollDownIndicator idName="project"/>
         </div>
