@@ -1,4 +1,5 @@
 
+"use client"
 
 import htmlTec from '/public/assets/technologies/html.svg';
 import cssTec from '/public/assets/technologies/css.svg';
@@ -24,7 +25,20 @@ import { SectionTitle } from '../../SectionTitle';
 import { Button } from '../../Button';
 import { Modal } from '../../Modal';
 
+import { useState } from 'react';
+
 export const Section = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModalHandle = () => {
+    setShowModal(true);
+  };
+
+  const closeModalHandle = () => {
+    setShowModal(false);
+  };
+
   return (
     <section 
       id="about-me"
@@ -45,13 +59,14 @@ export const Section = () => {
 
           <div className="flex gap-6 ">
             <Button
-              link=""
+              link="#contato"
               title="contato"
               fontSize="text-base"
               size="w-52 h-16"
               bgColor="bg-green-400"
               borderColor="border-green-400"
               icon={<MessagesSquare />}
+              onClickHandle={openModalHandle}
             />
             <Button
               link=""
@@ -63,7 +78,8 @@ export const Section = () => {
               icon={<FileCode2 />}
             />
           </div>
-          <Modal />
+          {showModal && <Modal display="fixed" onClose={closeModalHandle} />}
+
           < ScrollDownIndicator idName="project"/>
         </div>
 
