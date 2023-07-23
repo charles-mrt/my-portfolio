@@ -62,7 +62,7 @@ export const Section = () => {
               onClickHandle={openModal}
             />
             <Button
-              link=""
+              link="#project"
               title="projetos"
               fontSize="text-base"
               size="w-52 h-16"
