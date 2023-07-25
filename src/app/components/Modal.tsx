@@ -1,5 +1,4 @@
 import { ListSocialMediaIcon } from "./SocialIcons/ListSocialMediaIcon"
-
 import { XCircle } from 'lucide-react'
 
 interface ModalProps {
