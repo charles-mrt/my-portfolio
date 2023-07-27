@@ -19,6 +19,9 @@ module.exports = {
           400: '#2AD883',
         },
       },
+      screens: {
+        'laptop': '900px',
+      },
     },
   },
   plugins: [],
