@@ -25,7 +25,7 @@ export const Menu = ({ imageUrl, color}: MenuProps) => {
   return (
     <>
       <div className="w-[33%]">
-        <Image src={imageUrl} alt="charles portfolio logo" />
+        <Image src={imageUrl} alt="charles portfolio logo" className="w-36 h-auto"/>
       </div>
 
       <nav className=" flex justify-center w-auto gap-6">
@@ -40,7 +40,7 @@ export const Menu = ({ imageUrl, color}: MenuProps) => {
       </nav>
 
       <div className={`w-[33%] flex justify-end gap-5 ${color}`}>
-        <ListSocialMediaIcon />
+        <ListSocialMediaIcon iconSize={25}/>
       </div>
 
       {showModal && <Modal display="fixed" onClose={closeModal} />}

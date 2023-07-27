@@ -17,7 +17,7 @@ export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
   return (
     <>
       <div className="w-[33%]">
-        <Image src={imageUrl} alt="charles portfolio logo" />
+        <Image src={imageUrl} alt="charles portfolio logo" className="w-36 h-auto" />
       </div>
 
       <p className="text-xs text-zinc-400 uppercase font-medium">
@@ -25,10 +25,10 @@ export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
       </p>
 
       <div className="w-[33%] flex items-end justify-end gap-5 text-zinc-100 mb-5">
-        <ListSocialMediaIcon />    
+        <ListSocialMediaIcon iconSize={25}/>    
           <a
             href="#anchor-top"
-            className="w-10 h-10 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"
+            className="w-12 h-12 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"
           >
             <ArrowBigUpDash />
           </a>       

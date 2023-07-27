@@ -13,7 +13,7 @@ interface CardProps {
 export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => {
 
   return (
-    <div className="bg-zinc-900 w-50 h-auto rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3
+    <div className="bg-zinc-900 w-full h-full rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3
       hover:z-10
       hover:border-green-400 
       hover:rotate-2
@@ -38,7 +38,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
         <Image src={imageUrl} alt={`logo ${title}`} className="w-12 h-12" />
       </div>
 
-      <footer className="text-zinc-400 text-xs uppercase tracking-[1px]">
+      <footer className="text-zinc-50 text-xs uppercase tracking-[1px]">
         skill
         <BarLevel level={barLevel} />
       </footer>

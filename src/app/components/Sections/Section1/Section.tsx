@@ -8,36 +8,59 @@ import { ScrollDownIndicator } from '../../ScrollDownIndicator';
 import { WaveDivider } from '../../WaveDivider';
 
 export const Section = () => {
+
+  const screenSize = "laptop"; //width = 900px
+
+
   return (
     <section
       className="relative bg-no-repeat bg-cover bg-center bg-fixed h-screen max-h-[1080px] flex flex-end justify-center"
       style={{ backgroundImage: "url('/assets/bg-section-1.jpg')" }}
     >
-      <div className="h-full w-full max-w-7xl  grid grid-cols-2 items-center justify-items-center relative overflow-hidden">
+
+      <div className="
+      h-full 
+      w-full 
+      max-w-7xl  
+      grid 
+      grid-cols-1 
+      items-center 
+      justify-items-center 
+      relative 
+      overflow-hidden
+      laptop:grid-cols-2
+      ">
 
         {/* left */}
         <div className="flex flex-col gap-2 items-center">
 
           <div className="text-zinc-50 flex flex-col gap-2 items-center">
 
-            <h1 className="font-semibold uppercase text-base">
-              <span className="text-xl">olá</span>,
+            <h1 className="font-semibold uppercase text-base text-center sm:text-xl">
+              <span className="text-xl sm:text-2xl">olá</span>,
               seja bem vindo ao meu portfólio
             </h1>
 
-            <p className="text-xl font-semibold tracking-[1px]">
+            <div className="w-44 h-44 my-5 overflow-hidden rounded-full border-2 border-green-400 bg-zinc-500 laptop:hidden">
+              <Image               
+                src={avatar}
+                alt="imagem do Charles"
+              />
+            </div>
+
+            <p className="text-xl font-semibold tracking-[1px] text-center sm:text-2xl">
               Me chamo
               <strong className="capitalize"> charles martins </strong>
               sou,
             </p>
 
-            <SectionTitle titleName1="front End," titleName2="Developer" />
-            <ScrollDownIndicator idName="about-me"/>
+            <SectionTitle titleName1="front End," titleName2="Developer" fontSize="sm:text-6xl" />
+            <ScrollDownIndicator idName="about-me" />
           </div>
         </div>
 
         {/* right */}
-        <div className="max-w-md h-full flex items-end">
+        <div className="hidden laptop:flex items-end max-w-md h-full">
           <Image
             id="teste"
             src={avatar}
@@ -46,10 +69,10 @@ export const Section = () => {
         </div>
       </div>
 
-      <div className="absolute z-40 bottom-0 w-full">      
+      <div className="absolute z-40 bottom-0 w-full">
         <WaveDivider bgTextColor="text-zinc-800" />
       </div>
-    
+
     </section>
   )
 }
