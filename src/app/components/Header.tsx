@@ -1,6 +1,7 @@
-
 "use client";
-import { Menu } from './Menu/Menu';
+import { MenuMobile } from './Menu/MenuMobile';
+import { MenuDesktop } from './Menu/MenuDesktop';
+
 import charlesLogo from '/public/assets/logo.svg';
 
 import { useState, useEffect } from 'react';
@@ -23,9 +24,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`${bgColor ? "bg-zinc-800 border-b-[1px]" : "bg-transparent"}  border-green-400 h-13 w-screen py-2 px-6 flex justify-between items-center fixed z-50`}
+      className={`${bgColor ? "bg-zinc-800 border-b-[1px]" : "bg-transparent"}  border-green-400 h-12 w-screen fixed z-50`}
     >
-      <Menu imageUrl={charlesLogo} color={`${bgColor ? "text-zinc-50" : "text-zinc-900"}`} />
+      <MenuMobile/>
+      <MenuDesktop imageUrl={charlesLogo} color={`${bgColor ? "text-zinc-50" : "text-zinc-900"}`} />
     </header>
   )
 }
