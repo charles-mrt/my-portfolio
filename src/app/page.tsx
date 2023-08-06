@@ -27,7 +27,8 @@ export default function Home() {
 
         <div className="w-full bg-zinc-900 bg-opacity-90">
           <WaveDivider bgTextColor="text-zinc-700" />
-          <footer className="h-10 w-full p-2 bg-zinc-700 relative flex items-center justify-between">
+
+          <footer className="h-10 w-full px-2 pb-6 bg-zinc-700 relative flex items-center justify-between">
             <FooterInfo imageUrl={charlesLogo} />
           </footer>
         </div>

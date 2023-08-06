@@ -15,24 +15,26 @@ interface FooterInfoProps {
 
 export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
   return (
-    <>
-      <div className="w-[33%]">
+    <div className="w-full flex flex-col-reverse items-center gap-6 laptop:justify-between laptop:flex-row">
+
+      <div className="hidden laptop:block">
         <Image src={imageUrl} alt="charles portfolio logo" className="w-36 h-auto" />
       </div>
 
-      <p className="text-xs text-zinc-400 uppercase font-medium">
+      <p className="text-xs text-zinc-400 text-center uppercase font-medium">
         Copyright © 2023 charles martins. All rights reserved
       </p>
 
-      <div className="w-[33%] flex items-end justify-end gap-5 text-zinc-100 mb-5">
-        <ListSocialMediaIcon iconSize={25}/>    
-          <a
-            href="#anchor-top"
-            className="w-12 h-12 border-[1px] border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"
-          >
-            <ArrowBigUpDash />
-          </a>       
+      <div className="flex items-center justify-end gap-5 text-zinc-100">
+        <ListSocialMediaIcon iconSize={25} />
+        <a
+          href="#anchor-top"
+          className="w-11 h-11 border-2 border-green-400 rounded-[5px] text-green-400 flex items-center justify-center ease-linear duration-300 hover:bg-green-400 hover:text-zinc-50"
+        >
+          <ArrowBigUpDash />
+        </a>
       </div>
-    </>
+
+    </div>
   )
 }
