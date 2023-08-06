@@ -50,7 +50,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
           {description}
         </p>
 
-        <div>
+        <div className="flex flex-col items-center laptop:items-start ">
           <div className="flex gap-2 mb-1">
 
             {technologiesListImage.map((techImageUrl, index) => (
