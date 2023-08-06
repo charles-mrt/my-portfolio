@@ -20,11 +20,13 @@ export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor
       title={title}
       className={`${size} ${fontSize} ${bgColor} ${borderColor}
         text-zinc-50 
+        text-center
         font-semibold 
         uppercase 
         tracking-[1px] 
         border-2 
         rounded-[5px] 
+        px-2
         flex 
         items-center 
         justify-center 
