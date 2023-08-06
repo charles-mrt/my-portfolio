@@ -46,11 +46,13 @@ export const MenuMobile = ({ imageUrl }: MenuMenuMobileProps) => {
             icon={<User2 size={20} strokeWidth={2} />}
             linkText="sobre mim"
             textAnchor="about-me"
+            onClickHandle = {()=> setOpenMenu(false)}
           />
           < MenuNav
             icon={<FileCode2 size={20} strokeWidth={2} />}
             linkText="projetos"
             textAnchor="project"
+            onClickHandle = {()=> setOpenMenu(false)}
           />
           < MenuNav
             icon={<MessagesSquare size={20} strokeWidth={2} />}
