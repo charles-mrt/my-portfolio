@@ -32,14 +32,14 @@ export const MenuMobile = ({ imageUrl }: MenuMenuMobileProps) => {
         <Image src={imageUrl} alt="charles portfolio logo" className="w-20 h-auto" />
 
         {openMenu ? (
-          <CloseMenuIcon className="text-zinc-50 absolute top-2 right-4 z-50" size={30} onClick={() => setOpenMenu(false)} />
+          <CloseMenuIcon className="text-zinc-50 absolute top-0 py-[2px] right-4 z-50" size={30} onClick={() => setOpenMenu(false)} />
         ) : (
           <OpenMenuIcon className="text-zinc-50 mr-2" size={30} onClick={() => setOpenMenu(true)} />
         )}
 
       </div>
 
-      <div className={`${openMenu ? "fixed" : "hidden"} top-0 h-screen w-screen flex flex-col items-center justify-center bg-zinc-900 `}>
+      <div className={`${openMenu ? "fixed" : "hidden"} top-0 h-screen w-screen flex flex-col items-center justify-center bg-zinc-900`}>
 
         <nav className="flex flex-col items-center gap-5 my-10">
           < MenuNav
