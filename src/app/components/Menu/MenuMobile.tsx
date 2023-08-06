@@ -27,12 +27,12 @@ export const MenuMobile = ({ imageUrl }: MenuMenuMobileProps) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="laptop:hidden">
-      <div className="px-2 flex items-center justify-between">
+    <div className="w-full laptop:hidden">
+      <div className="w-full px-2 flex justify-between">
         <Image src={imageUrl} alt="charles portfolio logo" className="w-20 h-auto" />
 
         {openMenu ? (
-          <CloseMenuIcon className="text-zinc-50 absolute top-0 py-[2px] right-4 z-50" size={30} onClick={() => setOpenMenu(false)} />
+          <CloseMenuIcon className="text-zinc-50 absolute  -mt-1 right-4 z-50" size={30} onClick={() => setOpenMenu(false)} />
         ) : (
           <OpenMenuIcon className="text-zinc-50 mr-2" size={30} onClick={() => setOpenMenu(true)} />
         )}

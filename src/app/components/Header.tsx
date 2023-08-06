@@ -24,9 +24,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`${bgColor ? "bg-zinc-800 border-b-[1px]" : "bg-transparent"}  border-green-400 h-12 w-screen fixed z-50`}
+      className={`${bgColor ? "bg-zinc-800 border-b-[1px]" : "bg-transparent"}  border-green-400 h-12 w-screen fixed z-50 flex items-center`}
     >
-      <MenuMobile imageUrl={charlesLogo} display="" />
+      <MenuMobile imageUrl={charlesLogo} />
       <MenuDesktop imageUrl={charlesLogo} color={`${bgColor ? "text-zinc-50" : "text-zinc-900"}`} />
     </header>
   )
