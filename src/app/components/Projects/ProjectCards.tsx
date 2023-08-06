@@ -19,17 +19,8 @@ interface projectCardsProps {
 
 export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description }: projectCardsProps) => {
   return (
-    <div className="
-    
-    max-lg:w-[350px] 
-    max-lg:h-[500px]
-    
-    lg:w-[350px] 
-    lg:h-[500px]
+    <div className=" w-72 h-[500px] sm:w-80 laptop:w-72 lg:w-80 xl:w-96 xl:h-[600px] 2xl:h-[650px]
 
-    2xl:w-[400px] 
-    2xl:h-[650px]
-    
     bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
     position:block
     z-0
@@ -42,7 +33,6 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
     transform-gpu will-change-transform 
     will-change-box-shadow"
     >
-
       <header
         className="w-full h-1/2  overflow-hidden"
         style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%)' }}
@@ -65,14 +55,14 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
             {technologiesListImage.map((techImageUrl, index) => (
               <div key={index} className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
-                <Image 
-                  src={techImageUrl}                     
-                  alt="logo" 
-                  className="w-7 h-7" 
+                <Image
+                  src={techImageUrl}
+                  alt="logo"
+                  className="w-7 h-7"
                 />
               </div>
             ))}
-            
+
           </div>
 
           <span className="text-zinc-200">tecnologias utilizadas</span>

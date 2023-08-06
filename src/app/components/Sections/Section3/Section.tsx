@@ -22,13 +22,8 @@ export const Section = () => {
         </header>
 
         {/*cards */}
-        <div className="
-        w-full 
-        grid 
-        lg:grid-cols-[repeat(2,400px)] 
-        xl:grid-cols-[repeat(3,400px)]               
-        justify-center gap-4"
-        >
+        <div className="w-full grid justify-items-center gap-4 sm:grid-cols-2 laptop:grid-cols-3">
+          
           <ProjectCards
             imageUrl={walkProject.src}
             alt="walk landing page"
