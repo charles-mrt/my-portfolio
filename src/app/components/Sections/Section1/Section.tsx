@@ -9,13 +9,10 @@ import { WaveDivider } from '../../WaveDivider';
 
 export const Section = () => {
 
-  const screenSize = "laptop"; //width = 900px
-
-
   return (
 
     <section
-      className="bg-zinc-900 relative h-screen max-h-[1080px] flex flex-end justify-center laptop:bg-section-1 laptop:bg-no-repeat laptop:bg-cover laptop:bg-center laptop:bg-fixed "
+      className="bg-zinc-900 relative h-screen max-h-[1080px]  flex flex-end justify-center sm-device:mt-10 laptop:bg-section-1 laptop:bg-no-repeat laptop:bg-cover laptop:bg-center laptop:bg-fixed"
     >
 
       <div className="
