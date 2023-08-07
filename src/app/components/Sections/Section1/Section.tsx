@@ -13,9 +13,9 @@ export const Section = () => {
 
 
   return (
+
     <section
-      className="relative bg-no-repeat bg-cover bg-center bg-fixed h-screen max-h-[1080px] flex flex-end justify-center"
-      style={{ backgroundImage: "url('/assets/bg-section-1.jpg')" }}
+      className="bg-zinc-900 relative h-screen max-h-[1080px] flex flex-end justify-center laptop:bg-section-1 laptop:bg-no-repeat laptop:bg-cover laptop:bg-center laptop:bg-fixed "
     >
 
       <div className="
@@ -42,7 +42,7 @@ export const Section = () => {
             </h1>
 
             <div className="w-44 h-44 my-5 overflow-hidden rounded-full border-2 border-green-400 bg-zinc-500 laptop:hidden">
-              <Image               
+              <Image
                 src={avatar}
                 alt="imagem do Charles"
               />
@@ -69,7 +69,7 @@ export const Section = () => {
         </div>
       </div>
 
-      <div className="absolute z-40 bottom-0 w-full">
+      <div className="hidden  laptop:block laptop:absolute laptop:z-40 laptop:bottom-0 laptop:w-full">
         <WaveDivider bgTextColor="text-zinc-800" />
       </div>
 
