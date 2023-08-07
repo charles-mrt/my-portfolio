@@ -16,7 +16,7 @@ export function BarLevel({ level }: BarLevelProps) {
       {Array.from({ length: maxLevel }, (_, index) => (
         <div
           key={index}
-          className={`w-2 h-[3px] ${index < Math.min(level, 10) ? 'bg-green-400' : 'bg-zinc-500'}`}
+          className={`sm-device:w-[0.4rem] w-2 h-[3px] ${index < Math.min(level, 10) ? 'bg-green-400' : 'bg-zinc-500'}`}
         >
         </div>
       ))}
