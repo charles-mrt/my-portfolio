@@ -15,17 +15,7 @@ export const Section = () => {
       className="bg-zinc-900 relative h-screen max-h-[1080px]  flex flex-end justify-center sm-device:mt-10 laptop:bg-section-1 laptop:bg-no-repeat laptop:bg-cover laptop:bg-center laptop:bg-fixed"
     >
 
-      <div className="
-      h-full 
-      w-full 
-      max-w-7xl  
-      grid 
-      grid-cols-1 
-      items-center 
-      justify-items-center 
-      relative 
-      overflow-hidden
-      laptop:grid-cols-2
+      <div className="h-full w-full max-w-7xl  grid grid-cols-1 items-center justify-items-center relative overflow-hidden laptop:grid-cols-2
       ">
 
         {/* left */}
@@ -51,7 +41,7 @@ export const Section = () => {
               sou,
             </p>
 
-            <SectionTitle titleName1="front End," titleName2="Developer" fontSize="sm:text-6xl" />
+            <SectionTitle titleName1="front End," titleName2="Developer" fontSize="sm:text-4xl xl:text-5xl 2xl:text-6xl" />
             <ScrollDownIndicator idName="about-me" />
           </div>
         </div>
