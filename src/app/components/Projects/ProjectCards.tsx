@@ -19,8 +19,7 @@ interface projectCardsProps {
 
 export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description }: projectCardsProps) => {
   return (
-    <div className=" w-72 h-[500px] sm:w-80 laptop:w-72 lg:w-80 xl:w-96 xl:h-[600px] 2xl:h-[650px]
-
+  <div className="h-[31.2rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
     bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
     position:block
     z-0
