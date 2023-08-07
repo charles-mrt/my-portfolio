@@ -40,7 +40,7 @@ export const Section = () => {
 
       <div className=" h-full w-full max-w-7xl  px-4 grid grid-cols-1 gap-8 laptop:grid-cols-2">
         {/* left */}
-        <div className="w-full flex flex-col gap-4 items-center lg:items-start">
+        <div className="w-full flex flex-col gap-4 items-center mb-6 laptop:mb-0 lg:items-start">
           <header>
             <SectionTitle titleName1="sobre" titleName2="mim." />
           </header>
@@ -49,12 +49,12 @@ export const Section = () => {
             Sempre tive uma paixão pela criação e inovação, buscando soluções para desafios e necessidades. Essa habilidade me proporcionou uma mentalidade empreendedora e focada em soluções.Atualmente, estou direcionando meus estudos em tecnologias front-end, como JS, ReactJS e TypeScript. Além disso, sou criador do Espaço Conecta, uma plataforma focada na divulgação de cursos e ferramentas para aprimoramento profissional e pessoal. Sou responsável pelo desenvolvimento, manutenção e direcionamento tecnológico da plataforma, bem como pela criação de determinados conteúdos.Meu desejo de ensinar o que aprendi sempre foi uma constante em minha vida e, em breve, pretendo criar vídeo aulas focadas em desenvolvimento web e disponibilizá-las no Youtube para contribuir com a comunidade. Combinando minha paixão por soluções inovadoras e aperfeiçoamento profissional, estou animado para continuar crescendo como profissional e contribuir para o avanço da comunidade tecnológica.
           </p>
 
-          <div className="flex  gap-3 sm:gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <Button
               link="#contato"
               title="contato"
               fontSize="text-base"
-              size="w-44 sm:w-52 h-16"
+              size="w-52 h-16"
               bgColor="bg-green-400"
               borderColor="border-green-400"
               icon={<MessagesSquare />}
@@ -64,7 +64,7 @@ export const Section = () => {
               link="#project"
               title="projetos"
               fontSize="text-base"
-              size="w-44 sm:w-52 h-16"
+              size="w-52 h-16"
               bgColor="bg-zinc-700"
               borderColor="border-zinc-700"
               icon={<FileCode2 />}
