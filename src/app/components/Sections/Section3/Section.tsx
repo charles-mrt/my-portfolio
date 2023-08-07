@@ -13,7 +13,7 @@ export const Section = () => {
 
     < section 
       id="project"
-      className="w-full h-auto bg-zinc-900 bg-opacity-90 py-10"
+      className="w-full h-auto bg-zinc-900 py-10 laptop:bg-opacity-90"
     >
       <div className="w-full max-w-7xl m-auto">
 

@@ -38,20 +38,7 @@ export const Section = () => {
       className="w-full h-full  flex justify-center py-10"
     >
 
-      {/* <div className="h-full w-full max-w-7xl grid grid-cols-2 items-start"> */}
-      <div className="
-      h-full 
-      w-full 
-      max-w-7xl 
-      px-4
-      grid 
-      grid-cols-1
-      gap-8 
-      
-     
-      laptop:grid-cols-2
-      "
-      >
+      <div className=" h-full w-full max-w-7xl  px-4 grid grid-cols-1 gap-8 laptop:grid-cols-2">
         {/* left */}
         <div className="w-full flex flex-col gap-4 items-center lg:items-start">
           <header>
