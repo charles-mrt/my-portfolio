@@ -29,9 +29,18 @@ export default function RootLayout({
       <Head />
       <body
         className={
-          `${nunito.variable} font-sans bg-transparent bg-no-repeat bg-cover bg-center bg-fixed w-full h-screen`
+          `${nunito.variable}
+          font-sans
+          bg-zinc-800
+          laptop:bg-background            
+          laptop:bg-no-repeat 
+          laptop:bg-cover 
+          laptop:bg-center 
+          laptop:bg-fixed 
+          w-full 
+          h-screen`
         }
-        style={{ backgroundImage: "url('/assets/background.jpg')" }}
+       
       >
         {children}
       </body>
