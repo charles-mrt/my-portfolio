@@ -30,7 +30,7 @@ export default function Home() {
             <WaveDivider bgTextColor="text-zinc-700" />
           </div>
 
-          <footer className="h-10 w-full px-2 pb-6  mt-14 relative flex items-center justify-between laptop:mt-0 laptop:bg-zinc-700">
+          <footer className="h-full w-full px-2 pb-6  mt-14 relative flex items-center justify-between laptop:mt-0 laptop:bg-zinc-700">
             <FooterInfo imageUrl={charlesLogo} />
           </footer>
         </div>
