@@ -21,6 +21,7 @@ module.exports = {
       },
       screens: {
         'laptop': '900px',
+        'sm-device':{'max':'320px'},
       },
       backgroundImage: {
         'section-1':"url('/assets/bg-section-1.jpg')",
