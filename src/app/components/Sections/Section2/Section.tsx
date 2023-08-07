@@ -94,7 +94,7 @@ export const Section = () => {
             <TechCard title="tailwind" imageUrl={tailwindTec} barLevel={5} />
             <TechCard title="javascript" imageUrl={javascriptTec} barLevel={8} />
             <TechCard title="react" subTitle=".js" imageUrl={reactJsTec} barLevel={5} />
-            <TechCard title="netx" subTitle=".js" imageUrl={nextJsTec} barLevel={5} />
+            <TechCard title="next" subTitle=".js" imageUrl={nextJsTec} barLevel={5} />
             <TechCard title="typescript" imageUrl={typescriptTec} barLevel={5} />
             <TechCard title="wordpress" imageUrl={wordpressTec} barLevel={8} />
             <TechCard title="figma" imageUrl={figmaTec} barLevel={7} />
