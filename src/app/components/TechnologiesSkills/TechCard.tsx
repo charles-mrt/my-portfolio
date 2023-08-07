@@ -24,10 +24,10 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
       transform-gpu will-change-transform 
       will-change-box-shadow"
     >
-      <header className="text-green-400 text-2xl leading-none uppercase tracking-[1px]">
+      <header className="text-green-400 text-base leading-none uppercase tracking-[1px] xl:text-2xl">
         <strong>
           {title}
-          <span className="text-zinc-50 text-xl">
+          <span className="text-zinc-50 text-base xl:text-xl">
             {subTitle}
           </span>
         </strong>
@@ -38,7 +38,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
         <Image src={imageUrl} alt={`logo ${title}`} className="w-12 h-12" />
       </div>
 
-      <footer className="text-zinc-50 text-xs uppercase tracking-[1px]">
+      <footer className="text-zinc-50 text-left text-xs uppercase tracking-[1px]">
         skill
         <BarLevel level={barLevel} />
       </footer>
