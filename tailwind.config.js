@@ -22,6 +22,10 @@ module.exports = {
       screens: {
         'laptop': '900px',
       },
+      backgroundImage: {
+        'section-1':"url('/assets/bg-section-1.jpg')",
+        'background': "url('/assets/background.jpg')",
+      }
     },
   },
   plugins: [],
