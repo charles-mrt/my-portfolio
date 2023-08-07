@@ -11,9 +11,13 @@ import {
 
 interface FooterInfoProps {
   imageUrl: string,
+  currentYear: number,
 }
 
-export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
+export const FooterInfo = ({ imageUrl, currentYear }: FooterInfoProps) => {
+
+  currentYear = new Date().getFullYear()
+
   return (
     <div className="w-full flex flex-col-reverse items-center gap-6 laptop:justify-between laptop:flex-row">
 
@@ -22,7 +26,7 @@ export const FooterInfo = ({ imageUrl }: FooterInfoProps) => {
       </div>
 
       <p className="text-xs text-zinc-400 text-center uppercase font-medium">
-        Copyright © 2023 charles martins. All rights reserved
+        Copyright © {currentYear} charles martins. All rights reserved
       </p>
 
       <div className="flex items-center justify-end gap-5 text-zinc-100">
