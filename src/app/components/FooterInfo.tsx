@@ -11,7 +11,7 @@ import {
 
 interface FooterInfoProps {
   imageUrl: string,
-  currentYear: number,
+  currentYear?: number,
 }
 
 export const FooterInfo = ({ imageUrl, currentYear }: FooterInfoProps) => {
