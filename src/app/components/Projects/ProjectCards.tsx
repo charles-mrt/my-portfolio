@@ -8,7 +8,6 @@ import {
   MonitorSmartphone
 } from 'lucide-react';
 
-
 interface projectCardsProps {
   imageUrl: StaticImageData;
   alt: string;
@@ -72,7 +71,6 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
           <span className="text-zinc-200">tecnologias utilizadas</span>
         </div>
 
-
         <footer className="flex gap-2 ">
           <Button
             link={project_url}
@@ -98,7 +96,6 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
         </footer>
 
       </div>
-
 
     </div>
   )
