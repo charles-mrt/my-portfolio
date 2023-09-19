@@ -27,7 +27,6 @@ import { Button } from '../../Button';
 import { Modal } from '../../Modal';
 import { useModal } from '../../../hooks/useModal';
 
-
 export const Section = () => {
 
   const { showModal, openModal, closeModal } = useModal();
@@ -86,7 +85,6 @@ export const Section = () => {
           </header>
 
           {/* cards */}
-          {/* <div className="grid grid-cols-3 gap-5 mx-auto"> */}
           <div className="grid grid-cols-2 gap-3 mx-auto sm:grid-cols-3 sm:gap-5">
 
             <TechCard title="html" imageUrl={htmlTec} barLevel={9} />
