@@ -10,9 +10,10 @@ interface ButtonProps {
   bgColor: string;
   borderColor: string;
   onClickHandle?: () => void;
+  openNewTab?:boolean
 }
 
-export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor, onClickHandle }: ButtonProps) => {
+export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor, onClickHandle, openNewTab }: ButtonProps) => {
  
   return (
     <a
@@ -36,6 +37,8 @@ export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor
       hover:bg-zinc-700
        hover:border-green-400`}
       onClick={onClickHandle}
+      target={openNewTab ? '_blank' : '_self'}
+      rel="noreferrer noopener"
     >
       {icon}
       {title}
