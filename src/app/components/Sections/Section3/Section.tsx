@@ -1,63 +1,61 @@
-
-import styledComponentTec from '/public/assets/technologies/styledcomponent.svg';
-import reactJsTec from '/public/assets/technologies/reactjs.svg';
-import typescriptTec from '/public/assets/technologies/typescript.svg';
-import walkProject from '/public/assets/projects/walk.jpg';
+'use client'
 
 import { ProjectCards } from '../../Projects/ProjectCards'
 import { SectionTitle } from '../../SectionTitle';
 
-export const Section = () => {
+import { projectsData } from '@/app/data';
+import { SearchProject } from '../../SearchProject';
+import { useState } from 'react';
 
+export const Section = () => {
+  const [selectedCategory, setSelectedCategory] = useState("todas");
+
+  const handleCategoryChange = (category:string) => {
+    setSelectedCategory(category.trim());
+    console.log("selectedCategory " + selectedCategory)
+  };
   return (
 
-    < section 
+    < section
       id="project"
       className="w-full h-auto bg-zinc-900 py-10 laptop:bg-opacity-90"
     >
       <div className="w-full max-w-7xl m-auto">
 
-        <header className="text-center my-10">
+        <header className="text-center mt-10 mb-5">
           <SectionTitle titleName1="projetos" titleName2="realizados." />
         </header>
-
+        
+        <SearchProject onCategoryChange={handleCategoryChange} />
+       
         {/*cards */}
-        <div className="w-full grid justify-items-center gap-4 sm:grid-cols-2 laptop:grid-cols-3">
-          
-          <ProjectCards
-            imageUrl={walkProject.src}
-            alt="walk landing page"
-            title="walk"
-            technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}
-            description="WALK é um projeto de landing page para venda de tênis.
-          O foco da página é direcionar o usuário a aquisição do produto,
-          através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-          Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
-          />
-          <ProjectCards
-            imageUrl={walkProject.src}
-            alt="walk landing page"
-            title="walk"
-            technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}
-            description="WALK é um projeto de landing page para venda de tênis.
-          O foco da página é direcionar o usuário a aquisição do produto,
-          através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-          Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
-          />
-          <ProjectCards
-            imageUrl={walkProject.src}
-            alt="walk landing page"
-            title="walk"
-            technologiesListImage={[reactJsTec, styledComponentTec, typescriptTec]}
-            description="WALK é um projeto de landing page para venda de tênis.
-          O foco da página é direcionar o usuário a aquisição do produto,
-          através de uma página atraente, onde os modelos de tênis são exibidos em slide.
-          Entre as transições dos modelos ocorre a alteração da cor de fundo baseado nas cores do tênis."
-          />
-         
+        <div className="w-full">
+
+          <ul className="grid justify-items-center gap-4 sm:grid-cols-2 laptop:grid-cols-3">
+            {
+              projectsData.map((project, index) => {
+                return (
+                  project.is_public && project.categories.includes(selectedCategory) ? (
+                    <li key={index}>
+                      <ProjectCards
+                        imageUrl={project.image}
+                        alt={project.alt}
+                        title={project.title}
+                        technologiesListImage={project.tecnologies}
+                        description={project.description}
+                        github_url={project.github}
+                        project_url={project.url}
+                        category={project.categories}
+                      />
+                    </li>
+                  ) : <></>
+                )
+              })
+            }
+          </ul>
 
         </div>{/* end cards*/}
-        
+
       </div >
 
     </section >
