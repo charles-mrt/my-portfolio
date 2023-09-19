@@ -1,5 +1,5 @@
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import { Button } from '../Button';
 
@@ -10,16 +10,20 @@ import {
 
 
 interface projectCardsProps {
-  imageUrl: string;
+  imageUrl: StaticImageData;
   alt: string;
   title: string;
   description: string;
   technologiesListImage: string[];
+  project_url: string;
+  github_url: string;
+  category: string[];
 }
 
-export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description }: projectCardsProps) => {
+export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description, project_url, github_url, category }: projectCardsProps) => {
   return (
-  <div className="h-[31.2rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
+    
+    <div className="custom-fade-animation h-[31.2rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
     bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
     position:block
     z-0
@@ -31,6 +35,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
     transition-transform duration-200 ease-linear
     transform-gpu will-change-transform 
     will-change-box-shadow"
+    data-category={category}
     >
       <header
         className="w-full h-1/2  overflow-hidden"
@@ -57,7 +62,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
                 <Image
                   src={techImageUrl}
                   alt="logo"
-                  className="w-7 h-7"
+                  className="w-7 h-7"                 
                 />
               </div>
             ))}
@@ -70,23 +75,25 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
         <footer className="flex gap-2 ">
           <Button
-            link=""
+            link={project_url}
             title="acessar app"
             fontSize="text-xs"
             size="w-60 h-14"
             bgColor="bg-transparent"
             borderColor="border-green-400 "
             icon={<MonitorSmartphone />}
+            openNewTab={true}
           />
 
           <Button
-            link=""
+            link={github_url}
             title="acessar código"
             fontSize="text-xs"
             size="w-60 h-14"
             bgColor="bg-transparent"
             borderColor="border-green-400 "
             icon={<FileCode2 />}
+            openNewTab={true}
           />
         </footer>
 
