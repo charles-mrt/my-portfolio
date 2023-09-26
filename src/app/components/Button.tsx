@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 interface ButtonProps {
-  link: string;
+  link?: string;
   title: string;
   fontSize: string;
   icon?: ReactElement;
@@ -34,6 +34,7 @@ export const Button = ({ link, title, fontSize, icon, size, bgColor, borderColor
         gap-2        
         ease-linear 
         duration-300
+        cursor-pointer
       hover:bg-zinc-700
        hover:border-green-400`}
       onClick={onClickHandle}
