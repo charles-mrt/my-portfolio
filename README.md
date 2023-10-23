@@ -26,3 +26,12 @@ Built using: ` ReactJS, Next.js, TypeScript, Tailwind CSS, Lucid Icons and desig
 
 <small>Some projects you may find may have been developed with other developers.</small>
 
+---
+  
+## Next Steps
+
+- **Development of a Node.js API to manage portfolio data** 
+ - It will allow the direct registration of projects through an administrative panel, making it easier to include and manage project-related information. Additionally, it will simplify the management of the technologies used, eliminating the need for frequent updates to the source code.
+
+
+<small>Feel free to track my progress and contribute to these efforts.</small>
