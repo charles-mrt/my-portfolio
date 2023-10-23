@@ -52,3 +52,11 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+.transition-about-close {
+  max-height: 420px;
+  transition: max-height 0.5s ease-in;
+}
+.transition-about-open {
+  max-height: 100%;
+  transition: max-height 0.5s ease-in;
+}
