@@ -43,6 +43,7 @@ export const Section = () => {
                         title={project.title}
                         technologiesListImage={project.tecnologies}
                         description={project.description}
+                        tec_description={project.tec_description}
                         github_url={project.github}
                         project_url={project.url}
                         category={project.categories}

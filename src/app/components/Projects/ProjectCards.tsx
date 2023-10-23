@@ -16,13 +16,14 @@ interface projectCardsProps {
   alt: string;
   title: string;
   description: string;
+  tec_description?: string;
   technologiesListImage: string[];
   project_url: string;
   github_url: string;
   category: string[];
 }
 
-export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description, project_url, github_url, category }: projectCardsProps) => {
+export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description, tec_description, project_url, github_url, category }: projectCardsProps) => {
 
   let imageUrlString = "";
 
@@ -131,26 +132,34 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
         </>
 
       ) : (
-        
+
         <div id="flip-card" className="p-10  h-full flex flex-col items-center gap-8 overflow-y-auto">
-          
+
           <h4 className="text-base font-bold text-green-400 text-center uppercase leading-none">
             {title}
           </h4>
 
-          <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center ">
+          <p className="text-base text-zinc-100 font-normal tracking-[1px] text-center">
             {description}
           </p>
 
-          <Button
-            title='voltar'
-            icon={<IterationCcw />}
-            fontSize=''
-            size="w-60 h-14"
-            bgColor="bg-transparent"
-            borderColor="border-green-400"
-            onClickHandle={() => handleReaMoreButton(false)}
-          />
+          <div className="text-basetracking-[1px] text-center">
+            <p className=" font-bold text-zinc-100">tecnologias utilizadas: </p>
+            <span className="font-normal italic capitalize text-green-300">{tec_description}</span>
+          </div>
+
+          <div>
+            <Button
+              title='voltar'
+              icon={<IterationCcw />}
+              fontSize=''
+              size="w-60 h-14"
+              bgColor="bg-transparent"
+              borderColor="border-green-400"
+              onClickHandle={() => handleReaMoreButton(false)}
+            />
+          </div>
+          
         </div>
       )}
 
