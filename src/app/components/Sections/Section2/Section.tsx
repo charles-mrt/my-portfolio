@@ -4,6 +4,8 @@
 import {
   MessagesSquare,
   FileCode2,
+  ChevronUp,
+  ChevronRight,
 } from 'lucide-react';
 
 import htmlTec from '/public/assets/technologies/html.svg';
@@ -26,10 +28,17 @@ import { Button } from '../../Button';
 
 import { Modal } from '../../Modal';
 import { useModal } from '../../../hooks/useModal';
+import { useState } from 'react';
 
 export const Section = () => {
 
   const { showModal, openModal, closeModal } = useModal();
+  const [isToogle, setIsToogle] = useState(Boolean);
+
+  const handleToogle = () => {
+    setIsToogle(!isToogle)
+  }
+
 
   return (
     <section
@@ -44,9 +53,34 @@ export const Section = () => {
             <SectionTitle titleName1="sobre" titleName2="mim." />
           </header>
 
-          <p className="font-normal text-lg tracking-[1px] text-zinc-50">
-            Sempre tive uma paixão pela criação e inovação, buscando soluções para desafios e necessidades. Essa habilidade me proporcionou uma mentalidade empreendedora e focada em soluções.Atualmente, estou direcionando meus estudos em tecnologias front-end, como JS, ReactJS e TypeScript. Além disso, sou criador do Espaço Conecta, uma plataforma focada na divulgação de cursos e ferramentas para aprimoramento profissional e pessoal. Sou responsável pelo desenvolvimento, manutenção e direcionamento tecnológico da plataforma, bem como pela criação de determinados conteúdos.Meu desejo de ensinar o que aprendi sempre foi uma constante em minha vida e, em breve, pretendo criar vídeo aulas focadas em desenvolvimento web e disponibilizá-las no Youtube para contribuir com a comunidade. Combinando minha paixão por soluções inovadoras e aperfeiçoamento profissional, estou animado para continuar crescendo como profissional e contribuir para o avanço da comunidade tecnológica.
-          </p>
+          <div className={` ${!isToogle ? 'text-clip overflow-hidden transition-about-close ' : 'overflow-clip transition-about-open '
+            } indent-8 font-normal text-lg tracking-[1px] text-zinc-50 `}>
+
+            <p>Iniciei minha jornada na programação guiado pela curiosidade de compreender o funcionamento por trás das interfaces de computadores. Desde então, tenho dedicado tempo e esforço ao aprimoramento das minhas habilidades em desenvolvimento de software.</p>
+            <p>Embora já tenha trabalhado com tecnologias backend, como Java EE, minha atenção atual está focada principalmente no desenvolvimento frontend.</p>
+            <p>Minha abordagem no desenvolvimento web está centrada na usabilidade, no design e na performance. Meu objetivo é criar interfaces amigáveis e acessíveis, proporcionando uma excelente experiência ao usuário em diversos dispositivos.</p>
+            <p>Estou constantemente em busca de novos desafios e oportunidades para ampliar meu conhecimento e habilidades como desenvolvedor frontend. Minha paixão pela programação e meu compromisso com a aprendizagem contínua me motivam a criar soluções web eficazes e inovadoras.</p>
+            <p>Além disso, tenho um genuíno interesse em compartilhar conhecimento com a comunidade. Planejo criar conteúdo educativo, como vídeo aulas, para ajudar outros aspirantes a desenvolvedores a aprimorar suas habilidades e crescer na área.</p>
+
+          </div>
+          <button
+            className="text-green-400"
+            onClick={() => handleToogle()}
+          >
+
+            {!isToogle ? (
+              <span className="transition-about-close flex items-center gap-1">
+                <ChevronRight />
+                continuar lendo...
+              </span>
+            ) : (
+              <span className="transition-about-open flex items-center gap-1">
+                <ChevronUp />
+                recuar!
+              </span>
+            )}
+
+          </button>
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
