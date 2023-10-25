@@ -13,7 +13,7 @@ module.exports = {
       boxShadow: {
         'custom': '0px 0px 20px 1px #2AD883',
       },
-
+      
       colors: {
         green: {
           400: '#2AD883',
@@ -29,5 +29,14 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.drop-shadow-filter': {
+          '-webkit-filter': 'drop-shadow(15px 14px 10px rgba(0 0 0 / 60%))',
+          'filter': 'drop-shadow(15px 14px 10px rgba(0 0 0 / 60%))',
+        },
+      }, ['responsive']);
+    },
+  ],
 }
