@@ -60,3 +60,24 @@ html::-webkit-scrollbar-thumb {
   max-height: 100%;
   transition: max-height 0.5s ease-in;
 }
+
+@keyframes random-movement {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  25% {
+    transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translate(-100%, -100%);
+  }
+  75% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(-100%, 100%);
+  }
+}
+.element-to-move {
+  animation: random-movement 6s linear infinite;
+}
