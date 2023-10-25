@@ -24,6 +24,8 @@ import star_rating from '/public/assets/projects/star-rating.jpg'
 import sidebar_widget from '/public/assets/projects/sidebar-widget.jpg'
 import happy from '/public/assets/projects/happy.jpg'
 import podcast_time from '/public/assets/projects/podcast-time.jpg'
+import portfolio from '/public/assets/projects/portfolio.jpg'
+import moveit from '/public/assets/projects/moveit.jpg'
 
 export const projectsData = [
 
@@ -72,19 +74,32 @@ export const projectsData = [
     title: "espaço conecta",
     tecnologies: [php, wordpress, html, javascript, css],
     categories: ["todas", "php", "wordpress", "html", "javascript", "css"],
-    description: "Tema wordpress projetado para o Espaço Conecta, tem como foco principal potencializar as estratégias de marketing digital de afiliados e empreendedores digitais. Construído com uma abordagem centrada na conversão, na experiência do usuário com um layout minimalista",
+    description: "Tema wordpress projetado para o Espaço Conecta, tem como foco principal potencializar as estratégias de marketing digital de afiliados e empreendedores digitais. Construído com uma abordagem centrada na conversão, na experiência do usuário com um layout minimalista.",
     tec_description: "php, wordpress, html, javascript, css",
     url: "http://espacoconecta.com",
     github: "https://github.com/charles-mrt/espaco-conecta-theme"
   },
+
   {
     is_public: true,
-    image: "",
+    image: moveit,
+    alt: "move it",
+    title: "move it",
+    tecnologies: [reactjs, nextjs, typescript, cssmodule],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "cssmodule"],
+    description: "Move-it é um aplicativo web baseado na técnica Pomodoro que combina intervalos regulares de trabalho ou estudo com atividades físicas leves, como alongamentos. Os usuários ganham pontos e sobem de níveis à medida que completam as atividades, tornando a experiência mais envolvente e motivadora. Além disso, o aplicativo apresenta um gráfico que permite aos usuários acompanhar sua pontuação ao longo do tempo, oferecendo uma visão visual de seu progresso.",
+    tec_description: "reactjs, nextjs, typescript, cssmodule",
+    url: "https://move-it-nlw4-charles-mrt.vercel.app/",
+    github: "https://github.com/charles-mrt/nlw4-move.it/tree/main"
+  },
+  {
+    is_public: true,
+    image: portfolio,
     alt: "portfolio",
     title: "portfolio",
     tecnologies: [reactjs, nextjs, typescript, tailwind],
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
-    description: "O meu portfólio é um projeto onde falo um pouco sobre minha pessoa e apresento as tecnologias que tenho focado meus estudo, e apresento alguns projetos que já desenvolvi",
+    description: "O meu portfólio é um projeto onde falo um pouco sobre minha pessoa e apresento as tecnologias que tenho focado meus estudo, e apresento alguns projetos que já desenvolvi.",
     tec_description: "reactjs, nextjs, typescript, tailwind",
     url: "https://github.com/charles-mrt/my-portfolio",
     github: "https://github.com/charles-mrt/my-portfolio"
@@ -175,7 +190,7 @@ export const projectsData = [
     title: "currency converter",
     tecnologies: [javascript, html, css, figma],
     categories: ["todas", "javascript", "html", "css", "figma"],
-    description: "Currency Converter é um aplicativo que converte valores de moeda, permitindo que você insira o valor desejado e escolha o tipo de moeda. O aplicativo foi desenvolvido utilizando HTML, CSS e JavaScript e consome dados da a API Exchange Rate",
+    description: "Currency Converter é um aplicativo que converte valores de moeda, permitindo que você insira o valor desejado e escolha o tipo de moeda. O aplicativo foi desenvolvido utilizando HTML, CSS e JavaScript e consome dados da a API Exchange Rate.",
     tec_description: "javascript, html, css, figma",
     url: "https://charles-mrt.github.io/currency-converter/",
     github: "https://github.com/charles-mrt/currency-converter"
@@ -214,7 +229,7 @@ export const projectsData = [
     title: "ignite lab design system",
     tecnologies: [reactjs, typescript, css, figma],
     categories: ["todas", "reactjs", "typescript", "css", "figma"],
-    description: "O Ignite Design System é um projeto de login com foco principal em facilitar a compreensão e a implementação de um design system. Utiliza o Storybook como plataforma para o design system e Vite como tecnologia. Este projeto simplifica o desenvolvimento e aprimora a experiência do usuário. Foi desenvolvindo durante um evento da RocketSeat",
+    description: "O Ignite Design System é um projeto de login com foco principal em facilitar a compreensão e a implementação de um design system. Utiliza o Storybook como plataforma para o design system e Vite como tecnologia. Este projeto simplifica o desenvolvimento e aprimora a experiência do usuário. Foi desenvolvindo durante um evento da RocketSeat.",
     tec_description: "reactjs, typescript, css, figma",
     url: "https://www.figma.com/proto/SMaUwZEnJCGJtHiDWWTuFj/Ignite-lab-design-system?type=design&node-id=1-2&t=zUmmpllmSVq4PQzB-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design",
     github: "https://github.com/charles-mrt/ignite-lab-design-system"
@@ -253,7 +268,7 @@ export const projectsData = [
     title: "toogle para filtro de categorias",
     tecnologies: [php, wordpress, javascript, css],
     categories: ["todas", "php", "wordpress", "javascript", "css"],
-    description: "O toogle é uma feature para wordpress que utiliza os plugins elementor e Livemesh addons-for-elementor. Essa feature customiza o modo em que o filtro de categorias de postagem é apresentado em telas de dispositivos móveis, através do addons Post Grid, disponível no plugin Livemesh. Facilita e melhora a maneira que a lista de postagem é apresentada",
+    description: "O toogle é uma feature para wordpress que utiliza os plugins elementor e Livemesh addons-for-elementor. Essa feature customiza o modo em que o filtro de categorias de postagem é apresentado em telas de dispositivos móveis, através do addons Post Grid, disponível no plugin Livemesh. Facilita e melhora a maneira que a lista de postagem é apresentada.",
     tec_description: "php, wordpress, javascript, css",
     url: "https://github.com/charles-mrt/toogle-category-list-post-grid",
     github: "https://github.com/charles-mrt/toogle-category-list-post-grid"
