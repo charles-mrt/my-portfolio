@@ -59,9 +59,9 @@ export const Section = () => {
             <li className="relative h-[31.2rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
             bg-zinc-900 p-10 border-2 border-dashed border-green-400 rounded-[5px] flex flex-col justify-around items-center">
 
-              <header className="text-4xl text-center text-zinc-50">
+              <header className="text-2xl text-center text-zinc-50">
                 Curioso para saber qual será o próximo
-                <span className="text-green-400 mr-1">
+                <span className="text-green-400 ml-2 mr-1">
                   projeto
                 </span>
                 ?
