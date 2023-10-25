@@ -40,7 +40,7 @@ export const projectsData = [
     github: "https://github.com/charles-mrt/walk"
   },
   {
-    is_public: true,
+    is_public: false,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGcxYmh1dW05bTh1azFxcWNicWpxdjh1cW03MnNpOWZwNDJmbHFjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/evHtzG1TLlQh9CSsHd/giphy.gif",
     alt: "tech world login",
     title: "tech world login",
