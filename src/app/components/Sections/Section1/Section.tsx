@@ -29,7 +29,7 @@ export const Section = () => {
             </h1>
 
             <div className="w-44 h-44 my-5 overflow-hidden rounded-full border-2 border-green-400 bg-zinc-500 laptop:hidden">
-              <Image
+              <Image                
                 src={avatar}
                 alt="imagem do Charles"
               />
@@ -47,16 +47,16 @@ export const Section = () => {
         </div>
 
         {/* right */}
-        <div className="hidden laptop:flex items-end max-w-md h-full">
-          <Image
-            id="teste"
+        <div className="hidden laptop:flex items-end  max-w-md h-full">
+          <Image            
+            className="drop-shadow-filter drop-shadow-webkit-filter"
             src={avatar}
             alt="imagem do Charles"
           />
         </div>
       </div>
 
-      <div className="hidden  laptop:block laptop:absolute laptop:z-40 laptop:bottom-0 laptop:w-full">
+      <div className="hidden laptop:block laptop:absolute laptop:z-40 laptop:bottom-0 laptop:w-full">
         <WaveDivider bgTextColor="text-zinc-800" />
       </div>
 
