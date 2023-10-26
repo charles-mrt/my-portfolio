@@ -44,7 +44,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
   return (
 
-    <div className="custom-fade-animation h-[31.2rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
+    <div className="custom-fade-animation h-[40rem] w-80 sm-device:w-72 sm:w-[19rem] md:w-[22rem] lg:w-[19.5rem] xl:w-96 2xl:h-[40.6rem] 
     bg-zinc-900 border-2 border-zinc-700 rounded-[5px]
     position:block
     z-0
@@ -61,7 +61,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
     >
       {!readMore ? (
         <>
-          <header className="w-full h-[45%]  overflow-hidden flex items-center bg-zinc-800">
+          <header className="w-full h-[40%]  overflow-hidden flex items-center bg-zinc-800">
 
             {isJpg && (
               <Image src={imageUrl} alt={alt} className="w-full h-full object-cover" />
@@ -72,7 +72,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
           </header>
 
-          <div className="w-full h-[55%] p-3 flex flex-col justify-between ">
+          <div className="w-full h-[60%] p-3 flex flex-col justify-between">
 
             <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">
               {title}
@@ -82,12 +82,15 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
               {description}
             </p>
 
-            <a onClick={() => handleReaMoreButton(true)} className="uppercase text-zinc-100 font-semibold text-right cursor-pointer italic hover:text-green-500">
+            <a
+              className="uppercase text-zinc-100 font-semibold text-right cursor-pointer italic hover:text-green-500"
+              onClick={() => handleReaMoreButton(true)}
+            >
               ler mais
             </a>
 
-            <div className="flex flex-col items-center laptop:items-start ">
-              <div className="flex gap-2 mb-1">
+            <div className="flex flex-col items-centerlaptop:items-start">
+              <div className="flex flex-wrap gap-2 mb-1">
 
                 {technologiesListImage.map((techImageUrl, index) => (
                   <div key={index} className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
@@ -159,7 +162,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
               onClickHandle={() => handleReaMoreButton(false)}
             />
           </div>
-          
+
         </div>
       )}
 
