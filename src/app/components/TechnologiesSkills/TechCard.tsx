@@ -39,7 +39,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
       will-change-box-shadow"
     >
       <header className="text-green-400 text-base leading-none uppercase tracking-[1px] xl:text-2xl">
-        <strong className="flex flex-wrap justify-center items-end">
+        <strong className="flex flex-wrap justify-center items-baseline">
           {title}
           <span className="text-zinc-50 text-base xl:text-xl">
             {subTitle}
