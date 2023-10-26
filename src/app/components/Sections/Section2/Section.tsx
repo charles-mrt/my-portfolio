@@ -54,7 +54,7 @@ export const Section = () => {
           </header>
 
           <div className={` ${!isToogle ? 'text-clip overflow-hidden transition-about-close ' : 'overflow-clip transition-about-open '
-            } indent-8 font-normal text-lg tracking-[1px] text-zinc-50 `}>
+            } font-normal text-lg text-center tracking-[1px] text-zinc-50 laptop:text-left indent-8`}>
 
             <p>Iniciei minha jornada na programação guiado pela curiosidade de compreender o funcionamento por trás das interfaces de computadores. Desde então, tenho dedicado tempo e esforço ao aprimoramento das minhas habilidades em desenvolvimento de software.</p>
             <p>Embora já tenha trabalhado com tecnologias backend, como Java EE, minha atenção atual está focada principalmente no desenvolvimento frontend.</p>
@@ -63,6 +63,7 @@ export const Section = () => {
             <p>Além disso, tenho um genuíno interesse em compartilhar conhecimento com a comunidade. Planejo criar conteúdo educativo, como vídeo aulas, para ajudar outros aspirantes a desenvolvedores a aprimorar suas habilidades e crescer na área.</p>
 
           </div>
+          
           <button
             className="text-green-400"
             onClick={() => handleToogle()}
