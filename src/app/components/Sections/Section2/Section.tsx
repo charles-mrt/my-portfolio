@@ -11,11 +11,14 @@ import {
 import htmlTec from '/public/assets/technologies/html.svg';
 import cssTec from '/public/assets/technologies/css.svg';
 import tailwindTec from '/public/assets/technologies/tailwind.svg';
-import nextJsTec from '/public/assets/technologies/nextjs.svg';
+import styledcomponentTec from '/public/assets/technologies/styledcomponent.svg';
+import sassTec from '/public/assets/technologies/sass.svg';
+import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
 
 import wordpressTec from '/public/assets/technologies/wordpress.svg';
 import figmaTec from '/public/assets/technologies/figma.svg';
 
+import nextJsTec from '/public/assets/technologies/nextjs.svg';
 import reactJsTec from '/public/assets/technologies/reactjs.svg';
 import typescriptTec from '/public/assets/technologies/typescript.svg';
 import javascriptTec from '/public/assets/technologies/javascript.svg';
@@ -121,14 +124,16 @@ export const Section = () => {
 
           {/* cards */}
           <div className="grid grid-cols-2 gap-3 mx-auto sm:grid-cols-3 sm:gap-5">
-
-            <TechCard title="html" imageUrl={htmlTec} barLevel={9} />
-            <TechCard title="css" imageUrl={cssTec} barLevel={9} />
-            <TechCard title="tailwind" imageUrl={tailwindTec} barLevel={5} />
             <TechCard title="javascript" imageUrl={javascriptTec} barLevel={8} />
             <TechCard title="react" subTitle=".js" imageUrl={reactJsTec} barLevel={5} />
             <TechCard title="next" subTitle=".js" imageUrl={nextJsTec} barLevel={5} />
             <TechCard title="typescript" imageUrl={typescriptTec} barLevel={5} />
+            <TechCard title="html" imageUrl={htmlTec} barLevel={9} />
+            <TechCard title="css" imageUrl={cssTec} barLevel={9} />
+            <TechCard title="tailwind" subTitle='css' imageUrl={tailwindTec} barLevel={5} />
+            <TechCard title="styled" subTitle="components" imageUrl={styledcomponentTec} barLevel={9} />
+            <TechCard title="sass" imageUrl={sassTec} barLevel={9} />
+            <TechCard title="css" subTitle="modules" imageUrl={cssModuleTec} barLevel={9} />
             <TechCard title="wordpress" imageUrl={wordpressTec} barLevel={8} />
             <TechCard title="figma" imageUrl={figmaTec} barLevel={7} />
           </div>
