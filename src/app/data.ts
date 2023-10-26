@@ -26,6 +26,7 @@ import happy from '/public/assets/projects/happy.jpg'
 import podcast_time from '/public/assets/projects/podcast-time.jpg'
 import portfolio from '/public/assets/projects/portfolio.jpg'
 import moveit from '/public/assets/projects/moveit.jpg'
+import tic_tac_game from '/public/assets/projects/tic-tac-game.jpg'
 
 export const projectsData = [
 
@@ -94,6 +95,18 @@ export const projectsData = [
   },
   {
     is_public: true,
+    image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFnazQ1MTMxc3IxZHM1d2xvZ2d3YWZ3aGhneGd4ajZiY2NiemMwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Syn4JbGEtyPx41Lh13/giphy.gif",
+    alt: "nike lebron",
+    title: "nike lebron landing page",
+    tecnologies: [javascript, html, css, figma],
+    categories: ["todas", "javascript", "html", "css", "figma"],
+    description: "landing page de alta conversão para venda de tenis com interação entre os modelos de tenis apresentados",
+    tec_description: "javascript, html, css, figma",
+    url: "https://github.com/charles-mrt/nike-lebron-landing-page",
+    github: "https://github.com/charles-mrt/nike-lebron-landing-page"
+  },
+  {
+    is_public: true,
     image: portfolio,
     alt: "portfolio",
     title: "portfolio",
@@ -104,18 +117,18 @@ export const projectsData = [
     url: "https://github.com/charles-mrt/my-portfolio",
     github: "https://github.com/charles-mrt/my-portfolio"
   },
-
+  
   {
     is_public: true,
-    image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFnazQ1MTMxc3IxZHM1d2xvZ2d3YWZ3aGhneGd4ajZiY2NiemMwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Syn4JbGEtyPx41Lh13/giphy.gif",
-    alt: "nike lebron",
-    title: "nike lebron landing page",
-    tecnologies: [javascript, html, css, figma],
-    categories: ["todas", "javascript", "html", "css", "figma"],
-    description: "landing page de alta conversão para venda de tenis com interação entre os modelos de tenis apresentados",
-    tec_description: "javascript, html, css, figma",
-    url: "https://github.com/charles-mrt/nike-lebron-landing-page",
-    github: "https://github.com/charles-mrt/nike-lebron-landing-page"
+    image: tic_tac_game,
+    alt: "tic tac game",
+    title: "tic tac game",
+    tecnologies: [javascript, html, css],
+    categories: ["todas", "javascript", "html", "css"],
+    description: "O Tic Tac Game é uma aplicação clássica de entretenimento que coloca dois jogadores para competir em um tabuleiro 3x3. O objetivo é preencher uma linha horizontal, vertical ou diagonal com suas próprias peças (X ou O) antes do seu oponente. Além disso, este jogo oferece a capacidade de ativar ou desativar o som, reiniciar partidas a qualquer momento e conta com um contador de pontos para tornar as partidas ainda mais emocionantes.",
+    tec_description: "javascript, html, css",
+    url: "https://charles-mrt.github.io/tic-tac-game/",
+    github: "https://github.com/charles-mrt/tic-tac-game"
   },
 
   {
