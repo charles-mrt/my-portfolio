@@ -1,9 +1,8 @@
-import type { Icon } from 'lucide-react';
 
 interface SocialMediaIconProps {
   url: string;
   title: string;
-  icon: Icon;
+  icon: React.ComponentType<any>;
   size?: number;
   extraSelectors?: string;
 }
