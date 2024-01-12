@@ -26,10 +26,23 @@ import happy from '/public/assets/projects/happy.jpg'
 import podcast_time from '/public/assets/projects/podcast-time.jpg'
 import portfolio from '/public/assets/projects/portfolio.jpg'
 import moveit from '/public/assets/projects/moveit.jpg'
+import hang_man_game from '/public/assets/projects/hangman-game.jpg'
+import my_code_draws from '/public/assets/projects/my-code-draws.jpg'
 import tic_tac_game from '/public/assets/projects/tic-tac-game.jpg'
 
 export const projectsData = [
-
+  {
+    is_public: true,
+    image: hang_man_game,
+    alt: "hang man game",
+    title: "hang man game",
+    tecnologies: [reactjs, nextjs, typescript, tailwind],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "game"],
+    description: "'Hang man Game' é uma versão digital do clássico jogo da Forca, no qual os participantes tentam adivinhar uma palavra oculta ao arriscar letras a cada tentativa. A dinâmica do jogo envolve descobrir a palavra antes que um desenho completo do enforcado seja desenhado.",
+    tec_description: "reactjs, nextjs, typescript, tailwind",
+    url: "https://hangman-game-weld.vercel.app/",
+    github: "https://github.com/charles-mrt/hangman-game"
+  },
   {
     is_public: true,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGcxYmh1dW05bTh1azFxcWNicWpxdjh1cW03MnNpOWZwNDJmbHFjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/evHtzG1TLlQh9CSsHd/giphy.gif",
@@ -54,20 +67,32 @@ export const projectsData = [
     url: "https://github.com/charles-mrt/tech-world-login",
     github: "https://github.com/charles-mrt/tech-world-login"
   },
-
   {
     is_public: true,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjd5aXAxZ29ubXNsbjhxYzZtazV0aDdleDJraWR0NDhyNzRzNTNrbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WqEcA6aRIBXQGbR2Ne/giphy.gif",
     alt: "planning poker",
     title: "planning poker",
     tecnologies: [nodejs, reactjs, nextjs, typescript, socketio, tailwind, figma],
-    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "nodejs"],
-    description: "O Planning Poker é um sistema destinado a simplificar a estimativa de esforço temporal. Através de uma abordagem inovadora que combina a gamificação do planning poker com o método T-shirt sizing, proporcionando uma maneira eficaz de colaboração entre os participantes, aproveitando a tecnologia de socket para interações em tempo real. E o melhor de tudo: esta plataforma é inteiramente gratuita. Agora, sua equipe pode estimar projetos com precisão e envolvimento, aproveitando os benefícios da interatividade em tempo real, sem nenhum custo associado.",
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "nodejs", "game"],
+    description: "O Planning Poker é um sistema destinado a simplificar a estimativa de esforço temporal. Através de uma abordagem inovadora que combina a gamificação do planning poker com o método T-shirt sizing, proporcionando uma maneira eficaz de colaboração entre os participantes, aproveitando a tecnologia de socket para interações em tempo real. E o melhor de tudo: esta plataforma é inteiramente gratuita. Agora, sua equipe pode estimar projetos com precisão e envolvimento, aproveitando os benefícios da interatividade em tempo real, sem nenhum custo associado. Esse projeto foi desenvolvido em equipe. Front-end: Charles Martins. Backend: Lucas Reis e Renato Viegas",
     tec_description: "nodejs, reactjs, nextjs, typescript, socketio, tailwind, figma",
     url: "https://github.com/charles-mrt/planning-poker-client",
     github: "https://github.com/charles-mrt/planning-poker-client"
   },
-
+  
+  {
+    is_public: true,
+    image: my_code_draws,
+    alt: "my code draws",
+    title: "my code draws",
+    tecnologies: [reactjs, nextjs, typescript ,javascript ,css ,html],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind","javascript" ,"css" ,"html", "code-art"],
+    description: "My Code Draws é o meu espaço digital, onde dou vida às minhas criações artísticas usando código. Neste site, mergulho na fascinante interseção entre arte e programação para expressar minha criatividade. De formas simples a composições mais complexas, o My Code Draws é o meu ateliê virtual, onde cada linha de código se transforma em uma desenho digital. Descubra o poder da programação criativa no My Code Draws, o meu espaço pessoal para explorar e compartilhar o mundo emocionante das artes com código.",
+    tec_description: "reactjs, nextjs, typescript, javascript ,css ,html",
+    url: "https://github.com/charles-mrt/my-code-draws",
+    github: "https://github.com/charles-mrt/my-code-draws"
+  },
+  
   {
     is_public: true,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3FlM2owOW85cThiZ2tsb2wxeGF5dm94ZW5veHlhb3ZiNDl1YjhzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xzl64JLv8e9GQhq1u0/giphy.gif",
@@ -75,7 +100,7 @@ export const projectsData = [
     title: "espaço conecta",
     tecnologies: [php, wordpress, html, javascript, css],
     categories: ["todas", "php", "wordpress", "html", "javascript", "css"],
-    description: "Tema wordpress projetado para o Espaço Conecta, tem como foco principal potencializar as estratégias de marketing digital de afiliados e empreendedores digitais. Construído com uma abordagem centrada na conversão, na experiência do usuário com um layout minimalista.",
+    description: "Um tema WordPress projetado para o Espaço Conecta, focado principalmente em impulsionar as estratégias de marketing digital para afiliados e empreendedores digitais. Construído com uma abordagem centrada na conversão e na experiência do usuário, apresentando um layout minimalista.",
     tec_description: "php, wordpress, html, javascript, css",
     url: "http://espacoconecta.com",
     github: "https://github.com/charles-mrt/espaco-conecta-theme"
@@ -88,7 +113,7 @@ export const projectsData = [
     title: "move it",
     tecnologies: [reactjs, nextjs, typescript, cssmodule],
     categories: ["todas", "reactjs", "nextjs", "typescript", "cssmodule"],
-    description: "Move-it é um aplicativo web baseado na técnica Pomodoro que combina intervalos regulares de trabalho ou estudo com atividades físicas leves, como alongamentos. Os usuários ganham pontos e sobem de níveis à medida que completam as atividades, tornando a experiência mais envolvente e motivadora. Além disso, o aplicativo apresenta um gráfico que permite aos usuários acompanhar sua pontuação ao longo do tempo, oferecendo uma visão visual de seu progresso.",
+    description: "Move-it é um aplicativo web baseado na técnica Pomodoro que combina intervalos regulares de trabalho ou estudo com atividades físicas leves, como alongamentos. Os usuários ganham pontos e sobem de níveis à medida que completam as atividades, tornando a experiência mais envolvente e motivadora. Além disso, o aplicativo apresenta um gráfico que permite aos usuários acompanhar sua pontuação ao longo do tempo, oferecendo uma visão de seu progresso.",
     tec_description: "reactjs, nextjs, typescript, cssmodule",
     url: "https://move-it-nlw4-charles-mrt.vercel.app/",
     github: "https://github.com/charles-mrt/nlw4-move.it/tree/main"
@@ -112,7 +137,7 @@ export const projectsData = [
     title: "portfolio",
     tecnologies: [reactjs, nextjs, typescript, tailwind],
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
-    description: "O meu portfólio é um projeto onde falo um pouco sobre minha pessoa e apresento as tecnologias que tenho focado meus estudo, e apresento alguns projetos que já desenvolvi.",
+    description: "Meu portfólio é um projeto que aborda minha pessoa, destacando as tecnologias nas quais tenho concentrado meus estudos, além de exibir alguns dos projetos que desenvolvi.",
     tec_description: "reactjs, nextjs, typescript, tailwind",
     url: "https://github.com/charles-mrt/my-portfolio",
     github: "https://github.com/charles-mrt/my-portfolio"
@@ -124,8 +149,8 @@ export const projectsData = [
     alt: "tic tac game",
     title: "tic tac game",
     tecnologies: [javascript, html, css],
-    categories: ["todas", "javascript", "html", "css"],
-    description: "O Tic Tac Game é uma aplicação clássica de entretenimento que coloca dois jogadores para competir em um tabuleiro 3x3. O objetivo é preencher uma linha horizontal, vertical ou diagonal com suas próprias peças (X ou O) antes do seu oponente. Além disso, este jogo oferece a capacidade de ativar ou desativar o som, reiniciar partidas a qualquer momento e conta com um contador de pontos para tornar as partidas ainda mais emocionantes.",
+    categories: ["todas", "javascript", "html", "css", "game"],
+    description: "O Tic Tac Game é uma aplicação clássica de entretenimento conhecida como 'Jogo da Velha', a qual coloca dois jogadores para competir em um tabuleiro 3x3. O objetivo é preencher uma linha horizontal, vertical ou diagonal com suas próprias peças (X ou O) antes do seu oponente. Além disso, este jogo oferece a capacidade de ativar ou desativar o som, reiniciar partidas a qualquer momento e conta com um contador de pontos para tornar as partidas ainda mais emocionantes.",
     tec_description: "javascript, html, css",
     url: "https://charles-mrt.github.io/tic-tac-game/",
     github: "https://github.com/charles-mrt/tic-tac-game"
@@ -138,7 +163,7 @@ export const projectsData = [
     title: "rocket contact",
     tecnologies: [javascript, html, css, figma],
     categories: ["todas", "javascript", "html", "css", "figma"],
-    description: "Rocket Contact é uma aplicação web usuários a capacidade de realizar buscas de contatos de forma rápida e eficaz.",
+    description: "Rocket Contact é uma aplicação web que oferece aos usuários a capacidade de realizar buscas de contatos de forma rápida e eficaz.",
     tec_description: "javascript, html, css, figma",
     url: "https://charles-mrt.github.io/rocket-contact/",
     github: "https://github.com/charles-mrt/rocket-contact"
@@ -190,7 +215,7 @@ export const projectsData = [
     title: "tomorrow it will rain",
     tecnologies: [javascript, html, css, figma],
     categories: ["todas", "javascript", "html", "css", "figma"],
-    description: "O aplicativo 'Amanhã Choverá' é uma aplicação de previsão do tempo que permite aos utilizadores obter atualizações em tempo real sobre as condições meteorológicas de uma cidade específica. Ao fornecer o nome de uma cidade, o aplicativo exibe a temperatura atual, condição do tempo e uma previsão de cinco dias. O aplicativo foi desenvolvido utilizando HTML, CSS e JavaScript e utiliza a API do OpenWeatherMap para buscar dados meteorológicos.",
+    description: "O aplicativo 'Amanhã Choverá' é uma aplicação de previsão do tempo que permite aos utilizadores obter atualizações em tempo real sobre as condições meteorológicas de uma cidade específica. Ao fornecer o nome de uma cidade, o aplicativo exibe a temperatura atual, condição do tempo e uma previsão de cinco dias. O aplicativo foi desenvolvido utilizando HTML, CSS, JavaScript e utiliza a API do OpenWeatherMap para buscar dados meteorológicos.",
     tec_description: "javascript, html, css, figma",
     url: "https://charles-mrt.github.io/Tomorrow-will-rain/",
     github: "https://github.com/charles-mrt/Tomorrow-will-rain"
@@ -203,7 +228,7 @@ export const projectsData = [
     title: "currency converter",
     tecnologies: [javascript, html, css, figma],
     categories: ["todas", "javascript", "html", "css", "figma"],
-    description: "Currency Converter é um aplicativo que converte valores de moeda, permitindo que você insira o valor desejado e escolha o tipo de moeda. O aplicativo foi desenvolvido utilizando HTML, CSS e JavaScript e consome dados da a API Exchange Rate.",
+    description: "Currency Converter é um aplicativo que converte valores de moeda, permitindo que você insira o valor desejado e escolha o tipo de moeda. O aplicativo foi desenvolvido utilizando HTML, CSS, JavaScript e consome dados da a API Exchange Rate.",
     tec_description: "javascript, html, css, figma",
     url: "https://charles-mrt.github.io/currency-converter/",
     github: "https://github.com/charles-mrt/currency-converter"
@@ -268,7 +293,7 @@ export const projectsData = [
     title: "custom login wp",
     tecnologies: [php, wordpress, javascript, css],
     categories: ["todas", "php", "wordpress", "javascript", "css"],
-    description: "O custom login wp é uma feaute para wordpress que reformula a página de login do wordpress. Com interaçãoes visuais que funcionam através da validação de login.",
+    description: "O Custom Login WP é uma funcionalidade para WordPress que reformula a página de login do WordPress, oferecendo interações visuais que operam por meio da validação de login.",
     tec_description: "php, wordpress, javascript, css",
     url: "https://github.com/charles-mrt/custom_loginWp",
     github: "https://github.com/charles-mrt/custom_loginWp"
@@ -333,7 +358,7 @@ export const projectsData = [
     title: "happy",
     tecnologies: [reactjs, typescript, css, reactnative, nodejs],
     categories: ["todas", "reactjs", "typescript", "css", "react-native", "nodejs"],
-    description: "Este projeto apresenta um sistema para registrar orfanatos, permitindo que as pessoas escolham facilmente orfanatos para visitar. Usando um mapa interativo, você pode explorar orfanatos na sua região, tornando o processo de localização e agendamento de visitas mais acessível e eficiente. Além disso, foi criado um aplicativo móvel para uma experiência ainda mais conveniente. Este projeto foi desenvolvido com  durante um evento da RocketSeat.",
+    description: "Este projeto apresenta um sistema para registrar orfanatos, permitindo que as pessoas escolham facilmente orfanatos para visitar. Por meio de um mapa interativo, os usuários podem explorar orfanatos em sua região, tornando o processo de localização e agendamento de visitas mais acessível e eficiente. Além disso, foi desenvolvido um aplicativo móvel para proporcionar uma experiência ainda mais conveniente. Este projeto foi desenvolvido durante um evento da RocketSeat.",
     tec_description: "reactjs, typescript, css, reactNative, nodejs",
     url: "https://github.com/charles-mrt/Happy-nlw3-rocket-seat",
     github: "https://github.com/charles-mrt/Happy-nlw3-rocket-seat"
