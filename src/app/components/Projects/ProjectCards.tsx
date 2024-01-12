@@ -74,7 +74,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
           <div className="w-full h-[60%] p-3 flex flex-col justify-between">
 
-            <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none">
+            <h3 className="text-base font-bold text-green-400 text-center uppercase leading-none" translate='no'>
               {title}
             </h3>
 
@@ -148,7 +148,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
           <div className="text-basetracking-[1px] text-center">
             <p className=" font-bold text-zinc-100">tecnologias utilizadas: </p>
-            <span className="font-normal italic capitalize text-green-300">{tec_description}</span>
+            <span className="font-normal italic capitalize text-green-300" translate='no'>{tec_description}</span>
           </div>
 
           <div>

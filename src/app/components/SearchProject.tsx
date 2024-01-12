@@ -51,7 +51,7 @@ export const SearchProject = ({ onCategoryChange }: SearchProjectProps) => {
       </button>
       
       {searchByCategory ? (
-        <ul className="w-11/12 m-auto flex items-center justify-center flex-wrap gap-2 mb-2 custom-fade-animation">
+        <ul className="w-11/12 m-auto flex items-center justify-center flex-wrap gap-2 mb-2 custom-fade-animation" translate="no">
           
           {categories.map((category, index) =>
             <li
