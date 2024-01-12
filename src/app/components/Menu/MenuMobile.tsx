@@ -15,6 +15,7 @@ import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon';
 import { Modal } from '../Modal';
 import { useModal } from '../../hooks/useModal';
 import { useState } from 'react';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 
 interface MenuMenuMobileProps {
@@ -63,6 +64,7 @@ export const MenuMobile = ({ imageUrl }: MenuMenuMobileProps) => {
         </nav>
 
         <div className="flex text-zinc-50 gap-6">
+          <LanguageSwitcher />
           <ListSocialMediaIcon iconSize={25} />
         </div>
 

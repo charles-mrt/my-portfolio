@@ -11,6 +11,7 @@ import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon';
 import { Modal } from '../Modal';
 import { useModal } from '../../hooks/useModal';
 
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 interface MenuDesktopProps {
   imageUrl: string;
@@ -24,9 +25,9 @@ export const MenuDesktop = ({ imageUrl, color }: MenuDesktopProps) => {
   return (
 
     <div className="hidden laptop:flex justify-between items-center w-full  py-2 px-6">
-     
+
       <Image src={imageUrl} alt="charles portfolio logo" className="w-36 h-auto" />
-     
+
       <nav className=" flex justify-center w-auto gap-6">
         < MenuNav
           icon={<User2 size={20} strokeWidth={2} />}
@@ -47,6 +48,7 @@ export const MenuDesktop = ({ imageUrl, color }: MenuDesktopProps) => {
       </nav>
 
       <div className={`flex justify-end gap-5 ${color}`}>
+        <LanguageSwitcher />
         <ListSocialMediaIcon iconSize={25} />
       </div>
 
