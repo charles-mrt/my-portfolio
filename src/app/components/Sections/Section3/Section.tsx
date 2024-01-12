@@ -14,8 +14,8 @@ export const Section = () => {
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category.trim());
-    console.log("selectedCategory " + selectedCategory)
   };
+  
   return (
 
     < section
