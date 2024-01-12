@@ -6,43 +6,40 @@ import {
   FileCode2,
   ChevronUp,
   ChevronRight,
-} from 'lucide-react';
+} from 'lucide-react'
 
-import htmlTec from '/public/assets/technologies/html.svg';
-import cssTec from '/public/assets/technologies/css.svg';
-import tailwindTec from '/public/assets/technologies/tailwind.svg';
-import styledcomponentTec from '/public/assets/technologies/styledcomponent.svg';
-import sassTec from '/public/assets/technologies/sass.svg';
-import cssModuleTec from '/public/assets/technologies/cssmodule.svg';
+import htmlTec from '/public/assets/technologies/html.svg'
+import cssTec from '/public/assets/technologies/css.svg'
+import tailwindTec from '/public/assets/technologies/tailwind.svg'
+import styledcomponentTec from '/public/assets/technologies/styledcomponent.svg'
+import sassTec from '/public/assets/technologies/sass.svg'
+import cssModuleTec from '/public/assets/technologies/cssmodule.svg'
 
-import wordpressTec from '/public/assets/technologies/wordpress.svg';
-import figmaTec from '/public/assets/technologies/figma.svg';
+import wordpressTec from '/public/assets/technologies/wordpress.svg'
+import figmaTec from '/public/assets/technologies/figma.svg'
 
-import nextJsTec from '/public/assets/technologies/nextjs.svg';
-import reactJsTec from '/public/assets/technologies/reactjs.svg';
-import typescriptTec from '/public/assets/technologies/typescript.svg';
-import javascriptTec from '/public/assets/technologies/javascript.svg';
+import nextJsTec from '/public/assets/technologies/nextjs.svg'
+import reactJsTec from '/public/assets/technologies/reactjs.svg'
+import typescriptTec from '/public/assets/technologies/typescript.svg'
+import javascriptTec from '/public/assets/technologies/javascript.svg'
 
-import { ScrollDownIndicator } from '../../ScrollDownIndicator';
+import { ScrollDownIndicator } from '../../ScrollDownIndicator'
 
-import { TechCard } from '../../TechnologiesSkills/TechCard';
-import { SectionTitle } from '../../SectionTitle';
-import { Button } from '../../Button';
+import { TechCard } from '../../TechnologiesSkills/TechCard'
+import { SectionTitle } from '../../SectionTitle'
+import { Button } from '../../Button'
 
-import { Modal } from '../../Modal';
-import { useModal } from '../../../hooks/useModal';
-import { useState } from 'react';
+import { Modal } from '../../Modal'
+import { useModal } from '../../../hooks/useModal'
+import { useState } from 'react'
 
 export const Section = () => {
 
-  const { showModal, openModal, closeModal } = useModal();
-  const [isToogle, setIsToogle] = useState(Boolean);
+  const { showModal, openModal, closeModal } = useModal()
+  const [isToogle, setIsToogle] = useState(Boolean)
 
-  const handleToogle = () => {
-    setIsToogle(!isToogle)
-  }
-
-
+  const handleToogle = () => setIsToogle(!isToogle)
+  
   return (
     <section
       id="about-me"
@@ -73,12 +70,12 @@ export const Section = () => {
           >
 
             {!isToogle ? (
-              <span className="transition-about-close flex items-center gap-1">
+              <span className="transition-about-close flex items-center gap-1 " translate='no'>
                 <ChevronRight />
                 continuar lendo...
               </span>
             ) : (
-              <span className="transition-about-open flex items-center gap-1">
+              <span className="transition-about-open flex items-center gap-1" translate='no'>
                 <ChevronUp />
                 recuar!
               </span>
