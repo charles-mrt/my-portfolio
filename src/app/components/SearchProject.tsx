@@ -17,7 +17,9 @@ const categories = [
   "sass",  
   "tailwind",
   "html",
+  "game",
   "figma",
+  "code-art",
 ]
 
 interface SearchProjectProps {
