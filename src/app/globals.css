@@ -5,6 +5,11 @@
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizedLegibility;
+  top: 0!important;
+}
+
+.skiptranslate {
+  display: none !important;
 }
 
 
@@ -29,8 +34,8 @@ html::-webkit-scrollbar-thumb {
 #flip-card {
   transition: .5s;
   transform: rotateY(180deg);
- }
- 
+}
+
 .custom-fade-animation {
   animation: fadeIn 0.8s ease-in-out;
 }
@@ -56,6 +61,7 @@ html::-webkit-scrollbar-thumb {
   max-height: 420px;
   transition: max-height 0.5s ease-in;
 }
+
 .transition-about-open {
   max-height: 100%;
   transition: max-height 0.5s ease-in;
@@ -65,19 +71,25 @@ html::-webkit-scrollbar-thumb {
   0% {
     transform: translate(-50%, 50%);
   }
+
   25% {
     transform: translate(50%, 50%);
   }
+
   50% {
     transform: translate(-50%, -50%);
   }
+
   75% {
     transform: translate(50%, -50%);
   }
+
   50% {
     transform: translate(-50%, 50%);
   }
 }
+
 .element-to-move {
   animation: random-movement 6s linear infinite;
 }
+
