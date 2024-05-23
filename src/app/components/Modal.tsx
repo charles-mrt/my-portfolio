@@ -27,7 +27,7 @@ export const Modal = ({ display, onClose }: ModalProps) => {
 
         <footer className='bg-zinc-900 p-2 rounded-md'>
           <p className="text-sm text-center font-semibold text-zinc-50 p-2 laptop:text-xl">
-            Ou<br></br> fique à vontade para me contatar pelas redes sociais,<br></br> será um prazer receber sua mensagem!
+          <strong>Ou</strong><br></br> fique à vontade para me contatar pelas redes sociais,<br></br> será um prazer receber sua mensagem!
           </p>
 
           <div className="text-zinc-50 flex gap-2 justify-center laptop:flex laptop:justify-between">
