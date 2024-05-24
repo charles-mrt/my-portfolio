@@ -1,3 +1,4 @@
+import Script from 'next/script'
 
 import {
   Mail,
@@ -15,11 +16,18 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { sendEmail } from '../../../utils/sendEmail'
 import { useState } from 'react'
 
+declare interface Grecaptcha {
+  ready: (cb: () => void) => void
+  execute: (secret: string | undefined, config: any) => Promise<string>
+}
+declare const grecaptcha: Grecaptcha
+const recaptchaSiteKey = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_PUBLIC_KEY
 
 export type FormData = {
   name: string
   email: string
   message: string
+  recaptchaToken:string
 }
 
 const nameRegex = /^[a-zA-ZÀ-ú\s]+$/
@@ -40,6 +48,7 @@ const formSchema = z.object({
     .max(400, { message: 'máximo 1000 caractreres' })
 })
 
+
 export const ContactForm = () => {
   const {
     register,
@@ -51,7 +60,8 @@ export const ContactForm = () => {
     defaultValues: {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      recaptchaToken:'',
     },
   })
 
@@ -97,15 +107,16 @@ export const ContactForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSending(true)
     try {
+      const token = await grecaptcha.execute(recaptchaSiteKey, { action: 'submit' })
+      data.recaptchaToken = token 
       const response = await sendEmail(data)
-
+  
       if (response.status === 200) {
         clearFormFields()
         handleMessageDisplay(true, true, 4000)
       } else {
         handleMessageDisplay(false, true, 4000)
       }
-
     } catch (error) {
       console.error('Erro ao enviar e-mail:', error)
       handleMessageDisplay(false, true, 4000)
@@ -113,8 +124,8 @@ export const ContactForm = () => {
       setIsSending(false)
     }
   }
-
-
+  
+  
   return (
     <div className="">
       {isSending && (
@@ -183,7 +194,7 @@ export const ContactForm = () => {
           </label>
 
           <textarea
-          placeholder="Digite sua mensagem aqui..."
+            placeholder="Digite sua mensagem aqui..."
             className="w-full p-2  bg-zinc-900 outline-none text-zinc-50 max-h-48 overflow-y-auto"
             {...register('message')}
           >
@@ -204,6 +215,7 @@ export const ContactForm = () => {
           <HandleFormMessage />
         )}
       </form>
+      <Script src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`} />
     </div>
   )
 }
