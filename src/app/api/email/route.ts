@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import Mail from 'nodemailer/lib/mailer'
 
-const recaptchaSecret = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY
+const recaptchaSecret = process.env.GOOGLE_RECAPTCHA_SECRET_KEY
 
 export async function POST(request: NextRequest) {
   const { name, email, message, recaptchaToken} = await request.json()
@@ -21,14 +21,14 @@ export async function POST(request: NextRequest) {
     const transport = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.NEXT_PUBLIC_EMAIL,
-        pass: process.env.NEXT_PUBLIC_NODEMAILER_PASS,
+        user: process.env.EMAIL,
+        pass: process.env.NODEMAILER_PASS,
       },
     })
 
     const mailOptions: Mail.Options = {
-      from: process.env.NEXT_PUBLIC_EMAIL,
-      to: process.env.NEXT_PUBLIC_EMAIL,
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
       // cc: email, (uncomment this line if send a copy to the sender)
       subject: `Message from ${name} (${email})`,
       text: message,

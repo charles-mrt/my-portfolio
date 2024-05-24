@@ -105,7 +105,9 @@ export const ContactForm = () => {
 
 
   const onSubmit = async (data: FormData) => {
+    
     setIsSending(true)
+
     try {
       const token = await grecaptcha.execute(recaptchaSiteKey, { action: 'submit' })
       data.recaptchaToken = token 
