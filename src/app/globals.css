@@ -93,3 +93,6 @@ html::-webkit-scrollbar-thumb {
   animation: random-movement 6s linear infinite;
 }
 
+.grecaptcha-badge {
+  margin-bottom: 5rem;
+}
