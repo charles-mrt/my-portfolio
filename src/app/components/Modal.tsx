@@ -13,12 +13,12 @@ export const Modal = ({ display, onClose }: ModalProps) => {
 
     <div className={`w-full h-full bg-black bg-opacity-90 ${display} top-0 bottom-0 right-0 left-0 m-auto z-[9999] flex items-center justify-center`}>
 
-      <div className="relative max-w-lg  bg-zinc-800 border-2 border-green-400 rounded-lg p-10">
+      <div className="relative max-w-lg  bg-zinc-800 border-2 border-green-400 rounded-lg p-2 laptop:p-10">
         <header>
           <a onClick={onClose}>
             <XCircle className="text-zinc-50 absolute top-0 right-0 mt-2 mr-2 :hover cursor-pointer" />
           </a>
-          <p className="text-center text-slate-50 text-2xl mb-6">Envie-me uma mensagem,</p>
+          <p className="text-center text-slate-50 text-xl mb-6">Envie-me uma mensagem,</p>
         </header>
 
         <div className="w-full pb-6">
@@ -26,7 +26,7 @@ export const Modal = ({ display, onClose }: ModalProps) => {
         </div>
 
         <footer className='bg-zinc-900 p-2 rounded-md'>
-          <p className="text-sm text-center font-semibold text-zinc-50 p-2 laptop:text-xl">
+          <p className="text-sm text-center text-zinc-50 p-2 laptop:text-xl">
           <strong>Ou</strong><br></br> fique à vontade para me contatar pelas redes sociais,<br></br> será um prazer receber sua mensagem!
           </p>
 
