@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description: 'gerenciar projetos',
 }
 
-export default function ProjectLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <body className = "w-screen h-screen bg-zinc-900 ">
+    <body className = "w-screen h-screen overflow-x-hidden">
       { children }
     </body >
   )
