@@ -4,7 +4,7 @@ export interface ProjectProps {
   image: string
   alt: string
   title: string
-  tecnologies: string[]
+  technologies: string[]
   categories: string[]
   description: string
   url: string
