@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
+    "@radix-ui/react-switch": "^1.1.0",
     "@types/node": "^20.11.0",
     "@types/nodemailer": "^6.4.15",
     "@types/react": "^18.2.47",
