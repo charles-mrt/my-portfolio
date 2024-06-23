@@ -9,11 +9,22 @@ export const getAllProjects = async (): Promise<ProjectProps[]> => {
     if (response.status === 200) {
       return response.data as ProjectProps[]
     } else {
-      console.error('API access failed with status:', response.status )
+      console.error('API access failed with status:', response.status)
       return []
     }
   } catch (error) {
     console.error('Error accessing API:', error)
     return []
   }
+}
+
+export const getProjectById = async ({ id }: { id: ProjectProps['id'] }) => {
+  if (id !== '') {
+    try {
+      const response = await api.get(`/projects/${id}`)
+      if (response.status === 200) return response.data
+    } catch (error) {
+      console.error('Error get proget:', error)
+    }
+  } else return
 }
