@@ -53,6 +53,7 @@ export default function DashBoard() {
               <TableHead> url da Imagem </TableHead>
               <TableHead> descrição </TableHead>
               <TableHead> tecnologias </TableHead>
+              <TableHead> categorias </TableHead>
               <TableHead> url github </TableHead>
               <TableHead> url projeto </TableHead>
             </TableRow>
@@ -64,10 +65,10 @@ export default function DashBoard() {
 
                 <TableCell>
                   <Link
-                    href={`projects/${project.id}`}
+                    href={`edit?id=${project.id}`}
                     className="bg-zinc-950 rounded-md p-2 hover:opacity-70 flex items-center gap-2"
                   >
-                   <EditIcon strokeWidth={1}/> editar
+                    <EditIcon strokeWidth={1} /> editar
                   </Link>
                 </TableCell>
 
@@ -80,10 +81,10 @@ export default function DashBoard() {
 
                 <TableCell className="font-medium">
                   {project.image ? (
-                    <Image src={project.image} width={150} height={150} alt={project.alt} className="w-36 h-20 border-2 border-zinc-700 rounded-md"/>
+                    <Image src={project.image} width={150} height={150} alt={project.alt} className="w-36 h-20 border-2 border-zinc-700 rounded-md" />
                   ) : (
                     <span className="flex flex-col items-center text-zinc-500 text-xs border-2 border-zinc-700 rounded-md max-h-20">
-                      <ImageOff width={60} height={60} strokeWidth={1} className="text-zinc-700"/>
+                      <ImageOff width={60} height={60} strokeWidth={1} className="text-zinc-700" />
                       sem imagem
                     </span>
                   )}
@@ -109,7 +110,11 @@ export default function DashBoard() {
 
                 <TableCell className="max-w-7xl">{project.description}</TableCell>
 
-                <TableCell> {project.tecnologies.join(', ')} </TableCell>
+                <TableCell> {project.technologies.join(', ')} </TableCell>
+
+                <TableCell>
+                  {project.categories.map(category => category === 'all' ? 'todas' : category).join(', ')}
+                </TableCell>
 
                 <TableCell >
                   <div className="flex flex-col gap-2">
