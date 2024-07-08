@@ -120,10 +120,8 @@ export default function DashBoard() {
 
                 </TableCell>
 
-                <TableCell className="max-w-7xl">
-
-                  <p className="overflow-auto max-h-16">{project.description}
-                  </p>
+                <TableCell className="max-w-4xl">
+                  <p className="overflow-auto max-h-16">{project.description}</p>
                 </TableCell>
 
                 <TableCell> {project.technologies.join(', ')} </TableCell>
