@@ -14,8 +14,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/app/components/ui/table"
-import { EditIcon, ImageOff } from "lucide-react"
 
+import { EditIcon, HomeIcon, ImageOff, LayoutDashboard } from "lucide-react"
 
 
 export default function DashBoard() {
@@ -34,8 +34,15 @@ export default function DashBoard() {
   return (
     <div className="h-full w-full px-4 pt-20 bg-zinc-950">
       <header className="fixed z-50 top-0 left-0 w-full h-auto p-2 border-b-[1px] bg-zinc-800 border-green-500">
-        <nav className="flex">
-          <Link href={'/'} className="bg-zinc-700 p-2 rounded-md text-zinc-100 font-sans">Preview</Link>
+        <nav className="flex gap-2">
+          <Link href={'/'} className="flex gap-2 items-center justify-center bg-zinc-700 p-2 rounded-md text-zinc-100 font-sans">
+            <HomeIcon width={16} />
+            Home
+          </Link>
+          <Link href={'/dashboard'} className="flex gap-2 items-center justify-center bg-zinc-700 p-2 rounded-md text-zinc-100 font-sans">
+            <LayoutDashboard width={16} />
+            Dashboard
+          </Link>
         </nav>
       </header>
 
@@ -49,6 +56,7 @@ export default function DashBoard() {
             <TableRow className="font-bold text-base border-zinc-800">
               <TableHead> editar </TableHead>
               <TableHead> publicado </TableHead>
+              <TableHead> título </TableHead>
               <TableHead> imagem </TableHead>
               <TableHead> url da Imagem </TableHead>
               <TableHead> descrição </TableHead>
@@ -77,6 +85,10 @@ export default function DashBoard() {
                     ? (<span className="text-green-400"> sim </span>)
                     : (<span className="text-red-500">não </span>)
                   }
+                </TableCell>
+
+                <TableCell >
+                  {project.title}
                 </TableCell>
 
                 <TableCell className="font-medium">
@@ -108,7 +120,11 @@ export default function DashBoard() {
 
                 </TableCell>
 
-                <TableCell className="max-w-7xl">{project.description}</TableCell>
+                <TableCell className="max-w-7xl">
+
+                  <p className="overflow-auto max-h-16">{project.description}
+                  </p>
+                </TableCell>
 
                 <TableCell> {project.technologies.join(', ')} </TableCell>
 
