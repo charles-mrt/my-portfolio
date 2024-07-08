@@ -28,3 +28,17 @@ export const getProjectById = async ({ id }: { id: ProjectProps['id'] }) => {
     }
   } else return
 }
+
+
+export const updatedProject = async (id: string, data: ProjectProps) => {
+  
+  try {
+    if (id) {
+      const response = await api.patch(`/projects/${id}`, data)
+      return response
+    }
+   } catch (error) {
+    console.error('Error updating project')
+  }
+
+}
