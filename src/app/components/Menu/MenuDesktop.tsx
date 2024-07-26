@@ -1,7 +1,8 @@
 import {
   MessagesSquare,
   User2,
-  FileCode2
+  FileCode2,
+  LayoutDashboard
 } from 'lucide-react';
 
 import Image from 'next/image'
@@ -12,6 +13,7 @@ import { Modal } from '../Modal';
 import { useModal } from '../../hooks/useModal';
 
 import { LanguageSwitcher } from '../LanguageSwitcher';
+import Link from 'next/link';
 
 interface MenuDesktopProps {
   imageUrl: string;
@@ -45,12 +47,23 @@ export const MenuDesktop = ({ imageUrl, color }: MenuDesktopProps) => {
           textAnchor="contato"
           onClickHandle={openModal}
         />
+
       </nav>
 
       <div className={`flex justify-end gap-5 ${color}`}>
+        <Link
+          href="/dashboard"
+          title="dashboard"
+          className="text-green-500 bg-zinc-900 p-1 rounded-md"
+        >
+          <LayoutDashboard />
+        </Link>
+
         <LanguageSwitcher />
         <ListSocialMediaIcon iconSize={25} />
+
       </div>
+
 
       {showModal && <Modal display="fixed" onClose={closeModal} />}
 
