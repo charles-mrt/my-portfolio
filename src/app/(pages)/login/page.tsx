@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import google_plus from '../../../../public/assets/google-plus.svg'
-import avatar from '../../../../public/assets/avatar.png'
+import google_plus from '/public/assets/google-plus.svg'
+import avatar from '/public/assets/avatar.png'
 
 export default function Login() {
   return (
@@ -15,8 +15,6 @@ export default function Login() {
             alt="imagem do Charles"
           />
         </div>
-
-        
 
         <div className="mt-14 text-center flex flex-col items-center gap-6">
           <h1 className="font-bold">Bem vindo ao portfolio de Charles Martins</h1>
