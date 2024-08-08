@@ -1,28 +1,26 @@
 import {
   MessagesSquare,
   User2,
-  FileCode2,
-  LayoutDashboard
-} from 'lucide-react';
+  FileCode2
+} from 'lucide-react'
 
 import Image from 'next/image'
-import { MenuNav } from './MenuNav';
-import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon';
+import { MenuNav } from './MenuNav'
+import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon'
 
-import { Modal } from '../Modal';
-import { useModal } from '../../hooks/useModal';
+import { Modal } from '../Modal'
+import { useModal } from '../../hooks/useModal'
 
-import { LanguageSwitcher } from '../LanguageSwitcher';
-import Link from 'next/link';
+import { LanguageSwitcher } from '../LanguageSwitcher'
 
 interface MenuDesktopProps {
-  imageUrl: string;
-  color: string;
+  imageUrl: string
+  color: string
 }
 
 export const MenuDesktop = ({ imageUrl, color }: MenuDesktopProps) => {
 
-  const { showModal, openModal, closeModal } = useModal();
+  const { showModal, openModal, closeModal } = useModal()
 
   return (
 
@@ -51,17 +49,8 @@ export const MenuDesktop = ({ imageUrl, color }: MenuDesktopProps) => {
       </nav>
 
       <div className={`flex justify-end gap-5 ${color}`}>
-        <Link
-          href="/dashboard"
-          title="dashboard"
-          className="text-green-500 bg-zinc-900 p-1 rounded-md"
-        >
-          <LayoutDashboard />
-        </Link>
-
         <LanguageSwitcher />
         <ListSocialMediaIcon iconSize={25} />
-
       </div>
 
 
