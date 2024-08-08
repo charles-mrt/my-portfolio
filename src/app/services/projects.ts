@@ -1,6 +1,5 @@
-import api from "../api/axios/api"
-import { ProjectProps } from "../interfaces/project.interface"
-
+import api from '../api/axios/api'
+import { ProjectProps } from '../interfaces/project.interface'
 
 export const getAllProjects = async (): Promise<ProjectProps[]> => {
   try {
