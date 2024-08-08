@@ -34,7 +34,8 @@ const config = {
         'sm-device':{'max':'320px'},
       },
       backgroundImage: {
-        'background': "url('/public/assets/background.jpg')",
+        'section-1':"url('/assets/bg-section-1.jpg')",
+        'background': "url('/assets/background.jpg')",
       },
       keyframes: {
         "accordion-down": {
@@ -53,7 +54,8 @@ const config = {
     },
   },
   plugins: [
-    require("tailwindcss-animate")]    
+    require("tailwindcss-animate")]
+    
 } satisfies Config
 
 export default config

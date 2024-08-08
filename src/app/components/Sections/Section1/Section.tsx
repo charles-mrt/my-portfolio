@@ -1,28 +1,19 @@
 
 import Image from 'next/image'
-import backgroundImg from '/public/assets/bg-section-1.jpg'
-import avatar from '/public/assets/avatar.png'
+import avatar from '/public/assets/avatar.png';
 
-import { SectionTitle } from '../../SectionTitle'
-import { ScrollDownIndicator } from '../../ScrollDownIndicator'
-import { WaveDivider } from '../../WaveDivider'
+import { SectionTitle } from '../../SectionTitle';
+import { ScrollDownIndicator } from '../../ScrollDownIndicator';
 
-
+import { WaveDivider } from '../../WaveDivider';
 
 export const Section = () => {
+
   return (
 
     <section
-      className="bg-zinc-900 relative h-screen max-h-[1080px]  flex flex-end justify-center sm-device:mt-10 "
+      className="bg-zinc-900 relative h-screen max-h-[1080px]  flex flex-end justify-center sm-device:mt-10 laptop:bg-section-1 laptop:bg-no-repeat laptop:bg-cover laptop:bg-center laptop:bg-fixed"
     >
-      <Image
-        src={backgroundImg}
-        alt='imagem de fundo'
-        layout='fill'
-        objectFit='cover'
-        objectPosition='center'
-        className="hidden laptop:block"
-      />
 
       <div className="h-full w-full max-w-7xl  grid grid-cols-1 items-center justify-items-center relative overflow-hidden laptop:grid-cols-2
       ">
@@ -38,7 +29,7 @@ export const Section = () => {
             </h1>
 
             <div className="w-44 h-44 my-5 overflow-hidden rounded-full border-2 border-green-400 bg-zinc-500 laptop:hidden">
-              <Image
+              <Image                
                 src={avatar}
                 alt="imagem do Charles"
               />
@@ -57,7 +48,7 @@ export const Section = () => {
 
         {/* right */}
         <div className="hidden laptop:flex items-end  max-w-md h-full">
-          <Image
+          <Image            
             className="drop-shadow-filter drop-shadow-webkit-filter"
             src={avatar}
             alt="imagem do Charles"
