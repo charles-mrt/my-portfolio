@@ -1,23 +1,25 @@
 
+import charlesLogo from '/public/assets/logo.svg'
 
-import { FooterInfo } from './components/FooterInfo';
-import { WaveDivider } from './components/WaveDivider';
-import charlesLogo from '/public/assets/logo.svg';
+import { FooterInfo } from './components/FooterInfo'
+import { WaveDivider } from './components/WaveDivider'
+import { Header } from './components/Header'
 
-import { Header } from './components/Header';
+import { Section as Section1 } from './components/Sections/Section1/Section'
+import { Section as Section2 } from './components/Sections/Section2/Section'
+import { Section as Section3 } from './components/Sections/Section3/Section'
 
-import { Section as Section1 } from './components/Sections/Section1/Section';
-import { Section as Section2 } from './components/Sections/Section2/Section';
-import { Section as Section3 } from './components/Sections/Section3/Section';
+import { SendToDashBoardButon } from './components/Menu/sendToDashBoardButon'
 
 export default function Home() {
 
   return (
     <div
       id="anchor-top"
-      className="min-h-screen flex flex-col">
+      className="relative min-h-screen flex flex-col">
       <Header />
-
+      <SendToDashBoardButon />
+      
       <div className="flex flex-col flex-grow">
         <main className="flex-grow">
           <Section1 />
@@ -37,5 +39,5 @@ export default function Home() {
       </div>
 
     </div>
-  );
+  )
 }
