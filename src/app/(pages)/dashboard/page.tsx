@@ -1,7 +1,6 @@
-
-import { Suspense } from "react"
-import { LoggedInMenu } from "@/app/components/Menu/LoggedInMenu"
-import { Projects } from "@/app/components/Projects/Projects"
+import { Suspense } from 'react'
+import { LoggedInMenu } from '@/app/components/Menu/LoggedInMenu'
+import { ProjectsTable } from '@/app/components/Projects/ProjectsTable'
 
 export default async function DashBoard() {
 
@@ -19,7 +18,7 @@ export default async function DashBoard() {
             <p className="text-white text-2xl animate-pulse">Loading...</p>
           </div>
         }>
-          <Projects />
+          <ProjectsTable />
         </Suspense>
         
       </section>
