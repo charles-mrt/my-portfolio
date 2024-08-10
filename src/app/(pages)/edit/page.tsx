@@ -1,26 +1,24 @@
 'use client'
 
-import Link from "next/link"
-import { ChangeEvent, useEffect, useState } from "react"
+import Link from 'next/link'
+import { ChangeEvent, useEffect, useState } from 'react'
 
-import { useSearchParams } from "next/navigation"
+import { useSearchParams } from 'next/navigation'
 
-import { ProjectProps } from "@/app/interfaces/project.interface"
-import { getProjectById, updatedProject } from "@/app/services/projects"
+import { ProjectProps } from '@/app/interfaces/project.interface'
+import { getProjectById, updatedProject } from '@/app/services/projects'
 
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
 
 import {
   Code,
   FileCheck2,
   Github,
   Group,
-  HomeIcon,
   ImageIcon,
   ImageOff,
-  LayoutDashboard,
   LinkIcon,
   LucideImagePlus,
   NotepadText,
@@ -124,19 +122,19 @@ export default function DashBoard() {
       return false
     }
 
-    setIsPublic(data.is_public)
+    setIsPublic(data?.is_public)
 
     reset({
-      id: data.id,
-      title: data.title,
-      image: data.image,
-      alt: data.alt,
-      technologies: data.technologies,
-      categories: data.categories,
-      description: data.description,
-      url: data.url,
-      github: data.github,
-      is_public: data.is_public,
+      id: data?.id,
+      title: data?.title,
+      image: data?.image,
+      alt: data?.alt,
+      technologies: data?.technologies,
+      categories: data?.categories,
+      description: data?.description,
+      url: data?.url,
+      github: data?.github,
+      is_public: data?.is_public,
     })
 
   }
