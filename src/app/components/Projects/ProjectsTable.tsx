@@ -15,7 +15,7 @@ import {
 } from "@/app/components/ui/table"
 
 
-export const Projects = async () => {
+export const ProjectsTable = async () => {
 
   const projects = await getAllProjects()
 
