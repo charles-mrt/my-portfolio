@@ -1,40 +1,40 @@
-
+'use client'
 import Image, { StaticImageData } from 'next/image'
 
-import { Button } from '../Button';
+import { Button } from '../Button'
 
 import {
   FileCode2,
   IterationCcw,
   MonitorSmartphone
-} from 'lucide-react';
+} from 'lucide-react'
 
-import { useState } from 'react';
+import { useState } from 'react'
 
 interface projectCardsProps {
-  imageUrl: string | StaticImageData;
-  alt: string;
-  title: string;
-  description: string;
-  tec_description?: string;
-  technologiesListImage: string[];
-  project_url: string;
-  github_url: string;
-  category: string[];
+  imageUrl: string | StaticImageData
+  alt: string
+  title: string
+  description: string
+  tec_description?: string
+  technologiesListImage?: string[]
+  project_url: string
+  github_url: string
+  category: string[]
 }
 
 export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, description, tec_description, project_url, github_url, category }: projectCardsProps) => {
 
-  let imageUrlString = "";
+  let imageUrlString = ""
 
   if (typeof imageUrl === 'string') {
-    imageUrlString = imageUrl;
+    imageUrlString = imageUrl
   } else if (typeof imageUrl === 'object') {
-    imageUrlString = imageUrl.src;
+    imageUrlString = imageUrl.src
   }
 
-  const isJpg = imageUrlString.toLowerCase().endsWith('.jpg') || imageUrlString.toLowerCase().endsWith('.jpeg');
-  const isGif = imageUrlString.toLowerCase().endsWith('.gif');
+  const isJpg = imageUrlString.toLowerCase().endsWith('.jpg') || imageUrlString.toLowerCase().endsWith('.jpeg')
+  const isGif = imageUrlString.toLowerCase().endsWith('.gif')
 
   const [readMore, isReadMore] = useState(false)
 
@@ -92,7 +92,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
             <div className="flex flex-col items-centerlaptop:items-start">
               <div className="flex flex-wrap gap-2 mb-1">
 
-                {technologiesListImage.map((techImageUrl, index) => (
+                {technologiesListImage?.map((techImageUrl, index) => (
                   <div key={index} className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
                     <Image
                       src={techImageUrl}
