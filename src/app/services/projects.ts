@@ -17,6 +17,22 @@ export const getAllProjects = async (): Promise<ProjectProps[]> => {
   }
 }
 
+export const getAllPublicProjects = async (): Promise<ProjectProps[]> => {
+  try {
+    const response = await api.get('/projects/public')
+    if (response.status === 200) {
+      return response.data as ProjectProps[]
+    } else {
+      console.error('API access failed with status:', response.status)
+      return []
+      
+    }
+  } catch (error) {
+    console.error('Error accessing API:', error)
+    return []
+  }
+}
+
 export const getProjectById = async ({ id }: { id: ProjectProps['id'] }) => {
   if (id !== '') {
     try {
