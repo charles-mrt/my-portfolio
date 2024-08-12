@@ -6,8 +6,11 @@ import { ProjectCards } from './ProjectCards'
 
 export const PublicProjects = async () => {
 
-  const projectsData = await getAllPublicProjects()
+  let projectsData = await getAllPublicProjects()
 
+  if (!Array.isArray(projectsData)) {
+    projectsData = []
+  }
 
   return (
     <ul className="grid justify-items-center gap-4 sm:grid-cols-2 laptop:grid-cols-3">
