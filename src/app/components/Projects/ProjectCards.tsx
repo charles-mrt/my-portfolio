@@ -16,7 +16,7 @@ interface projectCardsProps {
   alt: string
   title: string
   description: string
-  tec_description?: string
+  tec_description?: string[]
   technologiesListImage?: string[]
   project_url: string
   github_url: string
@@ -95,9 +95,12 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
                 {technologiesListImage?.map((techImageUrl, index) => (
                   <div key={index} className="w-10 h-10 p-1 border-[1px] rounded-[5px] border-zinc-700 flex items-center justify-center">
                     <Image
-                      src={techImageUrl}
-                      alt="logo"
+                      src={`/assets/technologies/${techImageUrl}.svg`}
+                      alt={techImageUrl}
                       className="w-7 h-7"
+                      width={28}
+                      height={28}
+                      loading='lazy'
                     />
                   </div>
                 ))}
@@ -147,8 +150,10 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
           </p>
 
           <div className="text-basetracking-[1px] text-center">
-            <p className=" font-bold text-zinc-100">tecnologias utilizadas: </p>
-            <span className="font-normal italic capitalize text-green-300" translate='no'>{tec_description}</span>
+            <p className="font-bold text-zinc-100">tecnologias utilizadas: </p>
+            <span className="font-normal italic capitalize text-green-300" translate='no'>
+              {tec_description?.join(' - ')}
+            </span>
           </div>
 
           <div>
