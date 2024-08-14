@@ -53,8 +53,8 @@ export const Section = () => {
             <SectionTitle titleName1="sobre" titleName2="mim." />
           </header>
 
-          <div className={` ${!isToogle ? 'text-clip overflow-hidden transition-about-close ' : 'overflow-clip transition-about-open '
-            } font-normal text-lg text-center tracking-[1px] text-zinc-50 laptop:text-left lg:indent-8 space-y-2`}>
+          <div className={` ${!isToogle ? 'bg-gradient-to-b from-zinc-50 via-zinc-50 to-zinc-800 text-transparent bg-clip-text overflow-hidden transition-about-close ' : 'overflow-clip transition-about-open '
+            } font-normal text-lg text-center tracking-[1px] text-zinc-50 laptop:text-left lg:indent-8 space-y-2 `}>
 
             <p>Iniciei minha jornada na programação guiado pela curiosidade de compreender o funcionamento por trás das interfaces de computadores. Ao longo desse percurso, obtive minha formação em Análise e Desenvolvimento de Sistemas e também me graduei em Gestão da Tecnologia da Informação.</p>
             <p>Desde então, tenho dedicado tempo e esforço ao aprimoramento das minhas habilidades em desenvolvimento de software.</p>
