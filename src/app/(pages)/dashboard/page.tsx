@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { LoggedInMenu } from '@/app/components/Menu/LoggedInMenu'
 import { ProjectsTable } from '@/app/components/Projects/ProjectsTable'
+import { Toaster } from '@/app/components/ui/sonner'
 
 export default async function DashBoard() {
 
@@ -22,7 +23,7 @@ export default async function DashBoard() {
         </Suspense>
         
       </section>
-
+      <Toaster />
     </div>
 
 
