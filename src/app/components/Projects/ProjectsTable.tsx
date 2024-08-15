@@ -1,9 +1,9 @@
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
+import { getAllProjects } from '@/app/services/projects'
 
-import { EditIcon, ImageOff } from "lucide-react"
-import { getAllProjects } from "@/app/services/projects"
+import { EditIcon, ImageOff } from 'lucide-react'
 
 import {
   Table,
@@ -12,12 +12,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/app/components/ui/table"
+} from '@/app/components/ui/table'
+
+import { Button } from '../Button'
+import { DeleteButton } from '../deleteProject/deleteButton'
 
 
 export const ProjectsTable = async () => {
 
   const projects = await getAllProjects()
+
+  
 
   return (
 
@@ -26,6 +31,7 @@ export const ProjectsTable = async () => {
       <TableHeader >
         <TableRow className="font-bold text-base border-zinc-800">
           <TableHead> editar </TableHead>
+          <TableHead> excluir </TableHead>
           <TableHead> publicado </TableHead>
           <TableHead> título </TableHead>
           <TableHead> imagem </TableHead>
@@ -51,6 +57,10 @@ export const ProjectsTable = async () => {
               >
                 <EditIcon strokeWidth={1} /> editar
               </Link>
+            </TableCell>
+
+            <TableCell>
+              <DeleteButton id={project.id || ''}  title={project.title}/>
             </TableCell>
 
             <TableCell className="font-medium">
