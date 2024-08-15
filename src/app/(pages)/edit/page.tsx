@@ -1,16 +1,22 @@
 'use client'
 
 import Link from 'next/link'
-import { ChangeEvent, useEffect, useState } from 'react'
-
 import { useSearchParams } from 'next/navigation'
-
-import { ProjectProps } from '@/app/interfaces/project.interface'
-import { getProjectById, updatedProject } from '@/app/services/projects'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+
+
+import { ProjectProps } from '@/app/interfaces/project.interface'
+import { getProjectById, updatedProject } from '@/app/services/projects'
+import { CATEGORIES, TECHNOLOGIES } from '../../../../utils/projectAttributes'
+
+import { Switch } from '@/app/components/ui/switch'
+import { toast } from 'sonner'
+import { Toaster } from '@/app/components/ui/sonner'
+import { LoggedInMenu } from '@/app/components/Menu/LoggedInMenu'
 
 import {
   Code,
@@ -24,12 +30,7 @@ import {
   NotepadText,
   Save,
   Type
-} from "lucide-react"
-
-import { Switch } from "@/app/components/ui/switch"
-import { toast } from "sonner"
-import { Toaster } from "@/app/components/ui/sonner"
-import { LoggedInMenu } from "@/app/components/Menu/LoggedInMenu"
+} from 'lucide-react'
 
 
 const formSchema = z.object({
@@ -52,7 +53,7 @@ const formSchema = z.object({
   is_public: z.boolean(),
 })
 
-export default function DashBoard() {
+export default function EditProject() {
 
   const searchParams = useSearchParams()
   const projectId = searchParams.get('id')
@@ -61,7 +62,6 @@ export default function DashBoard() {
   const [isPublic, setIsPublic] = useState(false)
   const [isError, setIsError] = useState(false)
   const [isUpdating, setIsUpdating] = useState(false)
-
 
 
   const {
@@ -86,32 +86,6 @@ export default function DashBoard() {
       is_public: false,
     },
   })
-
-  const array_technologies = [
-    'javascript', 'react-js', 'react-native', 'next-js', 'node-js',
-    'typescript', 'php', 'socketio', 'wordpress', 'css',
-    'css-module', 'sass', 'styled-component', 'tailwind', 'html',
-    'figma', 'mongodb', 'fastify'
-  ]
-  const array_categories = [
-    "all",
-    "javascript",
-    "react-js",
-    "react-native",
-    "next-js",
-    "node-js",
-    "typescript",
-    "php",
-    "wordpress",
-    "css",
-    "css-modules",
-    "sass",
-    "tailwind",
-    "html",
-    "game",
-    "figma",
-    "code-art",
-  ]
 
 
   const getProject = async () => {
@@ -393,7 +367,7 @@ export default function DashBoard() {
 
               <div className="flex flex-wrap gap-2">
 
-                {array_technologies.map((tech) => (
+                {TECHNOLOGIES.map((tech) => (
                   <label key={tech} className="flex text-zinc-400 gap-1">
                     <input
                       className="appearance-none w-4 h-4 border border-zinc-500 rounded-sm bg-transparent mt-1 shrink-0 checked:bg-green-500 checked:border-0"
@@ -416,7 +390,7 @@ export default function DashBoard() {
               </span>
 
               <div className="flex flex-wrap gap-2">
-                {array_categories.map((category) => (
+                {CATEGORIES.map((category) => (
                   <label key={category} className="flex text-zinc-400 gap-1">
                     <input
                       className="appearance-none w-4 h-4 border border-zinc-500 rounded-sm bg-transparent mt-1 shrink-0 checked:bg-green-500 checked:border-0"
