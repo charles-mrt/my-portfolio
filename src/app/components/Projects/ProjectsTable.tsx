@@ -14,15 +14,12 @@ import {
   TableRow,
 } from '@/app/components/ui/table'
 
-import { Button } from '../Button'
 import { DeleteButton } from '../deleteProject/deleteButton'
 
 
 export const ProjectsTable = async () => {
 
   const projects = await getAllProjects()
-
-  
 
   return (
 
