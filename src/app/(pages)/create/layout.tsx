@@ -14,8 +14,10 @@ export default function EditProjectLayout({
   children: React.ReactNode
 }) {
   return (
-    <body className = "w-screen h-screen overflow-x-hidden">
-      { children }
-    </body >
+    <html lang="pt-br">
+      <body className="w-screen h-screen overflow-x-hidden">
+        {children}
+      </body >
+    </html>
   )
 }
