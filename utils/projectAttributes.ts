@@ -11,7 +11,7 @@ export const TECHNOLOGIES: string[] = [
   'socketio',
   'wordpress',
   'css',
-  'css-module',
+  'css-modules',
   'sass',
   'styled-component',
   'tailwind',
