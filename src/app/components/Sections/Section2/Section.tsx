@@ -11,15 +11,15 @@ import {
 import htmlTec from '/public/assets/technologies/html.svg'
 import cssTec from '/public/assets/technologies/css.svg'
 import tailwindTec from '/public/assets/technologies/tailwind.svg'
-import styledcomponentTec from '/public/assets/technologies/styledcomponent.svg'
+import styledcomponentTec from '/public/assets/technologies/styled-component.svg'
 import sassTec from '/public/assets/technologies/sass.svg'
-import cssModuleTec from '/public/assets/technologies/cssmodule.svg'
+import cssModuleTec from '/public/assets/technologies/css-modules.svg'
 
 import wordpressTec from '/public/assets/technologies/wordpress.svg'
 import figmaTec from '/public/assets/technologies/figma.svg'
 
-import nextJsTec from '/public/assets/technologies/nextjs.svg'
-import reactJsTec from '/public/assets/technologies/reactjs.svg'
+import nextJsTec from '/public/assets/technologies/next-js.svg'
+import reactJsTec from '/public/assets/technologies/react-js.svg'
 import typescriptTec from '/public/assets/technologies/typescript.svg'
 import javascriptTec from '/public/assets/technologies/javascript.svg'
 
