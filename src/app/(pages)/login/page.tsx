@@ -7,6 +7,9 @@ import avatar from '/public/assets/avatar.webp'
 
 import { useSearchParams } from 'next/navigation'
 export default function Login() {
+
+  const loginAPIurl = process.env.API_URL_LOGIN
+
   const searchParams = useSearchParams()
   const error = searchParams.get('error')
   const errorMessage = error === 'authentication_failed'
@@ -36,7 +39,7 @@ export default function Login() {
           <span>Realize seu login</span>
 
           <Link
-            href="http://localhost:3000/login"
+            href={loginAPIurl!}
             className="max-w-max flex items-center gap-2 rounded-full bg-zinc-500 px-4 py-2 font-semibold text-base hover:opacity-90 transition-opacity"
           >
             <Image src={google_plus} alt="google plus icon" width={30} height={30} />
