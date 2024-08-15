@@ -25,7 +25,7 @@ export const getAllPublicProjects = async (): Promise<ProjectProps[]> => {
     } else {
       console.error('API access failed with status:', response.status)
       return []
-      
+
     }
   } catch (error) {
     console.error('Error accessing API:', error)
@@ -46,14 +46,32 @@ export const getProjectById = async ({ id }: { id: ProjectProps['id'] }) => {
 
 
 export const updatedProject = async (id: string, data: ProjectProps) => {
-  
+
   try {
     if (id) {
       const response = await api.patch(`/projects/${id}`, data)
       return response
     }
-   } catch (error) {
+  } catch (error) {
     console.error('Error updating project')
   }
 
+}
+
+export const createProject = async (data: ProjectProps) => {
+  try {
+    const response = await api.post(`/projects/`, data)
+    return response
+  } catch (error) {
+    console.error('Error create project')
+  }
+}
+
+export const deleteProject = async (id: string) => {
+  try {
+    const response = await api.delete(`/projects/${id}`)
+    return response
+  } catch (error) {
+    console.error('Error to delete project')
+  }
 }
