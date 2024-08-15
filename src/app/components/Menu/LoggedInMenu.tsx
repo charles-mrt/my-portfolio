@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
-import { HomeIcon, LayoutDashboard, LogOut } from 'lucide-react'
+import { HomeIcon, LayoutDashboard, LogOut, PlusSquareIcon } from 'lucide-react'
 
 const navMenu = {
   home: {
@@ -10,6 +10,10 @@ const navMenu = {
   dashboard: {
     route: '/dashboard',
     name: 'dashboard',
+  },
+  create: {
+    route: '/create',
+    name: 'novo projeto',
   },
   logout: {
     route: 'http://localhost:3000/logout',
@@ -47,6 +51,11 @@ export const LoggedInMenu = () => {
           <MenuItem route={navMenu.dashboard.route} background="bg-green-400">
             <LayoutDashboard width={16} />
             {navMenu.dashboard.name}
+          </MenuItem>
+
+          <MenuItem route={navMenu.create.route} background="bg-purple-400">
+            <PlusSquareIcon width={16} />
+            {navMenu.create.name}
           </MenuItem>
         </div>
 
