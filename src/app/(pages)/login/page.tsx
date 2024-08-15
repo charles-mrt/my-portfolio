@@ -8,7 +8,7 @@ import avatar from '/public/assets/avatar.webp'
 import { useSearchParams } from 'next/navigation'
 export default function Login() {
 
-  const loginAPIurl = process.env.API_URL_LOGIN
+  const loginAPIurl = process.env.NEXT_PUBLIC_API_URL_LOGIN
 
   const searchParams = useSearchParams()
   const error = searchParams.get('error')
