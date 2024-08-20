@@ -11,6 +11,7 @@ import css from '/public/assets/technologies/css.svg';
 import cssmodule from '/public/assets/technologies/cssmodule.svg';
 import sass from '/public/assets/technologies/sass.svg';
 import styledcomponent from '/public/assets/technologies/styledcomponent.svg';
+import mongodb from '/public/assets/technologies/mongodb.svg';
 import tailwind from '/public/assets/technologies/tailwind.svg';
 import html from '/public/assets/technologies/html.svg';
 import figma from '/public/assets/technologies/figma.svg';
@@ -29,19 +30,45 @@ import moveit from '/public/assets/projects/moveit.jpg'
 import hang_man_game from '/public/assets/projects/hangman-game.jpg'
 import my_code_draws from '/public/assets/projects/my-code-draws.jpg'
 import tic_tac_game from '/public/assets/projects/tic-tac-game.jpg'
+import kids_ckeckin from '/public/assets/projects/kids-checkin.jpg'
+import lorraine_nail_designer from '/public/assets/projects/lorraine-nail-designer.jpg'
 
 export const projectsData = [
   {
     is_public: true,
-    image: hang_man_game,
-    alt: "hang man game",
-    title: "hang man game",
-    tecnologies: [reactjs, nextjs, typescript, tailwind],
-    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "game"],
-    description: "'Hang man Game' é uma versão digital do clássico jogo da Forca, no qual os participantes tentam adivinhar uma palavra oculta ao arriscar letras a cada tentativa. A dinâmica do jogo envolve descobrir a palavra antes que um desenho completo do enforcado seja desenhado.",
-    tec_description: "reactjs, nextjs, typescript, tailwind",
-    url: "https://hangman-game-weld.vercel.app/",
-    github: "https://github.com/charles-mrt/hangman-game"
+    image: kids_ckeckin,
+    alt: "kids check-in",
+    title: "kids check-in",
+    tecnologies: [reactjs, nextjs, typescript, nodejs, mongodb, tailwind, figma],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
+    description: "O Kids é uma plataforma projetada para otimizar a gestão de crianças em ambientes institucionais, como igrejas. O design foi cuidadosamente desenvolvido para ser intuitivo e fácil de usar, garantindo uma experiência fluida para todos os usuários. Utilizando a tecnologia Progressive Web App (PWA), a plataforma combina a conveniência de um aplicativo com a acessibilidade de um site, proporcionando um acesso rápido e confiável em qualquer dispositivo, seja desktop ou móvel. Atualmente, o sistema está em operação na Igreja Palavra Viva Canasvieiras. A principal função do sistema é registrar a presença das crianças quando chegam ao culto. O processo é simples: ao chegar, os pais levam as crianças até o professor, e o sistema marca a presença automaticamente. Em seguida, a criança recebe uma pulseira com sua matrícula, garantindo a identificação e acesso às funcionalidades do sistema. O Kids oferece um conjunto abrangente de funcionalidades, incluindo: Cadastro Detalhado: Armazena informações essenciais sobre cada criança, como alergias, condições especiais e necessidades individuais. Perfis Administrativos: Facilita a gestão e o acompanhamento das atividades por parte dos administradores e professores. Comunicação Direta: Permite o contato rápido com os pais por meio de uma integração com o WhatsApp, promovendo uma comunicação eficiente em situações importantes. Monitoramento em Tempo Real: Acompanha todas as atividades, desde check-ins até check-outs, de forma instantânea. Essa plataforma visa melhorar a organização e a segurança, proporcionando uma experiência mais eficiente e transparente para todos os envolvidos. Esse projeto foi desenvolvido em equipe Charles Martins e Lucas Reis",
+    tec_description: "reactjs, nextjs, typescript, nodejs, tailwind , mongodb, figma",
+    url: "",
+    github: ""
+  },
+  {
+    is_public: true,
+    image: lorraine_nail_designer,
+    alt: "lorraine nail designer",
+    title: "lorraine nail designer",
+    tecnologies: [reactjs, nextjs, typescript,tailwind, figma],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
+    description: " Lorraine Nail Designer, é um projeto  para um salão especializado em cuidados e design de unhas. O objetivo principal foi criar uma página intuitiva e eficiente que facilitasse a gestão de agendamentos e melhorasse a experiência dos clientes. Agendamentos Online: A página permite que os clientes agendem seus serviços diretamente online. Com um design amigável e fácil de navegar, os usuários podem selecionar o serviço desejado e escolher o horário que melhor se adapta à sua agenda. O sistema está integrado com o Google Agenda. Isso significa que todas as reservas feitas através da landing page são automaticamente sincronizadas com o Google Agenda de Lorraine. Assim, tanto os clientes quanto Lorraine recebem notificações e lembretes automáticos, reduzindo o risco de esquecimentos e melhorando a organização do salão.",
+    tec_description: "reactjs, nextjs, typescript, tailwind, figma, google agenda",
+    url: "",
+    github: ""
+  },
+  {
+    is_public: false,
+    image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGcxYmh1dW05bTh1azFxcWNicWpxdjh1cW03MnNpOWZwNDJmbHFjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/evHtzG1TLlQh9CSsHd/giphy.gif",
+    alt: "tech world login",
+    title: "tech world login",
+    tecnologies: [ reactjs, nextjs, typescript, tailwind, nodejs, figma],
+    categories: ["todas",  "reactjs", "nextjs", "typescript", "tailwind", "nodejs", "figma"],
+    description: "Tech World Login é um sistema de autenticação e registro de usuários com um design minimalista e contemporâneo. Além disso, oferece um plano de fundo interativo que permite personalizar as cores e imagens de fundo de acordo com suas preferências. Além disso, a plataforma dispõe de um painel administrativo intuitivo que permite aos usuários gerenciar facilmente as informações da conta.",
+    tec_description: "reactjs, reactjs, nextjs, typescript, tailwind, nodejs, figma",
+    url: "https://github.com/charles-mrt/tech-world-login",
+    github: "https://github.com/charles-mrt/tech-world-login"
   },
   {
     is_public: true,
@@ -56,17 +83,18 @@ export const projectsData = [
     github: "https://github.com/charles-mrt/walk"
   },
   {
-    is_public: false,
-    image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGcxYmh1dW05bTh1azFxcWNicWpxdjh1cW03MnNpOWZwNDJmbHFjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/evHtzG1TLlQh9CSsHd/giphy.gif",
-    alt: "tech world login",
-    title: "tech world login",
-    tecnologies: [ reactjs, nextjs, typescript, tailwind, nodejs, figma],
-    categories: ["todas",  "reactjs", "nextjs", "typescript", "tailwind", "nodejs", "figma"],
-    description: "Tech World Login é um sistema de autenticação e registro de usuários com um design minimalista e contemporâneo. Além disso, oferece um plano de fundo interativo que permite personalizar as cores e imagens de fundo de acordo com suas preferências. Além disso, a plataforma dispõe de um painel administrativo intuitivo que permite aos usuários gerenciar facilmente as informações da conta.",
-    tec_description: "reactjs, reactjs, nextjs, typescript, tailwind, nodejs, figma",
-    url: "https://github.com/charles-mrt/tech-world-login",
-    github: "https://github.com/charles-mrt/tech-world-login"
+    is_public: true,
+    image: hang_man_game,
+    alt: "hang man game",
+    title: "hang man game",
+    tecnologies: [reactjs, nextjs, typescript, tailwind],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "game"],
+    description: "'Hang man Game' é uma versão digital do clássico jogo da Forca, no qual os participantes tentam adivinhar uma palavra oculta ao arriscar letras a cada tentativa. A dinâmica do jogo envolve descobrir a palavra antes que um desenho completo do enforcado seja desenhado.",
+    tec_description: "reactjs, nextjs, typescript, tailwind",
+    url: "https://hangman-game-weld.vercel.app/",
+    github: "https://github.com/charles-mrt/hangman-game"
   },
+  
   {
     is_public: true,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjd5aXAxZ29ubXNsbjhxYzZtazV0aDdleDJraWR0NDhyNzRzNTNrbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WqEcA6aRIBXQGbR2Ne/giphy.gif",
