@@ -136,7 +136,7 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
 
       ) : (
 
-        <div id="flip-card" className="p-10  h-full flex flex-col items-center gap-8 overflow-y-auto">
+        <div id="flip-card" className="py-10 px-3 h-full flex flex-col items-center gap-8 overflow-y-auto">
 
           <h4 className="text-base font-bold text-green-400 text-center uppercase leading-none">
             {title}
