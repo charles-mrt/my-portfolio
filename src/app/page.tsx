@@ -10,8 +10,11 @@ import { Section as Section2 } from './components/Sections/Section2/Section'
 import { Section as Section3 } from './components/Sections/Section3/Section'
 
 import { SendToDashBoardButon } from './components/Menu/sendToDashBoardButon'
+import { getAllPublicProjects } from './services/projects'
 
-export default function Home() {
+export default async function Home() {
+  
+  const projects = await getAllPublicProjects()
 
   return (
     <div
@@ -24,7 +27,7 @@ export default function Home() {
         <main className="flex-grow">
           <Section1 />
           <Section2 />
-          <Section3 />
+          <Section3 projectsData={projects} />
         </main>
 
         <div className="w-full bg-zinc-900 laptop:bg-opacity-90">
