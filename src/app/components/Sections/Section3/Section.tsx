@@ -5,9 +5,14 @@ import { Suspense, useState, startTransition} from 'react'
 import { PublicProjects } from '../../Projects/PublicProjects'
 import { ProjectCardSkeleton } from '../../Projects/ProjectCardSkeleton'
 import { SearchProject } from '../../SearchProject'
+import { ProjectProps } from '@/app/interfaces/project.interface'
 
-export const Section = () => {
-  
+interface SectionProps {
+  projectsData: ProjectProps[]
+}
+
+export const Section =  ({ projectsData }: SectionProps) => {
+
   const [selectedCategory, setSelectedCategory] = useState("all")
 
   const handleCategoryChange = (category: string) => {
@@ -29,7 +34,7 @@ export const Section = () => {
           <Suspense fallback={ 
             <ProjectCardSkeleton totalCards={3} />
           }>
-            <PublicProjects category={selectedCategory}/>
+              <PublicProjects category={selectedCategory} projectsData={projectsData} />
           </Suspense>
         </div>
 
