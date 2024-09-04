@@ -1,31 +1,18 @@
-import { getAllPublicProjects } from '@/app/services/projects'
+
 import { SearchCode, TerminalSquare } from 'lucide-react'
 import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon'
 import { ProjectCards } from './ProjectCards'
-import { useEffect, useState } from 'react'
+
 import { ProjectProps } from '@/app/interfaces/project.interface'
 
 interface PublicProjectsProps {
   category: string
+  projectsData: ProjectProps[]
 }
 
-export const PublicProjects = async ({ category }: PublicProjectsProps) => {
+export const PublicProjects = async ({ category , projectsData}: PublicProjectsProps) => {
 
-  const [projectsData, setProjectsData] = useState<ProjectProps[]>([])
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await getAllPublicProjects()
-      if (Array.isArray(data)) {
-        setProjectsData(data)
-      } else {
-        setProjectsData([])
-      }
-    }
-    fetchProjects()
-  }, [])
-
-
+ 
   return (
     <ul className="grid justify-items-center gap-4 sm:grid-cols-2 laptop:grid-cols-3">
       {
