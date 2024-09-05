@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { ChangeEvent, useEffect, useState } from 'react'
 
 import { useForm } from 'react-hook-form'
@@ -54,7 +54,7 @@ const formSchema = z.object({
 })
 
 export default function EditProject() {
-
+  const router = useRouter()
   const searchParams = useSearchParams()
   const projectId = searchParams.get('id')
 
@@ -127,6 +127,12 @@ export default function EditProject() {
     setValue('is_public', !isPublic)
   }
 
+  const performActions = async () => {
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsUpdating(false)
+    router.push('/dashboard')
+    router.refresh()
+  }
 
   const onSubmit = handleSubmit(async (data) => {
     setIsUpdating(true)
@@ -134,7 +140,7 @@ export default function EditProject() {
       const response = await updatedProject(projectId || '', data)
       if (response) {
         toast.success("Dados alterados com sucesso")
-        setTimeout(() => setIsUpdating(false), 2000)
+        performActions()
       }
     }
     catch (error) {
@@ -151,10 +157,10 @@ export default function EditProject() {
             <p className=" text-zinc-100 flex flex-col justify-center items-center gap-2">
               nenhum projeto encontrado com id: {projectId}
               <Link href={'/dashboard'} className="w-40 border-2 border-green-400 p-2 text-center  rounded-md text-zinc-100">
-              dashboard
-            </Link>
+                dashboard
+              </Link>
             </p>
-            
+
           </div>
         )}
       </>
@@ -182,7 +188,7 @@ export default function EditProject() {
       <Errorloading />
 
       <div className="h-full w-full px-4 pt-20 bg-zinc-950">
-      <LoggedInMenu />
+        <LoggedInMenu />
 
         <section className="w-full h-auto bg-zinc-900 p-10  rounded-md flex flex-col items-center gap-4">
           <h4 className="text-center font-bold text-zinc-100 font-sans uppercase">
