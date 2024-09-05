@@ -6,7 +6,7 @@ export const config = {
 }
 
 const publicRoutes = ['/', '/login']
-const privateRoutesForLoggedIn = ['/login', '/dashboard', '/edit', '/create']
+const privateRoutesForLoggedIn = ['/login']
 
 export async function middleware(req: NextRequest) {
   const session = await isSessionValid()
