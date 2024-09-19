@@ -4,6 +4,7 @@ import Image, { StaticImageData } from 'next/image'
 import { Button } from '../Button';
 
 import {
+  Ban,
   FileCode2,
   IterationCcw,
   MonitorSmartphone
@@ -108,27 +109,44 @@ export const ProjectCards = ({ imageUrl, alt, title, technologiesListImage, desc
             </div>
 
             <footer className="flex gap-2 ">
-              <Button
-                link={project_url}
-                title="acessar app"
-                fontSize="text-xs"
-                size="w-60 h-14"
-                bgColor="bg-transparent"
-                borderColor="border-green-400"
-                icon={<MonitorSmartphone />}
-                openNewTab={true}
-              />
+              {project_url ? (
+                <Button
+                  link={project_url}
+                  title="acessar app"
+                  fontSize="text-xs"
+                  size="w-60 h-14"
+                  bgColor="bg-transparent"
+                  borderColor="border-green-400"
+                  icon={<MonitorSmartphone />}
+                  openNewTab={true}
+                />
+              ) : (
+                <button
+                  disabled
+                  className="w-60 h-14 px-2 flex items-center justify-center gap-2 cursor-not-allowed bg-zinc-950/40 border-2 border-zinc-800 rounded-[5px] text-xs font-semibold text-zinc-700 uppercase tracking-[1px]"
+                >
+                  <Ban /> Acessar app
+                </button>
+              )}
 
-              <Button
-                link={github_url}
-                title="acessar código"
-                fontSize="text-xs"
-                size="w-60 h-14"
-                bgColor="bg-transparent"
-                borderColor="border-green-400 "
-                icon={<FileCode2 />}
-                openNewTab={true}
-              />
+              {github_url ? (
+                <Button
+                  link={github_url}
+                  title="acessar código"
+                  fontSize="text-xs"
+                  size="w-60 h-14"
+                  bgColor="bg-transparent"
+                  borderColor="border-green-400"
+                  icon={<FileCode2 />}
+                  openNewTab={true}
+                />) : (
+                <button
+                  disabled
+                  className="w-60 h-14 px-2 flex items-center justify-center gap-2 cursor-not-allowed bg-zinc-950/40 border-2 border-zinc-800 rounded-[5px] text-xs font-semibold text-zinc-700 uppercase tracking-[1px]"
+                >
+                  <Ban /> Acessar código
+                </button>
+              )}
             </footer>
 
           </div>
