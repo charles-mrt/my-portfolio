@@ -15,7 +15,7 @@ export default function EditProjectLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="w-screen h-screen overflow-x-hidden">
+      <body className="w-screen min-h-screen overflow-x-hidden bg-zinc-950">
         {children}
       </body >
     </html>
