@@ -32,6 +32,7 @@ import my_code_draws from '/public/assets/projects/my-code-draws.jpg'
 import tic_tac_game from '/public/assets/projects/tic-tac-game.jpg'
 import kids_ckeckin from '/public/assets/projects/kids-checkin.jpg'
 import lorraine_nail_designer from '/public/assets/projects/lorraine-nail-designer.jpg'
+import multitrack_br from '/public/assets/projects/multitrack-br.jpg'
 
 export const projectsData = [
   {
@@ -55,9 +56,23 @@ export const projectsData = [
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
     description: " Lorraine Nail Designer, é um projeto  para um salão especializado em cuidados e design de unhas. O objetivo principal foi criar uma página intuitiva e eficiente que facilitasse a gestão de agendamentos e melhorasse a experiência dos clientes. Agendamentos Online: A página permite que os clientes agendem seus serviços diretamente online. Com um design amigável e fácil de navegar, os usuários podem selecionar o serviço desejado e escolher o horário que melhor se adapta à sua agenda. O sistema está integrado com o Google Agenda. Isso significa que todas as reservas feitas através da landing page são automaticamente sincronizadas com o Google Agenda de Lorraine. Assim, tanto os clientes quanto Lorraine recebem notificações e lembretes automáticos, reduzindo o risco de esquecimentos e melhorando a organização do salão.",
     tec_description: "reactjs, nextjs, typescript, tailwind, figma, google agenda",
-    url: "",
+    url: "https://lorrainenaildesigner.vercel.app",
     github: ""
   },
+
+  {
+    is_public: true,
+    image: multitrack_br,
+    alt: "multitrack-br",
+    title: "multitrack-br",
+    tecnologies: [reactjs, nextjs, typescript,tailwind, figma],
+    categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
+    description: "Esta landing page foi desenvolvida para a Multitrack BR. O foco da página é promover a venda de faixas de áudio, destacando os produtos oferecidos em uma seção de promoção. Os clientes podem adquirir produtos através de opções selecionáveis, e, de forma dinâmica, uma mensagem pré-formatada é enviada para a Multitrack via WhatsApp, facilitando a comunicação e o fechamento da venda. A página conta com seções de perguntas frequentes, informações sobre a Multitrack, depoimentos de clientes e várias chamadas para ação, otimizando a experiência do usuário e incentivando as conversões. Esses elementos tornam a página envolvente e informativa, ajudando a construir confiança e aumentar as vendas.",
+    tec_description: "reactjs, nextjs, typescript, tailwind, figma, google agenda",
+    url: "https://multitrackbr.com",
+    github: ""
+  },
+  
   {
     is_public: false,
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGcxYmh1dW05bTh1azFxcWNicWpxdjh1cW03MnNpOWZwNDJmbHFjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/evHtzG1TLlQh9CSsHd/giphy.gif",
@@ -67,7 +82,7 @@ export const projectsData = [
     categories: ["todas",  "reactjs", "nextjs", "typescript", "tailwind", "nodejs", "figma"],
     description: "Tech World Login é um sistema de autenticação e registro de usuários com um design minimalista e contemporâneo. Além disso, oferece um plano de fundo interativo que permite personalizar as cores e imagens de fundo de acordo com suas preferências. Além disso, a plataforma dispõe de um painel administrativo intuitivo que permite aos usuários gerenciar facilmente as informações da conta.",
     tec_description: "reactjs, reactjs, nextjs, typescript, tailwind, nodejs, figma",
-    url: "https://github.com/charles-mrt/tech-world-login",
+    url: "",
     github: "https://github.com/charles-mrt/tech-world-login"
   },
   {
@@ -104,7 +119,7 @@ export const projectsData = [
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind", "nodejs", "game"],
     description: "O Planning Poker é um sistema destinado a simplificar a estimativa de esforço temporal. Através de uma abordagem inovadora que combina a gamificação do planning poker com o método T-shirt sizing, proporcionando uma maneira eficaz de colaboração entre os participantes, aproveitando a tecnologia de socket para interações em tempo real. E o melhor de tudo: esta plataforma é inteiramente gratuita. Agora, sua equipe pode estimar projetos com precisão e envolvimento, aproveitando os benefícios da interatividade em tempo real, sem nenhum custo associado. Esse projeto foi desenvolvido em equipe. Front-end: Charles Martins. Backend: Lucas Reis e Renato Viegas",
     tec_description: "nodejs, reactjs, nextjs, typescript, socketio, tailwind, figma",
-    url: "https://github.com/charles-mrt/planning-poker-client",
+    url: "",
     github: "https://github.com/charles-mrt/planning-poker-client"
   },
   
@@ -117,7 +132,7 @@ export const projectsData = [
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind","javascript" ,"css" ,"html", "code-art"],
     description: "My Code Draws é o meu espaço digital, onde dou vida às minhas criações artísticas usando código. Neste site, mergulho na fascinante interseção entre arte e programação para expressar minha criatividade. De formas simples a composições mais complexas, o My Code Draws é o meu ateliê virtual, onde cada linha de código se transforma em uma desenho digital. Descubra o poder da programação criativa no My Code Draws, o meu espaço pessoal para explorar e compartilhar o mundo emocionante das artes com código.",
     tec_description: "reactjs, nextjs, typescript, javascript ,css ,html",
-    url: "https://github.com/charles-mrt/my-code-draws",
+    url: "",
     github: "https://github.com/charles-mrt/my-code-draws"
   },
   
@@ -130,7 +145,7 @@ export const projectsData = [
     categories: ["todas", "php", "wordpress", "html", "javascript", "css"],
     description: "Um tema WordPress projetado para o Espaço Conecta, focado principalmente em impulsionar as estratégias de marketing digital para afiliados e empreendedores digitais. Construído com uma abordagem centrada na conversão e na experiência do usuário, apresentando um layout minimalista.",
     tec_description: "php, wordpress, html, javascript, css",
-    url: "http://espacoconecta.com",
+    url: "",
     github: "https://github.com/charles-mrt/espaco-conecta-theme"
   },
 
@@ -155,7 +170,7 @@ export const projectsData = [
     categories: ["todas", "javascript", "html", "css", "figma"],
     description: "landing page de alta conversão para venda de tenis com interação entre os modelos de tenis apresentados",
     tec_description: "javascript, html, css, figma",
-    url: "https://github.com/charles-mrt/nike-lebron-landing-page",
+    url: "",
     github: "https://github.com/charles-mrt/nike-lebron-landing-page"
   },
   {
@@ -310,7 +325,7 @@ export const projectsData = [
     categories: ["todas", "php", "wordpress"],
     description: "O Star Rating for WordPress é um plugin que adiciona uma lista de estrelas para classificar um produto ou post em seu site WordPress. Isso é feito através de um shortcode, o que significa que você pode incorporar facilmente a funcionalidade de avaliação de estrelas em suas páginas ou postagens usando um código curto específico fornecido pelo plugin.",
     tec_description: "php, wordpress",
-    url: "https://github.com/charles-mrt/star-rating-for-wordpress",
+    url: "",
     github: "https://github.com/charles-mrt/star-rating-for-wordpress"
   },
 
@@ -323,7 +338,7 @@ export const projectsData = [
     categories: ["todas", "php", "wordpress", "javascript", "css"],
     description: "O Custom Login WP é uma funcionalidade para WordPress que reformula a página de login do WordPress, oferecendo interações visuais que operam por meio da validação de login.",
     tec_description: "php, wordpress, javascript, css",
-    url: "https://github.com/charles-mrt/custom_loginWp",
+    url: "",
     github: "https://github.com/charles-mrt/custom_loginWp"
   },
 
@@ -336,7 +351,7 @@ export const projectsData = [
     categories: ["todas", "php", "wordpress", "javascript", "css"],
     description: "O toogle é uma feature para wordpress que utiliza os plugins elementor e Livemesh addons-for-elementor. Essa feature customiza o modo em que o filtro de categorias de postagem é apresentado em telas de dispositivos móveis, através do addons Post Grid, disponível no plugin Livemesh. Facilita e melhora a maneira que a lista de postagem é apresentada.",
     tec_description: "php, wordpress, javascript, css",
-    url: "https://github.com/charles-mrt/toogle-category-list-post-grid",
+    url: "",
     github: "https://github.com/charles-mrt/toogle-category-list-post-grid"
   },
 
@@ -348,8 +363,8 @@ export const projectsData = [
     tecnologies: [javascript, html, css],
     categories: ["todas", "javascript", "html", "css"],
     description: "Cartão de presenta para evento do while da rocketseat. O projeto utiliza a funcionalidade de light e dark theme.",
+    tec_description: "javascript, html, css",    
     url:"https://github.com/charles-mrt/projeto-Badge-Do-While2021/deployments/github-pages",
-    tec_description: "javascript, html, css",
     github: "https://github.com/charles-mrt/projeto-Badge-Do-While2021"
   },
 
@@ -388,7 +403,7 @@ export const projectsData = [
     categories: ["todas", "reactjs", "typescript", "css", "react-native", "nodejs"],
     description: "Este projeto apresenta um sistema para registrar orfanatos, permitindo que as pessoas escolham facilmente orfanatos para visitar. Por meio de um mapa interativo, os usuários podem explorar orfanatos em sua região, tornando o processo de localização e agendamento de visitas mais acessível e eficiente. Além disso, foi desenvolvido um aplicativo móvel para proporcionar uma experiência ainda mais conveniente. Este projeto foi desenvolvido durante um evento da RocketSeat.",
     tec_description: "reactjs, typescript, css, reactNative, nodejs",
-    url: "https://github.com/charles-mrt/Happy-nlw3-rocket-seat",
+    url: "",
     github: "https://github.com/charles-mrt/Happy-nlw3-rocket-seat"
   },
 
@@ -400,8 +415,8 @@ export const projectsData = [
     tecnologies: [php, wordpress, html, css],
     categories: ["todas", "php", "wordpress", "html", "css"],
     description: "SideBar widget é uma feature que adiciona uma sidebar no do thema Hello-Elementor. Por padrão o tema vem sem opção de sidebar.",
-    url: "https://github.com/charles-mrt/wp-default-sidebar-hello-theme-child",
     tec_description: "php, wordpress, html, css",
+    url: "",
     github: "https://github.com/charles-mrt/wp-default-sidebar-hello-theme-child"
   },
   {
@@ -413,7 +428,7 @@ export const projectsData = [
     categories: ["todas", "javascript", "html", "css"],
     description: "Como um grande fã da série de jogos Top Gear, senti a inspiração para homenageá-la recriando uma imagem icônica do jogo, com veículos, árvores e outros elementos. Este projeto foi construído exclusivamente com código JavaScript, CSS e HTML, e está sempre em constante desenvolvimento. É uma paixão em evolução que continuamente aprimoro e expando.",
     tec_description: "javascript, html, css",
-    url: "https://github.com/charles-mrt/top-gear-template",
+    url: "",
     github: "https://github.com/charles-mrt/top-gear-template"
   }
 ]
