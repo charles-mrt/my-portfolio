@@ -68,7 +68,7 @@ export const projectsData = [
     tecnologies: [reactjs, nextjs, typescript,tailwind, figma],
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
     description: "Esta landing page foi desenvolvida para a Multitrack BR. O foco da página é promover a venda de faixas de áudio, destacando os produtos oferecidos em uma seção de promoção. Os clientes podem adquirir produtos através de opções selecionáveis, e, de forma dinâmica, uma mensagem pré-formatada é enviada para a Multitrack via WhatsApp, facilitando a comunicação e o fechamento da venda. A página conta com seções de perguntas frequentes, informações sobre a Multitrack, depoimentos de clientes e várias chamadas para ação, otimizando a experiência do usuário e incentivando as conversões. Esses elementos tornam a página envolvente e informativa, ajudando a construir confiança e aumentar as vendas.",
-    tec_description: "reactjs, nextjs, typescript, tailwind, figma, google agenda",
+    tec_description: "reactjs, nextjs, typescript, tailwind, figma",
     url: "https://multitrackbr.com",
     github: ""
   },
