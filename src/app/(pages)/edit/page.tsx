@@ -187,7 +187,7 @@ export default function EditProject() {
       <Loading />
       <Errorloading />
 
-      <div className="h-full w-full px-4 pt-20 bg-zinc-950">
+      <div className="h-full w-full px-4 pt-20">
         <LoggedInMenu />
 
         <section className="w-full h-auto bg-zinc-900 p-10  rounded-md flex flex-col items-center gap-4">

@@ -6,10 +6,10 @@ import { Toaster } from '@/app/components/ui/sonner'
 export default async function DashBoard() {
 
   return (
-    <div className="h-full w-full px-4 pt-20 bg-zinc-950">
+    <div className="w-full px-4 pt-20 ">
       <LoggedInMenu />
 
-      <section className="w-full h-auto bg-zinc-900 p-10  rounded-md flex flex-col gap-4">
+      <section className="w-full bg-zinc-900 p-10  rounded-md flex flex-col gap-4">
         <h4 className="text-center font-bold text-zinc-100 font-sans uppercase">
           tabela de projetos
         </h4>
