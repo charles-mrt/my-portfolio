@@ -56,9 +56,10 @@ export const Section = () => {
           <div className="absolute -z-0 inset-0 m-auto rounded-full h-[460px] w-[460px] bg-gradient-to-r from-zinc-900 via-violet-700 to-green-500 animate-spinCounterclockwise" />
           <div className="absolute z-20 inset-0 m-auto rounded-full h-[580px] w-[580px] border-r-4 border-b-4 border-dotted border-zinc-400 animate-spinCounterclockwise" />
           <Image
-            className="absolute z-0 inset-0 m-auto rounded-full h-[520px] w-[520px] border-b-2 border-purple-600 "
+            className="absolute z-0 inset-0 m-auto rounded-full h-[520px] w-[520px] border-b-2 border-purple-600"
             src={avatar}
             alt="imagem do Charles"
+            priority={true} 
           />
         </div>
       </div>
