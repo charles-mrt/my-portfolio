@@ -56,7 +56,7 @@ export const projectsData = [
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind"],
     description: " Lorraine Nail Designer, é um projeto  para um salão especializado em cuidados e design de unhas. O objetivo principal foi criar uma página intuitiva e eficiente que facilitasse a gestão de agendamentos e melhorasse a experiência dos clientes. Agendamentos Online: A página permite que os clientes agendem seus serviços diretamente online. Com um design amigável e fácil de navegar, os usuários podem selecionar o serviço desejado e escolher o horário que melhor se adapta à sua agenda. O sistema está integrado com o Google Agenda. Isso significa que todas as reservas feitas através da landing page são automaticamente sincronizadas com o Google Agenda de Lorraine. Assim, tanto os clientes quanto Lorraine recebem notificações e lembretes automáticos, reduzindo o risco de esquecimentos e melhorando a organização do salão.",
     tec_description: "reactjs, nextjs, typescript, tailwind, figma, google agenda",
-    url: "https://lorrainenaildesigner.vercel.app",
+    url: "https://esmalterialorrainebarros.vercel.app",
     github: ""
   },
 
