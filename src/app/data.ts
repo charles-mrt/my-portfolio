@@ -132,7 +132,7 @@ export const projectsData = [
     categories: ["todas", "reactjs", "nextjs", "typescript", "tailwind","javascript" ,"css" ,"html", "code-art"],
     description: "My Code Draws é o meu espaço digital, onde dou vida às minhas criações artísticas usando código. Neste site, mergulho na fascinante interseção entre arte e programação para expressar minha criatividade. De formas simples a composições mais complexas, o My Code Draws é o meu ateliê virtual, onde cada linha de código se transforma em uma desenho digital. Descubra o poder da programação criativa no My Code Draws, o meu espaço pessoal para explorar e compartilhar o mundo emocionante das artes com código.",
     tec_description: "reactjs, nextjs, typescript, javascript ,css ,html",
-    url: "",
+    url: "https://my-code-draws.vercel.app/",
     github: "https://github.com/charles-mrt/my-code-draws"
   },
   
