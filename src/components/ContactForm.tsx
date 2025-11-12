@@ -13,7 +13,7 @@ import {
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { sendEmail } from '../../../utils/sendEmail'
+import { sendEmail } from '../../utils/sendEmail'
 import { useState } from 'react'
 
 declare interface Grecaptcha {
@@ -27,7 +27,7 @@ export type FormData = {
   name: string
   email: string
   message: string
-  recaptchaToken:string
+  recaptchaToken: string
 }
 
 const nameRegex = /^[a-zA-ZÀ-ú\s]+$/
@@ -61,7 +61,7 @@ export const ContactForm = () => {
       name: '',
       email: '',
       message: '',
-      recaptchaToken:'',
+      recaptchaToken: '',
     },
   })
 
@@ -105,14 +105,14 @@ export const ContactForm = () => {
 
 
   const onSubmit = async (data: FormData) => {
-    
+
     setIsSending(true)
 
     try {
       const token = await grecaptcha.execute(recaptchaSiteKey, { action: 'submit' })
-      data.recaptchaToken = token 
+      data.recaptchaToken = token
       const response = await sendEmail(data)
-  
+
       if (response.status === 200) {
         clearFormFields()
         handleMessageDisplay(true, true, 4000)
@@ -126,8 +126,8 @@ export const ContactForm = () => {
       setIsSending(false)
     }
   }
-  
-  
+
+
   return (
     <div className="">
       {isSending && (

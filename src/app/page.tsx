@@ -1,14 +1,14 @@
 
 
-import { FooterInfo } from './components/FooterInfo';
-import { WaveDivider } from './components/WaveDivider';
+import { FooterInfo } from '../components/FooterInfo';
+import { WaveDivider } from '../components/WaveDivider';
 import charlesLogo from '/public/assets/logo.svg';
 
-import { Header } from './components/Header';
+import { Header } from '../components/Header';
 
-import { Section as Section1 } from './components/Sections/Section1/Section';
-import { Section as Section2 } from './components/Sections/Section2/Section';
-import { Section as Section3 } from './components/Sections/Section3/Section';
+import { HeroSection } from '@/components/Sections/Hero/HeroSection';
+import { AboutSection } from '@/components/Sections/About/AboutSection';
+import { ProjectsSection } from '@/components/Sections/Projects/ProjectsSection';
 
 export default function Home() {
 
@@ -20,9 +20,9 @@ export default function Home() {
 
       <div className="flex flex-col flex-grow">
         <main className="flex-grow">
-          <Section1 />
-          <Section2 />
-          <Section3 />
+          <HeroSection />
+          <AboutSection />
+          <ProjectsSection />
         </main>
 
         <div className="w-full bg-zinc-900 laptop:bg-opacity-90">

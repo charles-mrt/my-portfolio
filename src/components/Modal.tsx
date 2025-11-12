@@ -10,7 +10,6 @@ interface ModalProps {
 export const Modal = ({ display, onClose }: ModalProps) => {
 
   return (
-
     <div className={`w-full h-full bg-black bg-opacity-90 ${display} top-0 bottom-0 right-0 left-0 m-auto z-[9999] flex items-center justify-center`}>
 
       <div className="relative max-w-lg  bg-zinc-800 border-2 border-green-400 rounded-lg p-2 laptop:p-10">
@@ -37,6 +36,5 @@ export const Modal = ({ display, onClose }: ModalProps) => {
 
       </div>
     </div >
-
   )
 }

@@ -13,7 +13,7 @@ import { MenuNav } from './MenuNav';
 import { ListSocialMediaIcon } from '../SocialIcons/ListSocialMediaIcon';
 
 import { Modal } from '../Modal';
-import { useModal } from '../../hooks/useModal';
+import { useModal } from '../../app/hooks/useModal';
 import { useState } from 'react';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 

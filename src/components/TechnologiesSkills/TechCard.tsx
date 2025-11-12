@@ -1,16 +1,15 @@
+'use client'
+
 import { useEffect, useState } from "react"
-
 import { BarLevel } from "./BarLevel"
-
 import Image from 'next/image'
 
 interface CardProps {
   title: string;
   subTitle?: string;
   imageUrl: string;
-  barLevel: number;
+  barLevel?: number;
 }
-
 
 export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => {
 
@@ -23,8 +22,6 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
   useEffect(() => {
     handlerBarActived()
   }, [])
-
-
 
   return (
     <div className="bg-zinc-900 w-full h-full rounded-md shadow-xl shadow-zinc-900 flex flex-col items-center justify-between gap-3 p-3
@@ -55,7 +52,7 @@ export const TechCard = ({ title, subTitle, imageUrl, barLevel }: CardProps) => 
         isBarLevelActived ? (
           <footer className="text-zinc-50 text-left text-xs uppercase tracking-[1px]">
             skill
-            <BarLevel level={barLevel} />
+            <BarLevel level={barLevel || 0} />
           </footer>
         ) :
           (<></>)

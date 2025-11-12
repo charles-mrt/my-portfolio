@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { ListSocialMediaIcon } from '../components/SocialIcons/ListSocialMediaIcon';
+import { ListSocialMediaIcon } from './SocialIcons/ListSocialMediaIcon';
 
 import {
   ArrowBigUpDash

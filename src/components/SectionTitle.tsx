@@ -1,12 +1,12 @@
 interface TitleProps {
-  titleName1: string;
-  titleName2: string;
+  title: string;
+  highlightedTitle: string;
   fontSize?: string;
 }
 
-export const SectionTitle = ({ titleName1, titleName2, fontSize }: TitleProps) => {
+export const SectionTitle = ({ title, highlightedTitle, fontSize }: TitleProps) => {
 
-  const fontSizeVariant = fontSize ? `${fontSize}` : "sm:text-5xl"; 
+  const fontSizeVariant = fontSize ? `${fontSize}` : "sm:text-5xl";
 
   return (
     <h2 className={`
@@ -16,9 +16,9 @@ export const SectionTitle = ({ titleName1, titleName2, fontSize }: TitleProps) =
       text-zinc-50 
      ${fontSizeVariant}
     `}>
-      {titleName1}
+      {title}
       <strong className="text-green-400 underline ml-3 normal-case">
-        {titleName2}
+        {highlightedTitle}
       </strong>
     </h2>
   )

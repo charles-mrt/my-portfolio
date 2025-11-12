@@ -7,7 +7,7 @@ import { ScrollDownIndicator } from '../../ScrollDownIndicator'
 
 import { WaveDivider } from '../../WaveDivider'
 
-export const Section = () => {
+export const HeroSection = () => {
 
   return (
 
@@ -27,7 +27,7 @@ export const Section = () => {
               <span className="text-xl sm:text-2xl">olá</span>,
               seja bem vindo ao meu portfólio
             </h1>
-          
+
             <div className="relative laptop:hidden w-44 h-44 my-5">
               <div className="absolute z-10 inset-0 m-auto rounded-full w-40 h-40 border-r-4 border-b-4 border-dotted border-green-400 animate-spinClockwise" />
               <div className="absolute -z-0 inset-0 m-auto rounded-full w-36 h-36 bg-gradient-to-r from-zinc-900 via-violet-700 to-green-500 animate-spinCounterclockwise" />
@@ -45,12 +45,12 @@ export const Section = () => {
               sou,
             </p>
 
-            <SectionTitle titleName1="front End," titleName2="Developer" fontSize="sm:text-4xl xl:text-5xl 2xl:text-6xl" />
+            <SectionTitle title="front End," highlightedTitle="Developer" fontSize="sm:text-4xl xl:text-5xl 2xl:text-6xl" />
             <ScrollDownIndicator idName="about-me" />
           </div>
         </div>
 
-        {/* right */}        
+        {/* right */}
         <div className="relative  hidden laptop:block h-[600px] w-[600px]">
           <div className="absolute z-10 inset-0 m-auto rounded-full h-[520px] w-[520px] border-r-4 border-b-4 border-dotted border-green-400 animate-spinClockwise" />
           <div className="absolute -z-0 inset-0 m-auto rounded-full h-[460px] w-[460px] bg-gradient-to-r from-zinc-900 via-violet-700 to-green-500 animate-spinCounterclockwise" />
@@ -59,7 +59,7 @@ export const Section = () => {
             className="absolute z-0 inset-0 m-auto rounded-full h-[520px] w-[520px] border-b-2 border-purple-600"
             src={avatar}
             alt="imagem do Charles"
-            priority={true} 
+            priority={true}
           />
         </div>
       </div>
