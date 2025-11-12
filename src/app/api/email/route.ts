@@ -27,10 +27,10 @@ export async function POST(request: NextRequest) {
     })
 
     const mailOptions = {
-      from: `Contato do site <${process.env.EMAIL}>`,
-      replyTo: email,
+      from: `Site charles Dev <${process.env.EMAIL}>`,
       to: process.env.EMAIL,
-      subject: `Mensagem de ${name}`,
+      replyTo: email,
+      subject: `Mensagem de ${name} (${email})`,
       text: message,
     }
 
